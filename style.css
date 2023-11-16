@@ -1,3 +1,205 @@
-h1  {
-    font-size: 100px;
+html {
+    font-family: "Cygre SemiBold", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    /*overflow-x: hidden;*/
+}
+
+.logo {
+    width: 100%;
+}
+
+.header * {
+    color: white;
+}
+
+.header {
+    background-color: #222222;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.header__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header__logo {
+    width: 50px;
+}
+
+.header__nav {
+    margin-left: 20px;
+}
+
+.header__nav__list {
+    display: flex;
+    gap: 20px;
+}
+
+.header__nav__item {}
+
+.header__nav__link {
+    display: flex;
+    font-size: 16px;
+    font-weight: 100;
+    border: 1px solid white;
+    border-radius: 35px;
+    padding: 10px 16px;
+    line-height: normal;
+    transition: border-color .3s, color .3s;
+}
+
+.header__nav__link:hover, .header__order-phone-btn:hover {
+    color: #005BFF;
+    border-color: #005BFF;
+}
+
+.header__right-side {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    align-items: center;
+}
+
+.header__tel {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header__tel:hover {
+    text-decoration: underline;
+}
+
+.header__order-phone-btn {
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid white;
+    font-size: 16px;
+    height: 40px;
+    border-radius: 35px;
+    padding: 0 16px;
+    cursor: pointer;
+    align-items: center;
+    transition: border-color .3s, color .3s;
+}
+
+.header__menu-burger {
+    background: none;
+    border: 1px solid white;
+    border-radius: 35px;
+    padding: 0;
+    height: 39px;
+    width: 81px;
+    display: flex;
+    justify-content: center;
+}
+
+.header__menu-burger svg {
+    width: 49px;
+}
+
+.header__hr {
+    height: 1px;
+    background-color: white;
+    width: 100%;
+}
+
+
+/*Offcanvas*/
+.offcanvas {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    background-color: white;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 10;
+    overflow-y: scroll;
+    right: -1199px;
+    width: 100%;
+    max-width: 1199px;
+}
+
+.offcanvas__header {
+    background-color: #222222;
+    padding: 40px;
+}
+
+.offcanvas__nav__item {
+    margin-top: 20px;
+}
+
+.offcanvas__nav__link {
+    color: white;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.offcanvas__body {
+    padding: 30px 40px 40px;
+}
+
+/* Order Form */
+.input-group__input {
+    border: none;
+    background: none;
+    border-bottom: 1px solid #222222;
+    color: #222222;
+    outline: none;
+    text-align: center;
+}
+
+.input-group__input::placeholder {
+    color: #222222;
+}
+
+.input-group__label {
+    color: #222222;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    margin-right: 10px;
+}
+
+.order-form__title {
+    color: #005BFF;
+    font-size: 50px;
+    /*font-style: normal;*/
+    font-weight: 600;
+    line-height: 120%;
+}
+
+/* Footer */
+.footer {
+    background-color: #222222;
+}
+
+@media (max-width: 991px) {
+    .hr-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .header__right-side {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__right-side {
+        gap: 20px;
+    }
+
+    .header__menu-burger {
+        width: 70px;
+    }
+
+    .header__menu-burger svg {
+        width: 42px;
+    }
 }
