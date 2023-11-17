@@ -30,35 +30,35 @@
     font-display: swap;
 }
 
-/* Noto Sans */
-@font-face {
-    font-family: 'Noto Sans';
-    src: url('../fonts/Noto-Sans/NotoSans-Thin.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-}
+/*!* Noto Sans *!*/
+/*@font-face {*/
+/*    font-family: 'Noto Sans';*/
+/*    src: url('../fonts/Noto-Sans/NotoSans-Thin.ttf') format('truetype');*/
+/*    font-style: normal;*/
+/*    font-weight: 100;*/
+/*    font-display: swap;*/
+/*}*/
 
-@font-face {
-    font-family: 'Noto Sans';
-    src: url('../fonts/Noto-Sans/NotoSans-ExtraLight.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: 'Noto Sans';*/
+/*    src: url('../fonts/Noto-Sans/NotoSans-ExtraLight.ttf') format('truetype');*/
+/*    font-style: normal;*/
+/*    font-weight: 200;*/
+/*    font-display: swap;*/
+/*}*/
 
-@font-face {
-    font-family: 'Noto Sans';
-    src: url('../fonts/Noto-Sans/NotoSans-Light.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: 'Noto Sans';*/
+/*    src: url('../fonts/Noto-Sans/NotoSans-Light.ttf') format('truetype');*/
+/*    font-style: normal;*/
+/*    font-weight: 300;*/
+/*    font-display: swap;*/
+/*}*/
 
-@font-face {
-    font-family: 'Noto Sans';
-    src: url('../fonts/Noto-Sans/NotoSans-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: 'Noto Sans';*/
+/*    src: url('../fonts/Noto-Sans/NotoSans-Regular.ttf') format('truetype');*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    font-display: swap;*/
+/*}*/
