@@ -56,7 +56,7 @@
 
 @font-face {
     font-family: 'Cygre SemiBold';
-    src: url('../fonts/Cygre-SemiBold/Cygre-Black.ttf') format('truetype');
+    src: url('../fonts/Cygre-SemiBold/Cygre-ExtraBold.ttf') format('truetype');
     font-style: normal;
     font-weight: 800;
     font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
     font-family: 'Cygre SemiBold';
-    src: url('../fonts/Cygre-SemiBold/Cygre-ExtraBold.ttf') format('truetype');
+    src: url('../fonts/Cygre-SemiBold/Cygre-Black.ttf') format('truetype');
     font-style: normal;
     font-weight: 900;
     font-display: swap;

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 html {
     font-family: "Cygre SemiBold", sans-serif;
     font-size: 62.5%;
+    color: #222222;
 }
 
 input {
@@ -25,6 +25,15 @@ input {
 
 .text-center {
     text-align: center;
+}
+
+.blue-bordered {
+    border: 1px solid #005BFF;
+    border-radius: 35px;
+}
+
+.bordered-lg {
+    border-radius: 50px;
 }
 
 .privacy-text {
@@ -68,8 +77,6 @@ input {
     display: flex;
     gap: 20px;
 }
-
-.header__nav__item {}
 
 .header__nav__link {
     display: flex;
@@ -200,9 +207,12 @@ input {
     font-weight: 400;
     outline: none;
     text-align: center;
-    /*margin-bottom: 48px;*/
     font-size: 2.2rem;
     width: 100%;
+}
+
+.input-group__box {
+    margin-bottom: 48px;
 }
 
 .input-group__input::placeholder {
@@ -322,7 +332,7 @@ input {
     text-transform: uppercase;
 }
 
-.main-title__title-blue {
+.blue {
     color: #005BFF;
 }
 
@@ -331,7 +341,8 @@ input {
     max-width: 1355px;
     min-width: 442px;
 }
-    /* Blur Buttons Group */
+
+/* Blur Buttons Group */
 .blur-btn-group {
     border-radius: 80px;
     padding: 46px 70px;
@@ -394,11 +405,7 @@ input {
     padding: 60px 0 80px 0;
 }
 
-.for-whom__items {
-    display: flex;
-}
-
-.for-whom__item {
+.for-whom__items, .for-whom__item {
     display: flex;
 }
 
@@ -685,6 +692,124 @@ input {
     line-height: 101%;
 }
 
+/*Income*/
+.income {
+    margin-top: 120px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.income__title {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 101%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.income__warning {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 30px;
+}
+
+.calculation {
+    border: 1px solid #005BFF;
+}
+
+.calculation-content, .calculation-header {
+    padding: 0 40px;
+}
+
+.calculation__title {
+    font-family: "Cygre SemiBold", sans-serif;
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 138%;
+    text-transform: uppercase;
+    margin: 19px 0 57px 0;
+}
+
+.calculation__info {
+    font-size: 2.2rem;
+    line-height: normal;
+    font-weight: 400;
+    margin: 27px 0 50px 0;
+}
+
+.calculation__mid-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.invest-price {
+    height: 88px;
+    max-width: 524px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.invest-price__text {
+    color: black;
+    font-size: 5rem;
+    font-weight: 300;
+    opacity: .4;
+}
+
+.custom-radio-group {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.custom-radio {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.custom-radio__input[type=radio] {
+    display: none;
+}
+
+.custom-radio__label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 15px 23px;
+    line-height: normal;
+    user-select: none;
+    color: #005BFF;
+}
+
+/* Checked */
+.custom-radio__input[type=radio]:checked + label {
+    background: #005BFF;
+    color: white;
+}
+
+.calculation-result {
+    margin-top: 35px;
+    padding: 43px 40px 47px 40px;
+    background-color: #005BFF;
+    color: white;
+}
+
+.calculation-result__price {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 20px;
+    display: block;
+}
+
+.calculation-result__income {
+    font-size: 8rem;
+    margin-top: 8px;
+}
+
 .footer__list__item {
     margin-top: 20px;
 }
@@ -759,6 +884,14 @@ input {
     .business-input {
         font-size: 1.6rem;
         font-weight: 500;
+    }
+
+    .business__btn {
+        font-size: 1.6rem;
+        font-weight: 400;
+        padding: 14px 0;
+        width: 197px;
+        margin: 20px 0 10px 0;
     }
 }
 
@@ -849,6 +982,7 @@ input {
     .teach__show-more-btn {
         margin: 69px 0 60px 0;
     }
+
     /*Business*/
     .business {
         padding: 40px 0;
@@ -860,17 +994,78 @@ input {
         margin-bottom: 40px;
     }
 
-    .business__btn {
-        font-size: 1.6rem;
-        font-weight: 400;
-        padding: 14px 0;
-        width: 197px;
-        margin: 20px 0 10px 0;
-    }
-
     .business__privacy {
         max-width: 371px;
     }
+
+    /*Calculation*/
+    .income {
+        margin-top: 100px
+    }
+
+    .income__title {
+        font-size: 4rem;
+        line-height: 100%;
+    }
+
+    .income__warning {
+        margin-top: 20px;
+        max-width: 450px;
+    }
+
+    .calculation__title {
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 100%;
+        margin: 23px 0 13px 0;
+    }
+
+    .calculation__info {
+        font-size: 2rem;
+        margin: 0 0 47px 0;
+    }
+
+    .calculation-result {
+        margin-top: 23px;
+        padding: 20px 40px 30px 40px;
+    }
+
+    .calculation-result .calculation__mid-title {
+        font-weight: 400;
+    }
+
+    .calculation-result__price {
+        font-size: 3rem;
+        margin-top: 3px;
+        line-height: 140%;
+    }
+
+    .calculation-result__income {
+        margin: 10px 0 22px 0;
+        line-height: 100%;
+        font-size: 8rem;
+    }
+
+    .invest-price {
+        height: 56px;
+        max-width: 350px;
+        margin-top: 8px;
+    }
+
+    .invest-price__text {
+        font-size: 3rem;
+    }
+
+    .custom-radio-group {
+        margin-top: 8px;
+        gap: 7px;
+    }
+
+    .custom-radio__label {
+        font-size: 1.4rem;
+        padding: 12.5px 23px;
+    }
+
 
     /* Footer */
     .footer__logo {
@@ -930,6 +1125,10 @@ input {
 
     .header__right-side {
         gap: 40px;
+    }
+
+    .invest-price {
+        max-width: 235px;
     }
 }
 
@@ -1055,6 +1254,74 @@ input {
         margin: 15px 0 10px 0;
     }
 
+    /* Income */
+    .income {
+        margin-top: 80px;
+    }
+
+    .income__title {
+        font-size: 2.2rem;
+        line-height: 116%;
+        margin-bottom: 34px;
+    }
+
+    .income__warning {
+        font-size: 1.6rem;
+        margin-top: 10px;
+    }
+
+    .calculation-content, .calculation-header {
+        padding: 0;
+    }
+
+    .calculation-result {
+        margin-top: 20px;
+        padding: 10px 0 10px 0;
+    }
+
+    .calculation__title {
+        font-size: 2.4rem;
+        line-height: 130%;
+        margin: 2px 0 5px 0;
+    }
+
+    .calculation__info {
+        font-size: 1.6rem;
+        margin: 0 0 20px 0;
+    }
+
+    .calculation__mid-title {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .invest-price {
+        height: 51px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .invest-price__text {
+        font-size: 2.8rem;
+    }
+
+    .custom-radio__label {
+        padding: 10px 23px;
+    }
+
+    .calculation-result__price {
+        font-size: 1.6rem;
+        margin-top: 0;
+        line-height: normal;
+    }
+
+    .calculation-result__income {
+        margin: 0 0 19px 0;
+        line-height: 140%;
+        font-size: 3rem;
+    }
+
     /*Footer*/
     .footer__logo {
         max-width: 158px;
@@ -1104,9 +1371,12 @@ input {
         font-size: 2.4rem;
     }
 
+    .input-group__box {
+        margin-bottom: 17px;
+    }
+
     .input-group__input {
         font-weight: 500;
-        /*margin-bottom: 17px;*/
         font-size: 1.6rem;
     }
 
@@ -1125,5 +1395,23 @@ input {
     /* Business */
     .business__btn {
         width: 100%;
+    }
+
+    /* Income */
+    .invest-price {
+        max-width: 100%;
+    }
+
+    .calculation {
+        padding: 0 10px;
+    }
+
+    .calculation-result {
+        margin: 20px -10px 0 -10px;
+    }
+
+    .income {
+        margin-right: 18px;
+        margin-left: 18px;
     }
 }

@@ -44,21 +44,18 @@
         <p class="order-form__title">Заказать звонок</p>
 
         <div class="input-group">
-          <div class="d-flex">
+          <div class="d-flex input-group__box">
             <label class="input-group__label nowrap" for="name"> Меня зовут </label>
-            <!-- add empty class to input -->
             <input type="text" id="name" placeholder="ваше имя" class="input-group__input">
           </div>
 
-          <div class="d-flex">
+          <div class="d-flex input-group__box">
             <label class="input-group__label nowrap" for="phone"> мой телефон </label>
-            <!-- add empty class to input -->
             <input type="text" id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input">
           </div>
 
-          <div class="d-flex">
+          <div class="d-flex input-group__box">
             <label class="input-group__label nowrap" for="email"> моя эл. почта </label>
-            <!-- add empty class to input -->
             <input type="email" id="email" placeholder="здесь@и здесь" class="input-group__input">
           </div>
 
@@ -87,21 +84,18 @@
           <p class="order-form__title">Заказать звонок</p>
 
           <div class="input-group">
-            <div class="d-flex">
+            <div class="d-flex input-group__box">
               <label class="input-group__label nowrap" for="name1"> Меня зовут </label>
-              <!-- add empty class to input -->
               <input type="text" id="name1" placeholder="ваше имя" class="input-group__input">
             </div>
 
-            <div class="d-flex">
+            <div class="d-flex input-group__box">
               <label class="input-group__label nowrap" for="phone1"> мой телефон </label>
-              <!-- add empty class to input -->
               <input type="text" id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input">
             </div>
 
-            <div class="d-flex">
+            <div class="d-flex input-group__box">
               <label class="input-group__label nowrap" for="email1"> моя эл. почта </label>
-              <!-- add empty class to input -->
               <input type="email" id="email1" placeholder="здесь@и здесь" class="input-group__input">
             </div>
 
@@ -139,7 +133,7 @@
     </div>
   </div>
 
-  <!--Header-->
+  <!-- Header -->
   <header class="header dark">
     <div class="header__container container">
       <div class="row">
@@ -210,7 +204,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 px-0">
-            <h1 class="main-title__title">ОТКРЫВАЕМ ТОВАРНЫЙ БИЗНЕС ПОД КЛЮЧ С ГАРАНТИЕЙ ПРИБЫЛИ <span class="main-title__title-blue nowrap">на ozon и wb</span></h1>
+            <h1 class="main-title__title">ОТКРЫВАЕМ ТОВАРНЫЙ БИЗНЕС ПОД КЛЮЧ С ГАРАНТИЕЙ ПРИБЫЛИ <span class="blue nowrap">на ozon и wb</span></h1>
           </div>
         </div>
       </div>
@@ -230,7 +224,7 @@
     <div class="container-fluid dark">
       <div class="marquee position-relative">
         <div class="marquee__track">
-          <p class="marquee__text">115+ лет ведем бизнес мы гарантируем успех</p>
+          <p class="marquee__text">115+ лет ведем бизнес 115+ лет ведем бизнес</p>
         </div>
       </div>
 
@@ -401,18 +395,15 @@
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
           <label class="business__input-label input-group__label nowrap" for="name3"> Меня зовут </label>
-          <!-- add empty class to input -->
           <input type="text" id="name3" placeholder="ваше имя" class="business-input input-group__input">
         </div>
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
           <label class="business__input-label input-group__label nowrap" for="phone3"> мой телефон </label>
-          <!-- add empty class to input -->
           <input type="text" id="phone3" placeholder="+7 (999) 999 99-99" class="business-input input-group__input">
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
           <label class="business__input-label input-group__label nowrap" for="email3"> моя эл. почта </label>
-          <!-- add empty class to input -->
           <input type="email" id="email3" placeholder="здесь@и здесь" class="business-input input-group__input">
         </div>
 
@@ -426,7 +417,83 @@
     </div>
   </section>
 
-  <!--  Footer -->
+  <!-- Income -->
+  <section class="income" id="income">
+    <h2 class="income__title">Ваш доход составит <span class="blue">30-40% <br> от продажи</span> товаров</h2>
+
+    <!-- calculate income -->
+    <div class="container calculation calculate-container">
+      <div class="row calculation-header">
+        <div class="col-12 col-xl-6">
+          <h2 class="calculation__title blue">Рассчитать прибыль</h2>
+        </div>
+        <div class="col-12 col-xl-6">
+          <p class="calculation__info blue">основные расходы: налоги, комиссия маркетплейса, затраты на логистику, хранение и продвижение товара</p>
+        </div>
+      </div>
+
+      <div class="row calculation-content">
+        <div class="col-12 col-md-6">
+          <p class="calculation__mid-title">Вложения от 300 000 ₽</p>
+          <div class="invest-price blue-bordered bordered-lg">
+            <span class="invest-price__text">300 000 ₽</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="calculation__mid-title">Период работы</p>
+          <div class="custom-radio-group">
+            <div class="custom-radio">
+              <input class="custom-radio__input" id="radio-1" type="radio" name="radio" value=3">
+              <label class="custom-radio__label blue-bordered" for="radio-1">3 месяца</label>
+            </div>
+
+            <div class="custom-radio">
+              <input class="custom-radio__input" id="radio-2" type="radio" name="radio" value="6">
+              <label class="custom-radio__label blue-bordered" for="radio-2">6 месяцев</label>
+            </div>
+
+            <div class="custom-radio">
+              <input class="custom-radio__input" id="radio-3" type="radio" name="radio" value="9">
+              <label class="custom-radio__label blue-bordered" for="radio-3">9 месяцев</label>
+            </div>
+
+            <div class="custom-radio">
+              <input class="custom-radio__input" id="radio-4" type="radio" name="radio" value="12" checked>
+              <label class="custom-radio__label blue-bordered" for="radio-4">12 месяцев</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row calculation-result">
+        <div class="col-12 col-xl-6 order-xl-2">
+          <p class="calculation__mid-title">Чистая прибыль</p>
+          <span class="calculation-result__income calculation-result__price">1 284 000 ₽</span>
+        </div>
+        <div class="col-6 col-xl-3 order-xl-0">
+          <p class="calculation__mid-title">Оборот</p>
+          <span class="calculation-result__price">3 600 000 ₽</span>
+        </div>
+        <div class="col-6 col-xl-3 order-xl-1">
+          <p class="calculation__mid-title">Расходы</p>
+          <span class="calculation-result__price">1 584 000 ₽</span>
+        </div>
+      </div>
+    </div>
+
+    <div class=" d-flex justify-content-center text-center">
+      <p class="income__warning">В калькуляторе представлены прогназируемые данные <span class="nowrap">с учетом 30-дневного месяца</span></p>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee position-relative my-5">
+    <div class="marquee__track">
+      <p class="marquee__text">мы гарантируем успех мы гарантируем успех</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer class="footer dark">
     <div class="footer__container container">
       <div class="row d-flex justify-content-end">
