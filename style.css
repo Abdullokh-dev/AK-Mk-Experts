@@ -19,6 +19,25 @@ input {
     white-space: nowrap;
 }
 
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.privacy-text {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration-line: underline;
+}
+
+.privacy-text:hover {
+    text-decoration: none;
+}
+
 .logo {
     width: 100%;
 }
@@ -56,10 +75,10 @@ input {
     display: flex;
     font-size: 1.6rem;
     font-weight: 400;
+    line-height: normal;
     border: 1px solid white;
     border-radius: 35px;
-    padding: 10px 16px;
-    line-height: normal;
+    padding: 8px 16px;
     transition: border-color .3s, color .3s;
 }
 
@@ -181,7 +200,7 @@ input {
     font-weight: 400;
     outline: none;
     text-align: center;
-    margin-bottom: 48px;
+    /*margin-bottom: 48px;*/
     font-size: 2.2rem;
     width: 100%;
 }
@@ -241,10 +260,7 @@ input {
     display: block;
     color: #222222;
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 400;
     line-height: normal;
-    text-decoration-line: underline;
     opacity: .8;
 }
 
@@ -332,9 +348,11 @@ input {
     background-color: #005BFF;
     color: white;
     border-radius: 35px;
-    padding: 14px 24px;
-    font-size: 2rem;
+    padding: 15px 24px;
+    font-size: 2.8rem;
     font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
     transition: background-color.3s;
 }
 
@@ -518,25 +536,88 @@ input {
     text-decoration: underline;
 }
 
-.accordion__show-more-btn {
+.teach__show-more-btn {
     font-family: "Cygre SemiBold", sans-serif;
     width: 100%;
     background: none;
     border: 1px solid #005BFF;
     color: #005BFF;
     border-radius: 35px;
-    padding: 22px 0;
+    padding: 15px 0;
     font-size: 3.2rem;
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
-    margin-top: 80px;
+    margin: 80px 0;
     transition: background-color .3s, color .3s;
 }
 
-.accordion__show-more-btn:hover {
+.teach__show-more-btn:hover {
     background-color: #005BFF;
     color: white;
+}
+
+/*Business*/
+.business {
+    background-color: #005BFF;
+    padding: 40px 0 60px 0;
+}
+
+.business__input-label {
+    color: white;
+}
+
+.business-input {
+    color: white;
+    border-color: white;
+    max-width: 203px;
+}
+
+.business-input::placeholder {
+    color: white;
+}
+
+.business__input-group {
+    margin-bottom: 20px;
+}
+
+.business-input-group {
+    color: white;
+}
+
+.business__title {
+    color: white;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.business__btn {
+    color: white;
+    border: 1px solid white;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: normal;
+    padding: 15px 0;
+    border-radius: 35px;
+    text-align: center;
+    display: inline-block;
+    width: 339px;
+    margin: 60px 0 14px 0;
+    transition: background-color .3s, border-color .3s;
+}
+
+.business__btn:hover {
+    background-color: #222222;
+    border-color: #222222;
+}
+
+.business__privacy {
+    color: white;
+    opacity: .8;
 }
 
 /* Footer */
@@ -633,28 +714,16 @@ input {
 }
 
 .footer__privacy__text {
-    font-family: "Noto Sans", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-    text-decoration: underline;
     color: white;
     display: block;
     margin-top: 33px;
-}
-
-.footer__privacy__text:hover {
-    text-decoration: none;
 }
 
 .footer__bottom {
     font-family: "Noto Sans", sans-serif;
     color: white;
     margin-top: 16px;
-    font-size: 12px;
-}
-
-.footer__bottom__text {
-    width: 50%;
+    font-size: 1.2rem;
 }
 
 /*Animations*/
@@ -682,6 +751,15 @@ input {
         margin-top: -50px;
     }
 
+    /*Business*/
+    .business__input-label {
+        font-size: 2.4rem;
+    }
+
+    .business-input {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -702,7 +780,7 @@ input {
     }
 
     .blur-btn-group__link {
-        padding: 22px 24px;
+        padding: 16px 24px;
         font-size: 1.8rem;
     }
 
@@ -768,9 +846,32 @@ input {
         max-width: 89%;
     }
 
-    .accordion__show-more-btn {
-        margin-top: 69px;
+    .teach__show-more-btn {
+        margin: 69px 0 60px 0;
     }
+    /*Business*/
+    .business {
+        padding: 40px 0;
+    }
+
+    .business__title {
+        font-size: 3.6rem;
+        line-height: 140%;
+        margin-bottom: 40px;
+    }
+
+    .business__btn {
+        font-size: 1.6rem;
+        font-weight: 400;
+        padding: 14px 0;
+        width: 197px;
+        margin: 20px 0 10px 0;
+    }
+
+    .business__privacy {
+        max-width: 371px;
+    }
+
     /* Footer */
     .footer__logo {
         max-width: 228px;
@@ -861,7 +962,7 @@ input {
     /* Blur Buttons Group */
     .blur-btn-group {
         display: block;
-        padding: 15px 40px;
+        padding: 15px 41px;
         border-radius: 114px;
         bottom: 33px;
     }
@@ -931,11 +1032,27 @@ input {
         max-width: calc(100% - 38px);
     }
 
-    .accordion__show-more-btn {
-        padding: 17px 0;
+    .teach__show-more-btn {
+        padding: 14px 0;
         font-size: 1.6rem;
         font-weight: 400;
-        margin-top: 30px;
+        margin: 30px 0 60px 0;
+    }
+
+    /*Business*/
+    .business__title {
+        font-size: 3rem;
+        line-height: 100%;
+        margin-bottom: 48px;
+        text-align: left;
+    }
+
+    .business__input-group {
+        margin-bottom: 17px;
+    }
+
+    .business__btn {
+        margin: 15px 0 10px 0;
     }
 
     /*Footer*/
@@ -989,7 +1106,7 @@ input {
 
     .input-group__input {
         font-weight: 500;
-        margin-bottom: 17px;
+        /*margin-bottom: 17px;*/
         font-size: 1.6rem;
     }
 
@@ -1003,5 +1120,10 @@ input {
     /* Modal */
     .modal__body {
         margin: 0 10px;
+    }
+
+    /* Business */
+    .business__btn {
+        width: 100%;
     }
 }

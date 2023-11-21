@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Mk Expert</title>
   <link rel="stylesheet" href="./assets/styles/reset.css">
-<!--  <link rel="stylesheet" href="./assets/styles/bootstrap-grid.css">-->
   <link rel="stylesheet" href="./assets/styles/bootstrap-grid-npm.css">
   <link rel="stylesheet" href="./assets/styles/fonts.css">
   <link rel="stylesheet" href="./style.css">
@@ -46,26 +45,26 @@
 
         <div class="input-group">
           <div class="d-flex">
-            <label class="input-group__label" for="name" style="white-space: nowrap"> Меня зовут </label>
+            <label class="input-group__label nowrap" for="name"> Меня зовут </label>
             <!-- add empty class to input -->
             <input type="text" id="name" placeholder="ваше имя" class="input-group__input">
           </div>
 
           <div class="d-flex">
-            <label class="input-group__label" for="phone" style="white-space: nowrap"> мой телефон </label>
+            <label class="input-group__label nowrap" for="phone"> мой телефон </label>
             <!-- add empty class to input -->
             <input type="text" id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input">
           </div>
 
           <div class="d-flex">
-            <label class="input-group__label" for="email" style="white-space: nowrap"> моя эл. почта </label>
+            <label class="input-group__label nowrap" for="email"> моя эл. почта </label>
             <!-- add empty class to input -->
             <input type="email" id="email" placeholder="здесь@и здесь" class="input-group__input">
           </div>
 
           <button class="order-form__submit-btn" type="submit"> отправить </button>
 
-          <a href="#" class="order-form__privacy-link">
+          <a href="#" class="order-form__privacy-link privacy-text">
             Нажимая кнопку, я принимаю Политику в <br>
             отношении обработки персональных данных
           </a>
@@ -89,26 +88,26 @@
 
           <div class="input-group">
             <div class="d-flex">
-              <label class="input-group__label" for="name1" style="white-space: nowrap"> Меня зовут </label>
+              <label class="input-group__label nowrap" for="name1"> Меня зовут </label>
               <!-- add empty class to input -->
               <input type="text" id="name1" placeholder="ваше имя" class="input-group__input">
             </div>
 
             <div class="d-flex">
-              <label class="input-group__label" for="phone1" style="white-space: nowrap"> мой телефон </label>
+              <label class="input-group__label nowrap" for="phone1"> мой телефон </label>
               <!-- add empty class to input -->
               <input type="text" id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input">
             </div>
 
             <div class="d-flex">
-              <label class="input-group__label" for="email1" style="white-space: nowrap"> моя эл. почта </label>
+              <label class="input-group__label nowrap" for="email1"> моя эл. почта </label>
               <!-- add empty class to input -->
               <input type="email" id="email1" placeholder="здесь@и здесь" class="input-group__input">
             </div>
 
             <button class="order-form__submit-btn" type="submit"> отправить </button>
 
-            <a href="#" class="order-form__privacy-link">
+            <a href="#" class="order-form__privacy-link privacy-text">
               Нажимая кнопку, я принимаю Политику в <br>
               отношении обработки персональных данных
             </a>
@@ -121,7 +120,7 @@
   <!-- Modal Success -->
   <div class="success-modal modal" id="modalSuccess" style="display: none;">
     <div class="success-modal__content modal__body">
-      <div class="modal__content" style="text-align: center">
+      <div class="modal__content text-center">
         <button class="close-btn">
           <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
@@ -209,7 +208,11 @@
     <!-- title -->
     <div class="main-title dark">
       <div class="container">
-        <h1 class="main-title__title">ОТКРЫВАЕМ ТОВАРНЫЙ БИЗНЕС ПОД КЛЮЧ С ГАРАНТИЕЙ ПРИБЫЛИ <span class="main-title__title-blue nowrap">на ozon и wb</span></h1>
+        <div class="row">
+          <div class="col-12 px-0">
+            <h1 class="main-title__title">ОТКРЫВАЕМ ТОВАРНЫЙ БИЗНЕС ПОД КЛЮЧ С ГАРАНТИЕЙ ПРИБЫЛИ <span class="main-title__title-blue nowrap">на ozon и wb</span></h1>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -305,6 +308,7 @@
     </div>
   </section>
 
+  <!-- Teach -->
   <section class="teach" id="teach">
     <div class="container">
         <!-- title -->
@@ -381,15 +385,48 @@
         </div>
 
         <div class="col-12">
-          <button class="accordion__show-more-btn">посмотреть всю программу</button>
+          <button class="teach__show-more-btn">посмотреть всю программу</button>
         </div>
-
-<!--        <iframe width="560" height="315" src="https://www.youtube.com/embed/qcBUC6h95UE?si=Lij2tAZky-nxJ8T8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
       </div>
     </div>
   </section>
 
-    <!--  Footer -->
+  <!-- Business -->
+  <section class="business" id="business">
+    <div class="container">
+      <form class="row" action="">
+        <div class="col-12">
+          <h2 class="business__title">Привет, МК ЭКСПЕРТ <br> хочу начать свой бизнес</h2>
+        </div>
+
+        <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
+          <label class="business__input-label input-group__label nowrap" for="name3"> Меня зовут </label>
+          <!-- add empty class to input -->
+          <input type="text" id="name3" placeholder="ваше имя" class="business-input input-group__input">
+        </div>
+        <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
+          <label class="business__input-label input-group__label nowrap" for="phone3"> мой телефон </label>
+          <!-- add empty class to input -->
+          <input type="text" id="phone3" placeholder="+7 (999) 999 99-99" class="business-input input-group__input">
+        </div>
+
+        <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
+          <label class="business__input-label input-group__label nowrap" for="email3"> моя эл. почта </label>
+          <!-- add empty class to input -->
+          <input type="email" id="email3" placeholder="здесь@и здесь" class="business-input input-group__input">
+        </div>
+
+        <div class="col-12 text-center">
+          <a href="#" class="business__btn">личный кабинет</a>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="business__privacy privacy-text">Нажимая кнопку, я принимаю Политику в отношении <span class="nowrap">обработки персональных данных</span></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!--  Footer -->
   <footer class="footer dark">
     <div class="footer__container container">
       <div class="row d-flex justify-content-end">
@@ -447,14 +484,18 @@
             <a class="footer__btn-link  footer__btn-down" href="" target="_blank">Скачать договор</a>
             <a class="footer__btn-link footer__btn-cab" href="" target="_blank">личный кабинет</a>
           </div>
-          <a href="" target="_blank" class="footer__privacy__text">Политика в отношении обработки персональных данных</a>
+          <a href="" target="_blank" class="footer__privacy__text privacy-text">Политика в отношении обработки персональных данных</a>
         </div>
 
         <div class="col-12 footer__bottom">
-         <div class="d-flex justify-content-between">
-           <p class="footer__bottom__text">© 2023 All Rights Reserved</p>
-           <p class="footer__bottom__text">Сделано командой Office Media Crew</p>
-         </div>
+          <div class="row px-sm-3">
+            <div class="col-6">
+              <p class="footer__bottom__text">© 2023 All Rights Reserved</p>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+              <p class="footer__bottom__text">Сделано командой Office Media Crew</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

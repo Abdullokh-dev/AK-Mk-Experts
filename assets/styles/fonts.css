@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Cygre SemiBold';
-    src: url('../fonts/Cygre-SemiBold/Cygre-Thin-100.ttf') format('truetype');
+    src: url('../fonts/Cygre-SemiBold/Cygre-Thin.ttf') format('truetype');
     font-style: normal;
     font-weight: 100;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Cygre SemiBold';
-    src: url('../fonts/Cygre-SemiBold/Cygre-ExtraLight-200.ttf') format('truetype');
+    src: url('../fonts/Cygre-SemiBold/Cygre-Light.ttf') format('truetype');
     font-style: normal;
     font-weight: 200;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Cygre SemiBold';
-    src: url('../fonts/Cygre-SemiBold/Cygre-Light-300.ttf') format('truetype');
+    src: url('../fonts/Cygre-SemiBold/Cygre-Book.ttf') format('truetype');
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -24,11 +24,52 @@
 
 @font-face {
     font-family: 'Cygre SemiBold';
-    src: url('../fonts/Cygre-SemiBold/Cygre-Regular-400.ttf') format('truetype');
+    src: url('../fonts/Cygre-SemiBold/Cygre-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Cygre SemiBold';
+    src: url('../fonts/Cygre-SemiBold/Cygre-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cygre SemiBold';
+    src: url('../fonts/Cygre-SemiBold/Cygre-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cygre SemiBold';
+    src: url('../fonts/Cygre-SemiBold/Cygre-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cygre SemiBold';
+    src: url('../fonts/Cygre-SemiBold/Cygre-Black.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cygre SemiBold';
+    src: url('../fonts/Cygre-SemiBold/Cygre-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+}
+
 
 /*!* Noto Sans *!*/
 /*@font-face {*/
