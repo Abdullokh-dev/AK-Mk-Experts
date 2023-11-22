@@ -23,6 +23,10 @@ input {
     text-align: right;
 }
 
+.text-left {
+    text-align: left;
+}
+
 .text-center {
     text-align: center;
 }
@@ -379,7 +383,14 @@ input {
     height: 210px;
     overflow-x: hidden;
     font-family: 'Noto Sans', sans-serif;
-    margin-top: -40px;
+}
+
+.marquee-first {
+    margin-top: -65px;
+}
+
+.marquee-second {
+    margin-top: 178px;
 }
 
 .marquee__track {
@@ -402,7 +413,7 @@ input {
 /* For Whom */
 .for-whom {
     color: white;
-    padding: 60px 0 80px 0;
+    padding: 50px 0 75px 0;
 }
 
 .for-whom__items, .for-whom__item {
@@ -425,7 +436,6 @@ input {
 .for-whom__item__title {
     font-size: 1.8rem;
     font-weight: 900;
-    margin-bottom: 2px;
     line-height: normal;
     text-transform: uppercase;
 }
@@ -524,7 +534,6 @@ input {
 }
 
 .accordion__panel {
-    padding-top: 10px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -625,71 +634,6 @@ input {
 .business__privacy {
     color: white;
     opacity: .8;
-}
-
-/* Footer */
-.footer{
-    margin-top: 70px;
-    padding: 25px 0 60px 0;
-}
-
-.footer__logo {
-    margin-top: 30px;
-    max-width: 316px;
-}
-
-.footer__link {
-    color: white;
-}
-
-.footer__contact {
-    margin-top: 60px;
-    font-family: "Noto Sans", sans-serif;
-}
-
-.footer__email, .footer__address {
-    font-size: 2.2rem;
-}
-
-.footer__tel-icon, .footer__mail__icon {
-    margin-right: 10px;
-}
-
-.footer__map__icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.footer__address {
-    position: absolute;
-    left: 34px;
-}
-
-.footer__link {
-    position: relative;
-}
-
-.footer__contact__item {
-    margin-top: 16px;
-}
-
-.footer__phone {
-    font-size: 3.8rem;
-    line-height: normal;
-    font-weight: 400;
-}
-
-.footer__list {
-    font-size: 3rem;
-    color: white;
-    line-height: 100%;
-    font-weight: 600;
-}
-
-.list__title {
-    font-size: 6rem;
-    line-height: 101%;
 }
 
 /*Income*/
@@ -808,6 +752,152 @@ input {
 .calculation-result__income {
     font-size: 8rem;
     margin-top: 8px;
+}
+
+/*Success*/
+.success {
+    font-family: "Noto Sans", sans-serif;
+}
+
+.success-box-first {
+    padding-right: 35px !important;
+}
+
+.success-box-last {
+    padding-left: 35px !important;
+}
+
+.success__hr {
+    height: 1px;
+    width: 100%;
+    background-color: #222222;
+    opacity: .2;
+    margin: 20px 0;
+}
+
+.success__title {
+    font-family: "Cygre SemiBold", sans-serif;
+    font-size: 9rem;
+    font-weight: 900;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0 120px 0;
+}
+
+.success__logo {
+    max-width: 204px;
+}
+
+.success__mid-title {
+    font-family: "Cygre SemiBold", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 132%;
+    text-transform: uppercase;
+    margin: 26px 0 20px 0;
+    max-width: 343px;
+}
+
+.success__info {
+    font-size: 1.6rem;
+    line-height: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.success__description {
+    font-size: 1.4rem;
+    line-height: normal;
+}
+
+.success__btn-link {
+    background-color: #005BFF;
+    border-radius: 35px;
+    color: white;
+    font-size: 1.6rem;
+    padding: 16px 24px;
+    line-height: normal;
+    transition: background-color .3s;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 431px;
+}
+
+.success__btn-link:hover {
+    background-color: #222222;
+}
+
+.success__btn-link--first {
+    margin-top: 26px;
+}
+
+.success__btn-link--second {
+    margin-top: 18px;
+}
+
+/* Footer */
+.footer{
+    margin-top: 70px;
+    padding: 25px 0 60px 0;
+}
+
+.footer__logo {
+    margin-top: 30px;
+    max-width: 316px;
+}
+
+.footer__link {
+    color: white;
+}
+
+.footer__contact {
+    margin-top: 60px;
+}
+
+.footer__email, .footer__address {
+    font-size: 2.2rem;
+}
+
+.footer__tel-icon, .footer__mail__icon {
+    margin-right: 10px;
+}
+
+.footer__map__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.footer__address {
+    position: absolute;
+    left: 34px;
+}
+
+.footer__link {
+    position: relative;
+}
+
+.footer__contact__item {
+    margin-top: 16px;
+}
+
+.footer__phone {
+    font-size: 3.8rem;
+    line-height: normal;
+    font-weight: 400;
+}
+
+.footer__list {
+    font-size: 3rem;
+    color: white;
+    line-height: 100%;
+    font-weight: 600;
+}
+
+.list__title {
+    font-size: 6rem;
+    line-height: 101%;
 }
 
 .footer__list__item {
@@ -1066,6 +1156,32 @@ input {
         padding: 12.5px 23px;
     }
 
+    /*Success*/
+    .success-box {
+        margin-bottom: 80px;
+    }
+
+    .success__title {
+        font-size: 5.4rem;
+        line-height: 120%;
+        margin: 75px 0 50px 0;
+    }
+
+    .marquee-second {
+        margin-top: 100px;
+    }
+
+    .success-box-first {
+        padding-right: 10px !important;
+    }
+
+    .success-box-last {
+        padding-left: 10px !important;
+    }
+
+    .success__hr {
+        /*margin: 19px 0;*/
+    }
 
     /* Footer */
     .footer__logo {
@@ -1180,7 +1296,14 @@ input {
     /* Marquee */
     .marquee {
         height: 65px;
+    }
+
+    .marquee-first {
         margin-top: -18px;
+    }
+
+    .marquee-second {
+        margin-top: 100px;
     }
 
     .marquee__text {
@@ -1204,6 +1327,7 @@ input {
     .for-whom__item {
         margin-bottom: 26px;
     }
+
     /* Teach */
     .teach__title {
         font-size: 3.3rem;
@@ -1213,7 +1337,6 @@ input {
 
     .accordion {
         margin-top: 20px;
-        /*margin-bottom: ;*/
     }
 
     .accordion__order {
@@ -1267,6 +1390,7 @@ input {
 
     .income__warning {
         font-size: 1.6rem;
+        font-weight: 400;
         margin-top: 10px;
     }
 
@@ -1322,6 +1446,26 @@ input {
         font-size: 3rem;
     }
 
+    /*Success*/
+    .success-box {
+        margin-bottom: 58px;
+    }
+
+    .success__title {
+        font-size: 2.8rem;
+        margin: 65px 0 40px 0;
+    }
+
+    .marquee-second {
+        margin-top: 80px;
+    }
+
+    .success__mid-title {
+        font-size: 1.8rem;
+        line-height: 140%;
+        margin: 26px 0 25px 0;
+    }
+
     /*Footer*/
     .footer__logo {
         max-width: 158px;
@@ -1335,7 +1479,6 @@ input {
     .footer__btn-link {
         /*display: block;*/
     }
-
 }
 
 @media (max-width: 575px) {
