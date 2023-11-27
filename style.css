@@ -157,7 +157,6 @@ input {
     width: 100%;
 }
 
-
 /*Offcanvas*/
 .offcanvas {
     position: fixed;
@@ -398,8 +397,16 @@ input {
     margin-top: -65px;
 }
 
+.marquee-china-first {
+    margin-top: -11px;
+}
+
 .marquee-second {
     margin-top: 178px;
+}
+
+.marquee-china-second {
+    margin-top: 130px;
 }
 
 .marquee__track {
@@ -474,11 +481,6 @@ input {
 
 /* Accordion */
 .teach__title {
-    color: #005BFF;
-    font-size: 9rem;
-    font-weight: 900;
-    line-height: 100%;
-    text-transform: uppercase;
     margin-top: 120px;
 }
 
@@ -508,7 +510,7 @@ input {
     transition: 0.2s;
 }
 
-.accordion__item.active, .accordion__item:hover {
+.accordion__item--arrow.active, .accordion__item--arrow:hover {
     color: #005BFF;
 }
 
@@ -522,7 +524,7 @@ input {
     margin-right: 47px;
 }
 
-.accordion__item:after {
+.accordion__item--arrow:after {
     flex-shrink: 0;
     content: '';
     background-image: url("./assets/images/arrow.svg");
@@ -957,6 +959,7 @@ input {
 }
 
 .answer__prev-btn, .answer__next-btn {
+    display: flex;
     font-size: 4.8rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -967,7 +970,19 @@ input {
     gap: 16px;
 }
 
+.answer__prev-btn {
+    display: none;
+}
+
 .title {
+    font-size: 9rem;
+    font-weight: 900;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.title-blue {
+    color: #005BFF;
     font-size: 9rem;
     font-weight: 900;
     line-height: 100%;
@@ -1220,6 +1235,91 @@ input {
     background-color: #222;
     color: white;
 }
+
+/*China*/
+.china__slide__prev {
+    left: 20px;
+}
+
+.china__slide__next {
+    right: 20px;
+}
+
+.china__slide__box {
+    height: 657px;
+    background-color: #8C8C8C;
+}
+
+.accordion-china__item {
+    cursor: unset !important;
+    padding: 0 !important;
+}
+
+.china-navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: auto 0;
+}
+
+.china-navigation__inner {
+    height: 100%;
+}
+
+.accordion-list {
+    list-style-type: decimal;
+    padding-left: 30px;
+    margin: 5px 0 0;
+}
+
+.accordion-list__item::marker {
+    font-family: "Noto Sans", sans-serif;
+}
+
+.business-china {
+    margin-top: 80px;
+}
+
+.success-china-box-first {
+    padding-right: 45px !important;
+}
+
+.success-china-box-last {
+    padding-left: 55px !important;
+}
+
+.china-to-russia__title {
+    max-width: 1200px;
+}
+
+.china-to-russia {
+    margin-top: 120px;
+    padding: 90px 0 80px 0;
+}
+
+.china-to-russia__info,
+.china-to-russia__mid-info {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 2.2rem;
+    line-height: normal;
+}
+
+.china-to-russia__tel,
+.china-to-russia__email {
+    margin-top: 80px;
+    display: inline-block;
+}
+
+.china-to-russia__info {
+    margin-top: 30px;
+}
+
+.china-to-russia__mid-info {
+    margin-top: 22px;
+}
+
 
 /* Footer */
 .footer {
@@ -1607,7 +1707,7 @@ input {
         margin: 75px 0 50px 0;
     }
 
-    .marquee-second {
+    .marquee-second, .marquee-china-second {
         margin-top: 100px;
     }
 
@@ -1830,6 +1930,40 @@ input {
         margin-top: 20px;
     }
 
+    /*CHINA*/
+    .china__slide__box {
+        height: 450px;
+    }
+
+    .success-china-box-first {
+        padding-right: 18px !important;
+    }
+
+    .success-china-box-last {
+        padding-left: 18px !important;
+    }
+
+    .china-to-russia__title {
+        max-width: 700px;
+    }
+
+    .china-to-russia {
+        margin-top: 0;
+        padding: 70px 0 60px 0;
+    }
+
+    .china-to-russia__tel,
+    .china-to-russia__email {
+        margin-top: 60px;
+    }
+
+    .china-to-russia__info {
+        margin-top: 25px;
+    }
+
+    .china-to-russia__mid-info {
+        margin-top: 15px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -1851,6 +1985,13 @@ input {
         height: 23vw;
         max-height: 188px;
     }
+
+    /* China */
+    .work-info__title {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        font-size: 6rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1858,6 +1999,11 @@ input {
         font-size: 2.8rem;
         line-height: 120%;
         letter-spacing: -0.56px;
+    }
+
+    .title-blue {
+        font-size: 3.3rem;
+        line-height: 132%;
     }
 
     .header__right-side {
@@ -1908,8 +2054,8 @@ input {
         margin-top: -18px;
     }
 
-    .marquee-second {
-        margin-top: 100px;
+    .marquee-second, .marquee-china-second {
+        margin-top: 80px;
     }
 
     .marquee__text {
@@ -1940,8 +2086,6 @@ input {
 
     /* Teach */
     .teach__title {
-        font-size: 3.3rem;
-        line-height: 132%;
         margin-top: 33px;
         margin-bottom: 0;
     }
@@ -2064,10 +2208,6 @@ input {
     .success__title {
         font-size: 2.8rem;
         margin: 65px 0 40px 0;
-    }
-
-    .marquee-second {
-        margin-top: 80px;
     }
 
     .success__mid-title {
@@ -2382,6 +2522,43 @@ input {
 
     .position-md-relative {
         position: unset;
+    }
+
+    /* China */
+    .china__slide__box {
+        height: 350px;
+    }
+
+    .work-info__title {
+        margin-top: 33px;
+        margin-bottom: 0;
+    }
+
+    .china-to-russia__title {
+        max-width: 450px;
+    }
+
+    .china-to-russia {
+        margin-top: 0;
+        padding: 40px 0 30px 0;
+    }
+
+    .china-to-russia__info,
+    .china-to-russia__mid-info {
+        font-size: 1.6rem;
+    }
+
+    .china-to-russia__tel,
+    .china-to-russia__email {
+        margin-top: 30px;
+    }
+
+    .china-to-russia__info {
+        margin-top: 20px;
+    }
+
+    .china-to-russia__mid-info {
+        margin-top: 10px;
     }
 }
 
