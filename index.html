@@ -1455,11 +1455,15 @@
 
   // todo
   function plusSlides(n) {
-    if(n === 1 && answers.budget.length === 0) {
+    if(slideIndex + n === 2 && answers.budget.length === 0) {
       return false;
-    } else if (n === 2 && answers.task.length === 0) {
+    }
+
+    if(slideIndex + n === 3 && answers.task.length === 0) {
       return false;
-    } else if (n === 3 && answers.isReportDocument.length === 0) {
+    }
+
+    if(slideIndex + n === 4 && answers.isReportDocument.length === 0) {
       return false;
     }
 
@@ -1470,7 +1474,7 @@
       navigation.style.display = 'none'
     }
 
-    localStorage.setItem('answers', answers);
+    localStorage.setItem('answers', JSON.stringify(answers));
   }
 
   function showSlides(n) {
