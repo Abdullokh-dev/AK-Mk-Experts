@@ -4,6 +4,7 @@ html {
     font-family: "Cygre SemiBold", sans-serif;
     font-size: 62.5%;
     color: #222222;
+    scroll-behavior: smooth !important;
 }
 
 body {
@@ -334,6 +335,10 @@ input {
     padding: 50px 0;
 }
 
+.main-title--china {
+    padding: 50px 0 80px 0;
+}
+
 .main-title__title {
     color: white;
     text-align: center;
@@ -437,6 +442,16 @@ input {
     display: flex;
 }
 
+.for-whom__item {
+    cursor: pointer;
+    color: white;
+}
+
+.for-whom__item:hover .for-whom__item__title {
+    color: #005BFF;
+
+}
+
 .for-whom__title {
     color: white;
     font-size: 3.3rem;
@@ -456,6 +471,7 @@ input {
     margin-bottom: 2px;
     line-height: normal;
     text-transform: uppercase;
+    transition: color .3s;
 }
 
 .for-whom__item__text {
@@ -915,11 +931,34 @@ input {
 }
 
 .tiny-team__slide__prev {
-    left: 18px !important;
+    left: 19px;
 }
 
 .tiny-team__slide__next {
-    right: 18px !important;
+    right: 19px;
+}
+
+/*Navigation*/
+.team__slide__prev {
+    left: 0;
+    width: 38px;
+}
+
+.team__slide__next {
+    right: 0;
+    width: 38px;
+}
+
+.about-us-swiper__prev {
+    left: 18px;
+    width: 38px;
+    top: 45%;
+}
+
+.about-us-swiper__next {
+    right: 18px;
+    width: 38px;
+    top: 45%;
 }
 
 .swiper-slide-thumb-active {
@@ -1320,6 +1359,9 @@ input {
     margin-top: 22px;
 }
 
+.business-china-third {
+    margin: 110px 0 117px;
+}
 
 /* Footer */
 .footer {
@@ -1490,6 +1532,37 @@ input {
 }
 
 @media (max-width: 1199px) {
+    /*Navigation*/
+    .tiny-team__slide__prev {
+        left: 22px;
+    }
+
+    .tiny-team__slide__next {
+        right: 22px;
+    }
+
+    .team__slide__prev {
+        left: 12px;
+    }
+
+    .team__slide__next {
+        right: 12px;
+    }
+
+    .about-us-swiper__prev {
+        left: -21px;
+        top: 35%;
+    }
+
+    .about-us-swiper__next {
+        right: -21px;
+        top: 35%;
+    }
+
+    .about-us-container {
+        padding: 0 25px;
+    }
+
     .header__container {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -1964,6 +2037,10 @@ input {
     .china-to-russia__mid-info {
         margin-top: 15px;
     }
+
+    .business-china-third {
+        margin: 70px 0 0;
+    }
 }
 
 @media (max-width: 991px) {
@@ -1995,6 +2072,41 @@ input {
 }
 
 @media (max-width: 767px) {
+    /*Navigation*/
+    .tiny-team__slide__prev {
+        left: 20px;
+    }
+
+    .tiny-team__slide__next {
+        right: 20px;
+    }
+
+    .team__slide__prev {
+        left: 28px;
+        width: unset;
+    }
+
+    .team__slide__next {
+        right: 28px;
+        width: unset;
+    }
+
+    .about-us-swiper__prev {
+        left: -2px;
+    }
+
+    .about-us-swiper__next {
+        right: -2px;
+    }
+
+    .about-us-container {
+        padding: 0 18px;
+    }
+
+    .about-us-swiper {
+        padding: 0 16px;
+    }
+
     .title {
         font-size: 2.8rem;
         line-height: 120%;
@@ -2269,14 +2381,6 @@ input {
         font-weight: 500;
     }
 
-    .about-us-swiper__next {
-        right: -10px !important;
-    }
-
-    .about-us-swiper__prev {
-        left: -10px !important;
-    }
-
     .about-us-swiper__next, .about-us-swiper__prev {
         top: 38% !important;
     }
@@ -2336,7 +2440,7 @@ input {
     }
 
     .thumbs-swiper__slide {
-        margin: 20px 5px 28px 0;
+        margin: 20px 10px 28px 0;
     }
 
     .marquee-third {
@@ -2559,6 +2663,10 @@ input {
 
     .china-to-russia__mid-info {
         margin-top: 10px;
+    }
+
+    .business-china-third {
+        margin: 50px 0 0;
     }
 }
 

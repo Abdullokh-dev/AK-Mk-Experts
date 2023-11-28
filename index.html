@@ -5,10 +5,10 @@
   <title>Mk Expert</title>
   <link rel="stylesheet" href="./assets/styles/reset.css">
   <link rel="stylesheet" href="./assets/styles/bootstrap-grid-npm.css">
+  <link rel="stylesheet" href="./assets/styles/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="./assets/styles/swiper/navigation.css">
   <link rel="stylesheet" href="./assets/styles/fonts.css">
   <link rel="stylesheet" href="./style.css">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
   <!-- Header Modal -->
@@ -136,7 +136,7 @@
   </div>
 
   <!-- Header -->
-  <header class="header dark">
+  <header class="header dark" id="header">
     <div class="header__container container">
       <div class="row">
         <div class="col-12 d-flex">
@@ -150,16 +150,16 @@
           <nav class="header__nav nav d-none d-xl-flex">
             <ul class="header__nav__list nav__list">
               <li class="header__nav__item nav__item">
-                <a href="#" class="header__nav__link nav__link">начать бизнес</a>
+                <a href="#teach" class="header__nav__link nav__link">начать бизнес</a>
               </li>
               <li class="header__nav__item nav__item">
-                <a href="#" class="header__nav__link nav__link">закупка в китае</a>
+                <a href="./china.html" target="_blank" class="header__nav__link nav__link">закупка в китае</a>
               </li>
               <li class="header__nav__item nav__item">
-                <a href="#" class="header__nav__link nav__link">команда</a>
+                <a href="#our-team" class="header__nav__link nav__link">команда</a>
               </li>
               <li class="header__nav__item nav__item">
-                <a href="#" class="header__nav__link nav__link">новости</a>
+                <a href="#news" class="header__nav__link nav__link">новости</a>
               </li>
             </ul>
           </nav>
@@ -217,8 +217,8 @@
       <img class="company-image d-none d-md-flex" src="https://s3-alpha-sig.figma.com/img/6336/16a5/b4285090e070888ccfb94d56a73f954c?Expires=1702252800&Signature=LY7AGDx1NAk~F52j1XB4LLryqkbetB850xdw54hcKTEWHgJCdcZ9FVwrpE4880e062DvDXC4vBhkoYAmF8rui7ZGpV~L0REgEoXkIJ1B383GmfrNvl-0PbU9cT06XAcaKJKehqcHLr9L94gvt5R3plIm5~FlopTREVI9ZO17QDAxslRHOmSf~x5rXWmVVRYzFlfZR3AFeprUwaxzL7DAFTGXqeu5wqI4yhJ1zCZN0E76dlR-ZWY36fTNojpxOLExE3UJK4Yq6CtkJ9qG~AiGux~bXl5q02S~oXknAFf00i65sWWa702rRL4wKnO1fgxuYiX2JK4mtaB3X5Y9p5bx4Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
 
       <div class="blur-btn-group">
-        <a href="#" class="blur-btn-group__link">хочу начать бизнес</a>
-        <a href="#" class="blur-btn-group__link">поставки из китая</a>
+        <a href="#teach" class="blur-btn-group__link">хочу начать бизнес</a>
+        <a href="./china.html" target="_blank" class="blur-btn-group__link">поставки из китая</a>
       </div>
     </div>
 
@@ -236,7 +236,7 @@
           </div>
 
           <div class="col-12 col-md-4 col-xl-3 col-xxl-2 px-xxl-0">
-            <div class="for-whom__item">
+            <div class="for-whom__item" onclick="scrollElement('teach')">
               <div class="for-whom__icon">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7825 0.0416097C15.8743 0.227368 13.1645 1.01792 10.9316 2.16919C7.76234 3.8043 4.9771 6.29045 3.09798 9.30794C-0.653779 15.3278 -1.04643 22.715 2.18539 29.0826C2.79379 30.2792 3.40218 31.1735 4.12276 32.1541C4.47011 32.625 4.88865 33.1175 5.25757 33.5235L5.88106 34.1521C7.81628 36.0766 10.0557 37.5865 12.6468 38.6038C17.9972 40.7033 23.943 40.4225 29.0453 37.8457C30.3182 37.202 32.4498 35.8045 33.4918 34.7806C33.7334 34.543 33.9017 34.3832 34.1239 34.1607C38.1518 30.141 40.3093 24.646 39.9641 18.7644C39.3427 8.18475 30.1758 -0.684145 18.7803 0.0416097" fill="#005BFF"/>
@@ -260,7 +260,7 @@
               </svg>
             </div>
 
-            <div class="for-whom__item">
+            <div class="for-whom__item" onclick="scrollElement('teach')">
               <div class="for-whom__icon">
                 <svg class="for-whom__icon__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7825 0.0416097C15.8743 0.227368 13.1645 1.01792 10.9316 2.16919C7.76234 3.8043 4.9771 6.29044 3.09799 9.30794C-0.653778 15.3278 -1.04643 22.715 2.18539 29.0826C2.79379 30.2792 3.40218 31.1735 4.12276 32.1541C4.47011 32.625 4.88865 33.1175 5.25757 33.5235L5.88106 34.1521C7.81628 36.0766 10.0557 37.5865 12.6468 38.6038C17.9972 40.7033 23.943 40.4225 29.0453 37.8457C30.3182 37.202 32.4498 35.8066 33.4918 34.7806C33.7334 34.543 33.9017 34.3832 34.1239 34.1607C38.1518 30.141 40.3093 24.646 39.9641 18.7644C39.3427 8.18475 30.1758 -0.684145 18.7803 0.0416097" fill="#005BFF"/>
@@ -284,7 +284,7 @@
           </div>
 
           <div class="col-12 col-md-6 col-xl-4 col-xxl-3 px-xxl-0">
-            <div class="for-whom__item for-whom__item-last">
+            <div class="for-whom__item for-whom__item-last" onclick="scrollElement('teach')">
               <div class="for-whom__icon icon-last">
                 <svg class="for-whom__icon__svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7825 0.0416097C15.8743 0.227368 13.1645 1.01792 10.9316 2.16919C7.76234 3.8043 4.97711 6.29045 3.09799 9.30794C-0.653774 15.3278 -1.04643 22.715 2.18539 29.0826C2.79378 30.2792 3.40219 31.1735 4.12277 32.1541C4.47011 32.625 4.88865 33.1175 5.25757 33.5235L5.88106 34.1521C7.81627 36.0766 10.0557 37.5865 12.6468 38.6038C17.9972 40.7033 23.943 40.4225 29.0453 37.8457C30.3182 37.202 32.4498 35.8045 33.4918 34.7806C33.7334 34.543 33.9017 34.3832 34.1239 34.1607C38.1518 30.141 40.3093 24.646 39.9641 18.7644C39.3427 8.18475 30.1758 -0.684145 18.7803 0.0416097" fill="#005BFF"/>
@@ -593,7 +593,7 @@
           </div>
 
           <div class="d-flex justify-content-center">
-            <a class="success__btn-link success__btn-link--second justify-content-center" href="#" target="_blank">
+            <a class="success__btn-link success__btn-link--second justify-content-center" href="./china.html" target="_blank">
               <span>
                 подробнее о закупке <span class="nowrap">товара в китае</span>
               </span>
@@ -788,9 +788,33 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- If we need navigation buttons -->
-                              <div class="tiny-team__slide__prev swiper-button-prev"></div>
-                              <div class="tiny-team__slide__next swiper-button-next"></div>
+                              <div class="tiny-team__slide__prev swiper-button-prev">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
+
+                              <div class="tiny-team__slide__next swiper-button-next">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -829,9 +853,33 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- If we need navigation buttons -->
-                              <div class="tiny-team__slide__prev swiper-button-prev"></div>
-                              <div class="tiny-team__slide__next swiper-button-next"></div>
+                              <div class="tiny-team__slide__prev swiper-button-prev">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
+
+                              <div class="tiny-team__slide__next swiper-button-next">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -870,9 +918,33 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- If we need navigation buttons -->
-                              <div class="tiny-team__slide__prev swiper-button-prev"></div>
-                              <div class="tiny-team__slide__next swiper-button-next"></div>
+                              <div class="tiny-team__slide__prev swiper-button-prev">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
+
+                              <div class="tiny-team__slide__next swiper-button-next">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -911,9 +983,33 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- If we need navigation buttons -->
-                              <div class="tiny-team__slide__prev swiper-button-prev"></div>
-                              <div class="tiny-team__slide__next swiper-button-next"></div>
+                              <div class="tiny-team__slide__prev swiper-button-prev">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
+
+                              <div class="tiny-team__slide__next swiper-button-next">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -952,9 +1048,33 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- If we need navigation buttons -->
-                              <div class="tiny-team__slide__prev swiper-button-prev"></div>
-                              <div class="tiny-team__slide__next swiper-button-next"></div>
+                              <div class="tiny-team__slide__prev swiper-button-prev">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
+
+                              <div class="tiny-team__slide__next swiper-button-next">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -993,9 +1113,33 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- If we need navigation buttons -->
-                              <div class="tiny-team__slide__prev swiper-button-prev"></div>
-                              <div class="tiny-team__slide__next swiper-button-next"></div>
+                              <div class="tiny-team__slide__prev swiper-button-prev">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
+
+                              <div class="tiny-team__slide__next swiper-button-next">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1034,9 +1178,33 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- If we need navigation buttons -->
-                              <div class="tiny-team__slide__prev swiper-button-prev"></div>
-                              <div class="tiny-team__slide__next swiper-button-next"></div>
+                              <div class="tiny-team__slide__prev swiper-button-prev">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
+
+                              <div class="tiny-team__slide__next swiper-button-next">
+                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                                </svg>
+
+                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1075,8 +1243,26 @@
             </div>
 
             <!-- navigation -->
-            <div class="team__slide__prev swiper-button-prev"></div>
-            <div class="team__slide__next swiper-button-next"></div>
+            <div class="team__slide__prev swiper-button-prev">
+              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+              </svg>
+
+              <svg class="d-none d-md-block" width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.4284 4.09634e-06L36.0975 6.31148e-06L12.8732 28.7305L38 58L24.9446 58C16.6718 48.3793 8.66082 38.4416 -5.1057e-06 29.2012L23.4284 4.09634e-06Z" fill="#005BFF"/>
+              </svg>
+            </div>
+
+            <div class="team__slide__next swiper-button-next">
+              <svg  class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+              </svg>
+
+              <svg class="d-none d-md-block" width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5716 58L1.90254 58L25.1268 29.2695L-5.07052e-06 3.32207e-06L13.0554 2.18072e-06C21.3282 9.62069 29.3392 19.5584 38 28.7988L14.5716 58Z" fill="#005BFF"/>
+              </svg>
+
+            </div>
           </div>
         </div>
       </div>
@@ -1090,10 +1276,10 @@
   </div>
 
   <section class="about-us" id="about-us">
-    <div class="container position-relative">
+    <div class="about-us-container container position-relative">
       <h2 class="about-us__title title">клиенты о нас</h2>
 
-      <div class="swiper about-us-swiper col-xl-12 col-xxl-10">
+      <div class="swiper about-us-swiper col-12 col-xl-10 col-xxl-10">
         <div class="swiper-wrapper">
           <div class="swiper-slide position-relative">
             <div class="d-flex">
@@ -1136,8 +1322,25 @@
       </div>
 
       <!-- navigation buttons -->
-      <div class="swiper-button-prev about-us-swiper__prev"></div>
-      <div class="swiper-button-next about-us-swiper__next"></div>
+      <div class="swiper-button-prev about-us-swiper__prev">
+        <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+        </svg>
+        <svg class="d-none d-md-block" width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.4284 4.09634e-06L36.0975 6.31148e-06L12.8732 28.7305L38 58L24.9446 58C16.6718 48.3793 8.66082 38.4416 -5.1057e-06 29.2012L23.4284 4.09634e-06Z" fill="#005BFF"/>
+        </svg>
+      </div>
+
+      <div class="swiper-button-next about-us-swiper__next">
+        <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+        </svg>
+
+        <svg class="d-none d-md-block" width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.5716 58L1.90254 58L25.1268 29.2695L-5.07052e-06 3.32207e-06L13.0554 2.18072e-06C21.3282 9.62069 29.3392 19.5584 38 28.7988L14.5716 58Z" fill="#005BFF"/>
+        </svg>
+
+      </div>
     </div>
   </section>
 
@@ -1344,6 +1547,19 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
+  const scrollElement = (id) => {
+    document.getElementById(id).scrollIntoView({behavior: "smooth",'top':'top'})
+  }
+
+  window.onscroll = function() {
+    let header = document.getElementById("header")
+    if(window.pageYOffset > 20) {
+      header.classList.add('fixed')
+    } else {
+      header.classList.remove('fixed')
+    }
+  }
+
   const form = document.getElementById('form')
 
   let answers = {
@@ -1422,10 +1638,6 @@
 
   function openForm() {
     modalForm.style.display = 'flex';
-  }
-
-  function slideTo(n) {
-    tinySwiper.slideTo(n)
   }
 
 //  Accordion
