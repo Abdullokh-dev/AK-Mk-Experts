@@ -5,6 +5,7 @@ html {
     font-size: 62.5%;
     color: #222222;
     scroll-behavior: smooth !important;
+    overflow-x: hidden;
 }
 
 body {
@@ -258,6 +259,7 @@ input {
 }
 
 .order-form__submit-btn {
+    color: #222222;
     font-size: 3.2rem;
     font-weight: 500;
     line-height: normal;
