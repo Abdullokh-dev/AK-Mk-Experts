@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News</title>
+  <link rel="stylesheet" href="./assets/styles/reset.css">
+  <link rel="stylesheet" href="assets/styles/bootstrap-grid.css">
+  <link rel="stylesheet" href="./assets/styles/fonts.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- Header Modal -->
+<div class="offcanvas">
+  <div class="offcanvas__header dark">
+    <button class="close-btn">
+      <svg class="close-btn__icon" id="closeBtn" onclick="closeMenu()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="white"/>
+      </svg>
+    </button>
+
+    <nav class="offcanvas__nav nav">
+      <ul class="nav__list">
+        <li class="offcanvas__nav__item nav__item">
+          <a href="#teach" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="./china.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Закупка в китае</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="#our-team" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="#news" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Личный кабинет</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="offcanvas__body">
+    <form class="offcanvas__body__order-form order-form" onsubmit="return submitForm(event)">
+      <p class="order-form__title">Заказать звонок</p>
+
+      <div class="input-group">
+        <div class="d-flex input-group__box">
+          <label class="input-group__label nowrap" for="name"> Меня зовут </label>
+          <input type="text" id="name" placeholder="ваше имя" class="input-group__input">
+        </div>
+
+        <div class="d-flex input-group__box">
+          <label class="input-group__label nowrap" for="phone"> мой телефон </label>
+          <input type="text" id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input">
+        </div>
+
+        <div class="d-flex input-group__box">
+          <label class="input-group__label nowrap" for="email"> моя эл. почта </label>
+          <input type="email" id="email" placeholder="здесь@и здесь" class="input-group__input">
+        </div>
+
+        <button class="order-form__submit-btn" type="submit"> отправить </button>
+
+        <a href="#" class="order-form__privacy-link privacy-text">
+          Нажимая кнопку, я принимаю Политику в <br>
+          отношении обработки персональных данных
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Form -->
+<div class="form-modal modal" id="modalForm" style="display: none">
+  <div class="modal__body">
+    <button class="close-btn">
+      <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
+      </svg>
+    </button>
+
+    <div class="modal__content">
+      <form class="order-form" onsubmit="return submitForm(event)">
+        <p class="order-form__title">Заказать звонок</p>
+
+        <div class="input-group">
+          <div class="d-flex input-group__box">
+            <label class="input-group__label nowrap" for="name1"> Меня зовут </label>
+            <input type="text" id="name1" placeholder="ваше имя" class="input-group__input">
+          </div>
+
+          <div class="d-flex input-group__box">
+            <label class="input-group__label nowrap" for="phone1"> мой телефон </label>
+            <input type="text" id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input">
+          </div>
+
+          <div class="d-flex input-group__box">
+            <label class="input-group__label nowrap" for="email1"> моя эл. почта </label>
+            <input type="email" id="email1" placeholder="здесь@и здесь" class="input-group__input">
+          </div>
+
+          <button class="order-form__submit-btn" type="submit"> отправить </button>
+
+          <a href="#" class="order-form__privacy-link privacy-text">
+            Нажимая кнопку, я принимаю Политику в <br>
+            отношении обработки персональных данных
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Success -->
+<div class="success-modal modal" id="modalSuccess" style="display: none;">
+  <div class="success-modal__content modal__body">
+    <div class="modal__content text-center">
+      <button class="close-btn">
+        <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
+        </svg>
+      </button>
+
+      <div>
+        <svg width="77" height="79" viewBox="0 0 77 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="38.5" cy="40.5" r="37.5" stroke="#005BFF" stroke-width="2"/>
+          <path d="M19 32L35 54L66 6" stroke="#005BFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <p class="success-modal__text d-block">Спасибо! <br> Мы свяжемся с вами <br> в ближайшее время.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header dark" id="header">
+  <div class="header__container container">
+    <div class="row">
+      <div class="col-12 d-flex">
+        <a href="#" class="header__logo logo">
+          <svg width="51" height="40" viewBox="0 0 51 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M27.5817 0.00334544H31.8965C32.0972 0.00334544 32.2578 0.164015 32.2578 0.374894V25.7406C32.2578 25.9481 32.0972 26.1121 31.8965 26.1121H27.5817V0.00669599V0.00334544ZM0 0.00334544H4.35165C4.73966 0.00334544 5.08083 0.137236 5.23469 0.468617L12.7171 17.0343L19.564 0.468617C19.7079 0.137236 20.049 0.00334544 20.4371 0.00334544H24.7318V26.1088H20.417C20.2163 26.1088 20.0557 25.9481 20.0557 25.7372V7.35398L15.1522 18.6444V18.6544L14.3193 20.5724C14.2892 20.6293 14.2625 20.6862 14.2257 20.7331L12.6904 24.1774L10.1316 18.5874L4.66941 7.2569L4.66943 25.4025C4.66943 25.61 4.50888 25.7741 4.30819 25.7741H2.04154e-05L0 0V0.00334544ZM1.49849 38.9054H6.57264V39.9966H0.284312V30.0987H6.29501V31.19H1.49849V34.3866H5.76653V35.4778H1.49849V38.9021V38.9054ZM11.8341 34.0954L14.5735 30.1021H15.9115L12.5465 34.9791L16.0653 40H14.7174L11.8241 35.7958H11.7873L8.88727 40H7.52257L11.0681 34.9523L7.72995 30.1021H9.04783L11.8073 34.0954H11.8374H11.8341ZM18.681 39.9966H17.4668V30.0987H20.2063C20.6143 30.0987 20.9923 30.1289 21.3435 30.1757C21.6947 30.2226 22.0058 30.2996 22.2901 30.4033C22.8888 30.6109 23.3437 30.9356 23.6381 31.3506C23.9425 31.7791 24.093 32.2912 24.093 32.9172C24.093 33.4192 24.006 33.8577 23.7886 34.236C23.5979 34.6243 23.3036 34.9489 22.9256 35.2033C22.5543 35.4611 22.0994 35.6385 21.5509 35.7824C21.009 35.9163 20.3835 35.9732 19.7012 35.9732C19.37 35.9732 19.0289 35.9632 18.6777 35.9364V39.9966H18.681ZM18.681 34.8251C18.8416 34.8452 19.0121 34.8552 19.1928 34.872C19.3634 34.882 19.5239 34.882 19.6945 34.882C20.2531 34.882 20.7381 34.8452 21.1261 34.7481C21.5442 34.6611 21.8553 34.5406 22.1128 34.3699C22.3603 34.1891 22.541 33.9916 22.6614 33.754C22.7651 33.4962 22.8219 33.2218 22.8219 32.9205C22.8219 32.5222 22.735 32.2075 22.5577 31.9632C22.367 31.7255 22.1028 31.5448 21.7716 31.4042C21.5542 31.3272 21.3167 31.2703 21.0425 31.2435C20.7582 31.2134 20.437 31.1967 20.0758 31.1967H18.681V34.8318V34.8251ZM27.3107 38.9054H32.3849V39.9966H26.0999V30.0987H32.1106V31.19H27.3141V34.3866H31.5821V35.4778H27.3141V38.9021L27.3107 38.9054ZM35.6528 35.8962V39.9966H34.4386V30.0987H37.0074C37.4356 30.0987 37.8136 30.1188 38.1179 30.1456C38.4223 30.1757 38.6966 30.2326 38.9341 30.2962C39.6365 30.477 40.1583 30.8084 40.5262 31.2435C40.8875 31.6987 41.0681 32.2577 41.0681 32.9406C41.0681 33.3389 41.0112 33.7004 40.8674 34.0117C40.7537 34.3331 40.5731 34.6109 40.3456 34.8385C40.0981 35.0661 39.8238 35.2569 39.5127 35.4075C39.1816 35.5515 38.8304 35.672 38.4324 35.7289V35.759L41.3624 39.99H40.1483L37.1045 35.8895H35.6528V35.8962ZM35.6528 31.19V34.8151H36.8469C37.2081 34.8151 37.5292 34.795 37.7868 34.7682C38.0444 34.7481 38.2785 34.7013 38.4993 34.6444C38.9073 34.5105 39.2385 34.313 39.4659 34.0184C39.6934 33.754 39.7971 33.3724 39.7971 32.9372C39.7971 32.5021 39.6934 32.1607 39.4826 31.9029C39.2652 31.6452 38.9608 31.4678 38.5829 31.3439C38.4223 31.2971 38.2049 31.2502 37.9474 31.2201C37.7099 31.21 37.4055 31.19 37.0074 31.19H35.6528ZM46.955 39.9966H45.7509V31.19H42.4529V30.0987H50.2564V31.19H46.9584V39.9966H46.955Z" fill="white"/>
+            <path d="M42.5448 0H48.3579L37.7017 13.2094L49.2308 26.6667H43.2405C39.4446 22.2434 35.7689 17.6743 31.7949 13.4258L42.5448 0Z" fill="#005BFF"/>
+          </svg>
+        </a>
+
+        <nav class="header__nav nav d-none d-xl-flex">
+          <ul class="header__nav__list nav__list">
+            <li class="header__nav__item nav__item">
+              <a href="#teach" class="header__nav__link nav__link">начать бизнес</a>
+            </li>
+            <li class="header__nav__item nav__item">
+              <a href="./china.html" target="_blank" class="header__nav__link nav__link">закупка в китае</a>
+            </li>
+            <li class="header__nav__item nav__item">
+              <a href="#our-team" class="header__nav__link nav__link">команда</a>
+            </li>
+            <li class="header__nav__item nav__item">
+              <a href="#news" class="header__nav__link nav__link">новости</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__right-side">
+          <a href="tel:88002223355" class="header__tel tel">8 800 222 33 55</a>
+
+          <button onclick="openForm()" class="header__order-phone-btn order-phone-btn d-none d-xl-flex">заказать звонок</button>
+
+          <a href="" class="header__append d-none d-xl-flex">
+            <svg class="header__append__icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.39131 32.146L4.80623 31.867L4.39131 32.146ZM37.6087 32.146L37.1938 31.867L37.6087 32.146ZM5.81283 34.0142L5.33363 33.8715L5.25581 34.1328L5.43331 34.3397L5.81283 34.0142ZM36.1868 34.0142L36.5663 34.3397L36.7438 34.1328L36.666 33.8715L36.1868 34.0142ZM1.5 21C1.5 10.2304 10.2304 1.5 21 1.5V0.5C9.67816 0.5 0.5 9.67816 0.5 21H1.5ZM21 1.5C31.7696 1.5 40.5 10.2304 40.5 21H41.5C41.5 9.67816 32.3218 0.5 21 0.5V1.5ZM21 40.5C14.2543 40.5 8.30826 37.0751 4.80623 31.867L3.97639 32.425C7.65628 37.8976 13.9074 41.5 21 41.5V40.5ZM4.80623 31.867C2.71835 28.762 1.5 25.024 1.5 21H0.5C0.5 25.229 1.78107 29.1602 3.97639 32.425L4.80623 31.867ZM40.5 21C40.5 25.024 39.2816 28.762 37.1938 31.867L38.0236 32.425C40.2189 29.1602 41.5 25.229 41.5 21H40.5ZM37.1938 31.867C33.6917 37.0751 27.7457 40.5 21 40.5V41.5C28.0926 41.5 34.3437 37.8976 38.0236 32.425L37.1938 31.867ZM24.9444 14.3333C24.9444 16.5118 23.1785 18.2778 21 18.2778V19.2778C23.7307 19.2778 25.9444 17.0641 25.9444 14.3333H24.9444ZM21 18.2778C18.8215 18.2778 17.0556 16.5118 17.0556 14.3333H16.0556C16.0556 17.0641 18.2693 19.2778 21 19.2778V18.2778ZM17.0556 14.3333C17.0556 12.1549 18.8215 10.3889 21 10.3889V9.38889C18.2693 9.38889 16.0556 11.6026 16.0556 14.3333H17.0556ZM21 10.3889C23.1785 10.3889 24.9444 12.1549 24.9444 14.3333H25.9444C25.9444 11.6026 23.7307 9.38889 21 9.38889V10.3889ZM14.3331 28.1666H27.6665V27.1666H14.3331V28.1666ZM14.3331 27.1666C10.0798 27.1666 6.48828 29.9945 5.33363 33.8715L6.29203 34.1569C7.3239 30.6922 10.5342 28.1666 14.3331 28.1666V27.1666ZM21 40.5C15.0761 40.5 9.76944 37.8591 6.19234 33.6887L5.43331 34.3397C9.19229 38.7222 14.7721 41.5 21 41.5V40.5ZM27.6665 28.1666C31.4654 28.1666 34.6757 30.6922 35.7076 34.1569L36.666 33.8715C35.5113 29.9945 31.9198 27.1666 27.6665 27.1666V28.1666ZM35.8073 33.6887C32.2302 37.8591 26.9239 40.5 21 40.5V41.5C27.2279 41.5 32.8073 38.7222 36.5663 34.3397L35.8073 33.6887Z"
+                fill="white"/>
+            </svg>
+          </a>
+
+          <button onclick="openMenu()" class="header__menu-burger d-xl-none">
+            <svg class="d-flex align-self-center" xmlns="http://www.w3.org/2000/svg" width="42" height="15" viewBox="0 0 42 15" fill="none">
+              <path d="M0.5 0.5H41.5" stroke="white"/>
+              <path d="M0.5 14.5H41.5" stroke="white"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ol class="breadcrumb">
+        <li class="breadcrumb__item"><a class="breadcrumb__item__link" href="#">Главная</a></li>
+        <li class="breadcrumb__item active">Новости</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- News -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="news__title title">новости</h2>
+    </div>
+    <div class="col-12 col-md-6 pe-md-3">
+      <div class="news-card">
+        <img class="news-card__img" src="./assets/images/news/img.png" alt="#">
+        <p class="news-card__title">Запустили магазин бытовой техники на
+          <span class="news-item__title__underline">
+            Озоне
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          и
+          <span class="news-item__title__underline">
+            WB
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </p>
+        <a class="news-item__btn--bottom news-card__btn news-item__btn news-item__btn--blue" href="#" target="_blank">Подробнее</a>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 ps-md-3">
+      <div class="news-card">
+        <img class="news-card__img" src="./assets/images/news/img.png" alt="#">
+        <p class="news-card__title">Запустили магазин бытовой техники на
+          <span class="news-item__title__underline">
+            Озоне
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          и
+          <span class="news-item__title__underline">
+            WB
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </p>
+        <a class="news-item__btn--bottom news-item__btn news-item__btn--blue" href="#" target="_blank">Подробнее</a>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 pe-md-3">
+      <div class="news-card">
+        <img class="news-card__img" src="./assets/images/news/img_1.png" alt="#">
+        <p class="news-card__title">Лизинг персонала</p>
+        <p class="news-card__info">Что это и чем он полезен бизнесу?</p>
+        <a class="news-item__btn news-item__btn--blue" href="#" target="_blank">Подробнее</a>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 ps-md-3">
+      <div class="news-card">
+        <img class="news-card__img" src="./assets/images/news/img_2.png" alt="#">
+        <p class="news-card__title">Аутстаффинг персонала</p>
+        <p class="news-card__info">Зачем это нужно?</p>
+        <a class="news-item__btn news-item__btn--blue" href="#" target="_blank">Подробнее</a>
+      </div>
+    </div>
+
+    <div class="col-12 6 pe-md-3">
+      <div class="news-card">
+        <img class="news-card__img" src="./assets/images/news/img_3.png" alt="#">
+        <p class="news-card__title">Грузоперевозки</p>
+        <p class="news-card__info">Все что вы хотели узнать, но боялись спросить.</p>
+        <a class="news-item__btn news-item__btn--blue" href="#" target="_blank">Подробнее</a>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 ps-md-3">
+      <div class="news-card">
+        <img class="news-card__img" src="./assets/images/news/img_4.png" alt="#">
+        <p class="news-card__title">Ночные тусовки на складе</p>
+        <p class="news-card__info">Что? Гда? Как?</p>
+        <a class="news-item__btn news-item__btn--blue" href="#" target="_blank">Подробнее</a>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="news-show-more-btn show-more-btn">посмотреть еще новости</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer dark">
+  <div class="footer__container container">
+    <div class="row d-flex justify-content-end">
+      <div class="col-12 col-md-4 col-xxl-3 pe-md-0">
+        <img class="footer__logo" src="./assets/images/logo.png" alt="Mk Expert">
+
+        <div class="footer__contact">
+          <ul class="footer__contact__list">
+            <li class="footer__contact__item position-relative d-flex">
+              <svg class="footer__tel-icon align-self-center d-inline-flex" width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.0777 4.46825C14.051 4.6573 14.9456 5.1312 15.6468 5.8293C16.348 6.52739 16.824 7.41791 17.0139 8.3869M13.0777 0.5C15.0999 0.723647 16.9856 1.62517 18.4252 3.05655C19.8649 4.48793 20.7728 6.36409 21 8.37697M9.26803 12.2689C8.07064 11.0769 7.12516 9.72901 6.43159 8.29089C6.37193 8.16719 6.3421 8.10534 6.31918 8.02708C6.23774 7.74895 6.29624 7.40742 6.46566 7.17188C6.51333 7.1056 6.57029 7.04889 6.6842 6.93549C7.03259 6.58866 7.20678 6.41524 7.32067 6.24086C7.75016 5.58323 7.75016 4.73543 7.32067 4.07781C7.20678 3.90342 7.03259 3.73001 6.6842 3.38318L6.49001 3.18985C5.96042 2.66263 5.69563 2.39902 5.41124 2.25582C4.84566 1.97103 4.17773 1.97103 3.61215 2.25582C3.32776 2.39902 3.06297 2.66263 2.53338 3.18985L2.37629 3.34624C1.84852 3.87166 1.58463 4.13437 1.38309 4.49154C1.15945 4.88787 0.99865 5.50344 1.00001 5.95803C1.00123 6.36769 1.08106 6.64768 1.24071 7.20764C2.09867 10.217 3.71748 13.0566 6.09714 15.4256C8.47679 17.7947 11.3292 19.4062 14.352 20.2604C14.9145 20.4193 15.1957 20.4988 15.6072 20.5C16.0638 20.5013 16.6822 20.3413 17.0803 20.1186C17.4391 19.918 17.703 19.6553 18.2307 19.1299L18.3878 18.9735C18.9174 18.4462 19.1822 18.1826 19.326 17.8995C19.6121 17.3365 19.6121 16.6715 19.326 16.1085C19.1822 15.8253 18.9174 15.5617 18.3878 15.0345L18.1936 14.8412C17.8452 14.4944 17.671 14.3209 17.4959 14.2076C16.8353 13.78 15.9837 13.78 15.3231 14.2076C15.148 14.3209 14.9738 14.4944 14.6254 14.8412C14.5115 14.9546 14.4545 15.0113 14.3879 15.0588C14.1513 15.2274 13.8083 15.2857 13.5289 15.2046C13.4503 15.1818 13.3881 15.1521 13.2639 15.0927C11.8193 14.4022 10.4654 13.4609 9.26803 12.2689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <a href="tel:88002223355" class="footer__phone footer__link nowrap">8 800 222 33 55</a>
+            </li>
+            <li class="footer__contact__item position-relative pe-2">
+              <svg class="footer__map__icon" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.5C5.47715 0.5 1 5.00454 1 10.5612C1 13.732 2.90868 16.6956 5.57845 19.0235L10.4948 23.3104C10.7847 23.5632 11.2153 23.5632 11.5052 23.3104L16.4216 19.0235C19.0913 16.6956 21 13.732 21 10.5612C21 5.00454 16.5228 0.5 11 0.5Z" stroke="white"/>
+                <path d="M13.8569 10.5611C13.8569 12.1487 12.5777 13.4358 10.9997 13.4358C9.42176 13.4358 8.14258 12.1487 8.14258 10.5611C8.14258 8.97353 9.42176 7.68652 10.9997 7.68652C12.5777 7.68652 13.8569 8.97353 13.8569 10.5611Z" fill="white"/>
+              </svg>
+              <span class="footer__address footer__link">г. Ярославль, <span class="nowrap">ул. Свободы, 46</span></span>
+            </li>
+            <li class="footer__contact__item position-relative d-flex">
+              <svg class="footer__mail__icon align-self-center d-inline-flex" width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.5 14.5L13.8571 8.5M8.14286 8.5L1.50003 14.5M1 3.5L9.16492 9.21544C9.82609 9.67826 10.1567 9.90967 10.5163 9.99931C10.8339 10.0785 11.1661 10.0785 11.4837 9.99931C11.8433 9.90967 12.1739 9.67826 12.8351 9.21544L21 3.5M5.8 16.5H16.2C17.8802 16.5 18.7202 16.5 19.362 16.173C19.9265 15.8854 20.3854 15.4265 20.673 14.862C21 14.2202 21 13.3802 21 11.7V5.3C21 3.61984 21 2.77976 20.673 2.13803C20.3854 1.57354 19.9265 1.1146 19.362 0.82698C18.7202 0.5 17.8802 0.5 16.2 0.5H5.8C4.11984 0.5 3.27976 0.5 2.63803 0.82698C2.07354 1.1146 1.6146 1.57354 1.32698 2.13803C1 2.77976 1 3.61984 1 5.3V11.7C1 13.3802 1 14.2202 1.32698 14.862C1.6146 15.4265 2.07354 15.8854 2.63803 16.173C3.27976 16.5 4.11984 16.5 5.8 16.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <a href="mailto:info@mkexpert.ru" class="footer__email footer__link">info@mkexpert.ru</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- hr -->
+      <div class="col-12 footer__hr d-md-none"></div>
+
+      <div class="col-1 d-none d-lg-flex"></div>
+
+      <!-- hr -->
+      <div class="footer__hr d-md-none"></div>
+
+      <div class="col-6 col-md-3 col-lg-3 col-xxl-2 ps-md-5 ps-xl-0">
+        <ul class="footer__list list">
+          <li class="footer__list__item list__title list__item">О нас</li>
+          <li class="footer__list__item list__item"><a class="footer__link" href="#our-team">Команда</a></li>
+          <li class="footer__list__item list__item"><a class="footer__link" href="#news">Новости</a></li>
+          <li class="footer__list__item list__item"><a class="footer__link" href="#about-us">Отзывы</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-5 col-lg-4 col-xxl-3 px-xxl-0">
+        <ul class="footer__list list">
+          <li class="footer__list__item list__title list__item">Клиентам</li>
+          <li class="footer__list__item list__item"><a class="footer__link" href="#teach">Программа обучения</a></li>
+          <li class="footer__list__item list__item"><a class="footer__link" href="./china.html">Закупка в Китае</a></li>
+        </ul>
+      </div>
+
+      <!-- hr -->
+      <div class="col-12 footer__hr d-md-none"></div>
+
+      <div class="col-1 d-none d-xxl-flex"></div>
+
+      <div class="col-md-5 col-lg-4 col-xl-4 col-xxl-2 p-xxl-0 footer__privacy">
+        <div class="footer__btn-group d-flex d-md-block">
+          <a class="footer__btn-link footer__btn-down order-1" href="" target="_blank">Скачать договор</a>
+          <a class="footer__btn-link footer__btn-cab order-0" href="" target="_blank">личный кабинет</a>
+        </div>
+
+        <!-- hr -->
+        <div class="footer__hr footer__hr--full d-md-none"></div>
+
+        <a href="" target="_blank" class="footer__privacy__text privacy-text">Политика в отношении обработки персональных данных</a>
+      </div>
+
+      <!-- hr -->
+      <div class="footer__hr d-md-none"></div>
+
+      <div class="col-12 footer__bottom">
+        <div class="row">
+          <div class="col-6">
+            <p class="footer__bottom__text">© 2023 All Rights Reserved</p>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <p class="footer__bottom__text">Сделано командой Office Media Crew</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

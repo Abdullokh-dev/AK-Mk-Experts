@@ -392,7 +392,7 @@
         </div>
 
         <div class="col-12">
-          <button class="teach__show-more-btn">посмотреть всю программу</button>
+          <button class="teach__show-more-btn show-more-btn">посмотреть всю программу</button>
         </div>
       </div>
     </div>
@@ -1387,7 +1387,7 @@
     <div class="container">
       <div class="row news-title-box">
         <div class="col gx-auto">
-          <h2 class="news__title title">новости</h2>
+          <h2 class="title">новости</h2>
         </div>
         <div class="col gx-auto d-inline-flex">
           <a class="news__link align-self-center ms-auto" href="#" target="_blank">
@@ -1554,15 +1554,6 @@
 <script>
   const scrollElement = (id) => {
     document.getElementById(id).scrollIntoView({behavior: "smooth",'top':'top'})
-  }
-
-  window.onscroll = function() {
-    let header = document.getElementById("header")
-    if(window.pageYOffset > 20) {
-      header.classList.add('fixed')
-    } else {
-      header.classList.remove('fixed')
-    }
   }
 
   const form = document.getElementById('form')
