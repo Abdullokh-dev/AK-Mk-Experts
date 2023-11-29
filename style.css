@@ -1894,7 +1894,7 @@ input {
     }
 
     .answer__input__label {
-        max-width: 100%px;
+        max-width: 100%;
     }
 
     /*Success*/
