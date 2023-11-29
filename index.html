@@ -24,19 +24,19 @@
       <nav class="offcanvas__nav nav">
         <ul class="nav__list">
           <li class="offcanvas__nav__item nav__item">
-            <a href="#" class="offcanvas__nav__link nav__link">Начать бизнес</a>
+            <a href="#teach" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
           </li>
           <li class="offcanvas__nav__item nav__item">
-            <a href="#" class="offcanvas__nav__link nav__link">Закупка в китае</a>
+            <a href="./china.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Закупка в китае</a>
           </li>
           <li class="offcanvas__nav__item nav__item">
-            <a href="#" class="offcanvas__nav__link nav__link">Команда</a>
+            <a href="#our-team" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
           </li>
           <li class="offcanvas__nav__item nav__item">
-            <a href="#" class="offcanvas__nav__link nav__link">Новости</a>
+            <a href="#news" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
           </li>
           <li class="offcanvas__nav__item nav__item">
-            <a href="#" class="offcanvas__nav__link nav__link">Личный кабинет</a>
+            <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Личный кабинет</a>
           </li>
         </ul>
       </nav>
@@ -319,7 +319,9 @@
               <button class="accordion__item accordion__item--arrow">Регистрировать юридическое лицо</button>
               <div class="accordion__panel">
                 <p>в налоговом органе, открывать расчетный счет в банке и
-                  <a class="accordion__panel__link" href="#" target="_blank">личный кабинет продавца</a> на OZON Seller и WB Seller.</p>
+                  <a href="#" class="accordion__panel__link">личный кабинет продавца</a>
+                  на OZON Seller и WB Seller.
+                </p>
               </div>
             </div>
           </div>
@@ -329,8 +331,10 @@
             <div class="accordion__content">
               <button class="accordion__item accordion__item--arrow">Создавать индивидуальный бренд</button>
               <div class="accordion__panel">
-                <p>в налоговом органе, открывать расчетный счет в банке и
-                  <a class="accordion__panel__link" href="#" target="_blank">личный кабинет продавца</a> на OZON Seller и WB Seller.</p>
+                <p>и карточки товаров и продающие
+                  <a href="#" class="accordion__panel__link">фото, видео и Rich-контент.</a>
+                  Различать рекламные инструменты и настраивать рекламу.
+                </p>
               </div>
             </div>
           </div>
@@ -340,8 +344,10 @@
             <div class="accordion__content">
               <button class="accordion__item accordion__item--arrow">Проводить анализ категорий</button>
               <div class="accordion__panel">
-                <p>в налоговом органе, открывать расчетный счет в банке и
-                  <a class="accordion__panel__link" href="#" target="_blank">личный кабинет продавца</a> на OZON Seller и WB Seller.</p>
+                <p>карточек конкурентов и
+                  <a class="accordion__panel__link" href="#" target="_blank">предпродажную подготовку</a>
+                  товаров для отправки на склады МП.
+                </p>
               </div>
             </div>
           </div>
@@ -351,8 +357,12 @@
             <div class="accordion__content">
               <button class="accordion__item accordion__item--arrow">Находить и делать закупки товаров</button>
               <div class="accordion__panel">
-                <p>в налоговом органе, открывать расчетный счет в банке и
-                  <a class="accordion__panel__link" href="#" target="_blank">личный кабинет продавца</a> на OZON Seller и WB Seller.</p>
+                <p>из Китая с высокой рентабельностью, и
+                  <a class="accordion__panel__link" href="#" target="_blank">анализировать собственные продажи</a>,
+                  их географии, работать с оборачиваемостью и достаточностью товаров в своём магазине,
+                  <a class="accordion__panel__link" href="#" target="_blank">с отчётами и обратной связью</a>
+                  от покупателей.
+                </p>
               </div>
             </div>
           </div>
@@ -362,8 +372,10 @@
             <div class="accordion__content">
               <button class="accordion__item accordion__item--arrow">Добиваться попадение товаров в ТОП 5%</button>
               <div class="accordion__panel">
-                <p>в налоговом органе, открывать расчетный счет в банке и
-                  <a class="accordion__panel__link" href="#" target="_blank">личный кабинет продавца</a> на OZON Seller и WB Seller.</p>
+                <p>Добиваться выдачи своих карточек
+                  <a class="accordion__panel__link" href="#" target="_blank">на первых двух страницах</a>
+                  выдачи на OZON и WB.
+                </p>
               </div>
             </div>
           </div>
@@ -373,8 +385,7 @@
             <div class="accordion__content">
               <button class="accordion__item accordion__item--arrow">Автоматизировать работу</button>
               <div class="accordion__panel">
-                <p>в налоговом органе, открывать расчетный счет в банке и
-                  <a class="accordion__panel__link" href="#" target="_blank">личный кабинет продавца</a> на OZON Seller и WB Seller.</p>
+                <p>магазина и бизнес-процессов.</p>
               </div>
             </div>
           </div>
@@ -714,7 +725,7 @@
 
               <!-- navigation -->
               <div class="gx-0 justify-content-between" id="navigation" style="display: flex;">
-                <div class="col">
+                <div class="col d-flex align-items-center">
                   <a class="answer__prev-btn blue" onclick="plusSlides(-1)" id="answer__prev-btn">
                   <span class="d-flex align-self-center">
                     <svg width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -729,14 +740,14 @@
                   <div class="pagination-index blue my-auto" id="paginationText"></div>
                 </div>
 
-                <div class="col">
+                <div class="col d-flex align-items-center">
                   <a class="answer__next-btn blue" onclick="plusSlides(1)" id="answer__next-btn">
                     далее
                     <span class="d-flex align-self-center">
-                    <svg width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M14.5716 58L1.90254 58L25.1268 29.2695L-5.07052e-06 3.32207e-06L13.0554 2.18072e-06C21.3282 9.62069 29.3392 19.5584 38 28.7988L14.5716 58Z" fill="#005BFF"/>
-                    </svg>
-                  </span>
+                      <svg width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.5716 58L1.90254 58L25.1268 29.2695L-5.07052e-06 3.32207e-06L13.0554 2.18072e-06C21.3282 9.62069 29.3392 19.5584 38 28.7988L14.5716 58Z" fill="#005BFF"/>
+                      </svg>
+                    </span>
                   </a>
                 </div>
               </div>
@@ -757,65 +768,64 @@
     <div class="team-container container-fluid position-relative">
       <div class="row d-flex justify-content-center">
         <div class="col-12 d-flex justify-content-center">
-            <div class="swiper team-swiper">
-              <div class="team-swiper__wrapper swiper-wrapper">
-                <div class="team__slide swiper-slide">
-                  <div class="row d-flex justify-content-start justify-content-md-end team-swiper__row">
-                    <div class="col-6 position-relative team__member">
-                      <img class="team__member__img" src="./assets/images/users/img.png" alt="#">
-                    </div>
+          <div class="swiper team-swiper">
+            <div class="team-swiper__wrapper swiper-wrapper">
+              <div class="team__slide swiper-slide">
+                <div class="row d-flex justify-content-end team-swiper__row">
+                  <img class="team__member__img d-sm-none" src="assets/images/users/img-sm.png" alt="#">
+                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img-md.png" alt="#">
+                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img.png" alt="#">
 
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col-1 d-none d-xxl-flex"></div>
-                        <div class="col-12 col-md-10 col-xxl-7 pe-5 position-md-relative">
-                          <p class="team__name">Глеб Клычев</p>
-                          <p class="team__profession">Управляющий директор</p>
-                          <p class="team__info">Опыт работы 10 лет. Подберем товар с которым вы сможете выйти на маркетплейсы. <span class="d-none d-md-inline">Организуем помощь в закупке качественного и топового товара.</span></p>
+                  <div class="col-6 team__slide__right">
+                    <div class="row">
+                      <div class="col-1 d-none d-xxl-flex"></div>
+                      <div class="col-12 team-box position-md-relative">
+                        <p class="team__name">Глеб Клычев</p>
+                        <p class="team__profession">Основатель компании MK EXPERT</p>
+                        <p class="team__info">12 лет опыта работы в товарном бизнесе, 10 лет опыта работы с Китаем, 3 года успешной работы на маркетплейсах, действующий селлер с ежемесячным оборот на OZON 5+ млн. руб.</p>
 
-                          <!-- Tiny Swiper -->
-                          <div class="row tiny-team-swiper-wrapper">
-                            <div class="col-12 col-xl-10 position-relative">
-                              <div class="swiper tiny-team-swiper">
-                                <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box">Certificate</div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
+                        <!-- Tiny Swiper -->
+                        <div class="row tiny-team-swiper-wrapper">
+                          <div class="col-12 col-xl-10 position-relative">
+                            <div class="swiper tiny-team-swiper">
+                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box">Certificate</div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
                                 </div>
                               </div>
-                              <div class="tiny-team__slide__prev swiper-button-prev">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                                </svg>
+                            </div>
+                            <div class="tiny-team__slide__prev swiper-button-prev">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                              </svg>
+                            </div>
 
-                              <div class="tiny-team__slide__next swiper-button-next">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                                </svg>
+                            <div class="tiny-team__slide__next swiper-button-next">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -823,64 +833,63 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="team__slide swiper-slide">
+                <div class="row d-flex justify-content-end team-swiper__row">
+                  <img class="team__member__img d-sm-none" src="assets/images/users/img_1-sm.png" alt="#">
+                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_1-md.png" alt="#">
+                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_1.png" alt="#">
 
-                <div class="team__slide swiper-slide">
-                  <div class="row d-flex justify-content-start justify-content-md-end team-swiper__row">
-                    <div class="col-6 position-relative team__member">
-                      <img class="team__member__img" src="./assets/images/users/img_1.png" alt="#">
-                    </div>
+                  <div class="col-6 team__slide__right">
+                    <div class="row">
+                      <div class="col-1 d-none d-xxl-flex"></div>
+                      <div class="col-12 team-box position-md-relative">
+                        <p class="team__name">Иван Матвеевский</p>
+                        <p class="team__profession">Директор по маркетингу и монетизации</p>
+                        <p class="team__info">15 лет опыта работы в сфере рекламы и полиграфии, владелец гостиницы с уникальным концептом, 2 года успешной работы на маркетплейсах, месячный оборот на OZON и WB 4+ млн. руб.</p>
 
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col-1 d-none d-xxl-flex"></div>
-                        <div class="col-12 col-md-10 col-xxl-7 pe-5 position-md-relative">
-                          <p class="team__name">Глеб Клычев</p>
-                          <p class="team__profession">Управляющий директор</p>
-                          <p class="team__info">Опыт работы 10 лет. Подберем товар с которым вы сможете выйти на маркетплейсы. <span class="d-none d-md-inline">Организуем помощь в закупке качественного и топового товара.</span></p>
-
-                          <!-- Tiny Swiper -->
-                          <div class="row tiny-team-swiper-wrapper">
-                            <div class="col-12 col-xl-10 position-relative">
-                              <div class="swiper tiny-team-swiper">
-                                <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box">Certificate</div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
+                        <!-- Tiny Swiper -->
+                        <div class="row tiny-team-swiper-wrapper">
+                          <div class="col-12 col-xl-10 position-relative">
+                            <div class="swiper tiny-team-swiper">
+                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box">Certificate</div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
                                 </div>
                               </div>
-                              <div class="tiny-team__slide__prev swiper-button-prev">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                                </svg>
+                            </div>
+                            <div class="tiny-team__slide__prev swiper-button-prev">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                              </svg>
+                            </div>
 
-                              <div class="tiny-team__slide__next swiper-button-next">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                                </svg>
+                            <div class="tiny-team__slide__next swiper-button-next">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -888,64 +897,62 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="team__slide swiper-slide">
+                <div class="row d-flex justify-content-end team-swiper__row">
+                  <img class="team__member__img d-sm-none" src="assets/images/users/img_2-sm.png" alt="#">
+                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_2-md.png" alt="#">
+                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_2.png" alt="#">
 
-                <div class="team__slide swiper-slide">
-                  <div class="row d-flex justify-content-start justify-content-md-end team-swiper__row">
-                    <div class="col-6 position-relative team__member">
-                      <img class="team__member__img" src="./assets/images/users/img_2.png" alt="#">
-                    </div>
+                  <div class="col-6 team__slide__right">
+                    <div class="row">
+                      <div class="col-1 d-none d-xxl-flex"></div>
+                      <div class="col-12 team-box position-md-relative">
+                        <p class="team__name">Екатерина Матвеевская</p>
+                        <p class="team__info">6 лет опыта работы в сфере косметологии, 3 года в товарном бизнесе, 2 года успешной работы на маркетплейсах, месячный оборот на OZON и WB 3+ млн. руб.</p>
 
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col-1 d-none d-xxl-flex"></div>
-                        <div class="col-12 col-md-10 col-xxl-7 pe-5 position-md-relative">
-                          <p class="team__name">Глеб Клычев</p>
-                          <p class="team__profession">Управляющий директор</p>
-                          <p class="team__info">Опыт работы 10 лет. Подберем товар с которым вы сможете выйти на маркетплейсы. <span class="d-none d-md-inline">Организуем помощь в закупке качественного и топового товара.</span></p>
-
-                          <!-- Tiny Swiper -->
-                          <div class="row tiny-team-swiper-wrapper">
-                            <div class="col-12 col-xl-10 position-relative">
-                              <div class="swiper tiny-team-swiper">
-                                <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box">Certificate</div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
+                        <!-- Tiny Swiper -->
+                        <div class="row tiny-team-swiper-wrapper">
+                          <div class="col-12 col-xl-10 position-relative">
+                            <div class="swiper tiny-team-swiper">
+                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box">Certificate</div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
                                 </div>
                               </div>
-                              <div class="tiny-team__slide__prev swiper-button-prev">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                                </svg>
+                            </div>
+                            <div class="tiny-team__slide__prev swiper-button-prev">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                              </svg>
+                            </div>
 
-                              <div class="tiny-team__slide__next swiper-button-next">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                                </svg>
+                            <div class="tiny-team__slide__next swiper-button-next">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -953,64 +960,62 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="team__slide swiper-slide">
+                <div class="row d-flex justify-content-end team-swiper__row">
+                  <img class="team__member__img d-sm-none" src="assets/images/users/img_3-sm.png" alt="#">
+                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_3-md.png" alt="#">
+                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_3.png" alt="#">
 
-                <div class="team__slide swiper-slide">
-                  <div class="row d-flex justify-content-start justify-content-md-end team-swiper__row">
-                    <div class="col-6 position-relative team__member">
-                      <img class="team__member__img" src="./assets/images/users/img_3.png" alt="#">
-                    </div>
+                  <div class="col-6 team__slide__right">
+                    <div class="row">
+                      <div class="col-1 d-none d-xxl-flex"></div>
+                      <div class="col-12 team-box position-md-relative">
+                        <p class="team__name">Алёна Клычева</p>
+                        <p class="team__info">10 лет опыта работы в товарном бизнесе, 5 лет опыта работы с Китаем, 3 года успешной работы на маркетплейсах, действующий селлер с ежемесячным оборот на OZON 2+ млн. руб.</p>
 
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col-1 d-none d-xxl-flex"></div>
-                        <div class="col-12 col-md-10 col-xxl-7 pe-5 position-md-relative">
-                          <p class="team__name">Глеб Клычев</p>
-                          <p class="team__profession">Управляющий директор</p>
-                          <p class="team__info">Опыт работы 10 лет. Подберем товар с которым вы сможете выйти на маркетплейсы. <span class="d-none d-md-inline">Организуем помощь в закупке качественного и топового товара.</span></p>
-
-                          <!-- Tiny Swiper -->
-                          <div class="row tiny-team-swiper-wrapper">
-                            <div class="col-12 col-xl-10 position-relative">
-                              <div class="swiper tiny-team-swiper">
-                                <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box">Certificate</div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
+                        <!-- Tiny Swiper -->
+                        <div class="row tiny-team-swiper-wrapper">
+                          <div class="col-12 col-xl-10 position-relative">
+                            <div class="swiper tiny-team-swiper">
+                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box">Certificate</div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
                                 </div>
                               </div>
-                              <div class="tiny-team__slide__prev swiper-button-prev">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                                </svg>
+                            </div>
+                            <div class="tiny-team__slide__prev swiper-button-prev">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                              </svg>
+                            </div>
 
-                              <div class="tiny-team__slide__next swiper-button-next">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                                </svg>
+                            <div class="tiny-team__slide__next swiper-button-next">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -1018,64 +1023,63 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="team__slide swiper-slide">
+                <div class="row d-flex justify-content-end team-swiper__row">
+                  <img class="team__member__img d-sm-none" src="assets/images/users/img_4-sm.png" alt="#">
+                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_4-md.png" alt="#">
+                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_4.png" alt="#">
 
-                <div class="team__slide swiper-slide">
-                  <div class="row d-flex justify-content-start justify-content-md-end team-swiper__row">
-                    <div class="col-6 position-relative team__member">
-                      <img class="team__member__img" src="./assets/images/users/img_4.png" alt="#">
-                    </div>
+                  <div class="col-6 team__slide__right">
+                    <div class="row">
+                      <div class="col-1 d-none d-xxl-flex"></div>
+                      <div class="col-12 team-box position-md-relative">
+                        <p class="team__name">Марк Тихов</p>
+                        <p class="team__profession">Ведущий эксперт-наставник</p>
+                        <p class="team__info">10 лет опыта в сфере сдачи коммерческой недвижимости, 3 года в сфере таргетинга и рекламы в интернете, 2 года успешной работы на маркетплейсах, действующий селлер с ежемесячным оборот на OZON 2+ млн. руб.</p>
 
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col-1 d-none d-xxl-flex"></div>
-                        <div class="col-12 col-md-10 col-xxl-7 pe-5 position-md-relative">
-                          <p class="team__name">Глеб Клычев</p>
-                          <p class="team__profession">Управляющий директор</p>
-                          <p class="team__info">Опыт работы 10 лет. Подберем товар с которым вы сможете выйти на маркетплейсы. <span class="d-none d-md-inline">Организуем помощь в закупке качественного и топового товара.</span></p>
-
-                          <!-- Tiny Swiper -->
-                          <div class="row tiny-team-swiper-wrapper">
-                            <div class="col-12 col-xl-10 position-relative">
-                              <div class="swiper tiny-team-swiper">
-                                <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box">Certificate</div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
+                        <!-- Tiny Swiper -->
+                        <div class="row tiny-team-swiper-wrapper">
+                          <div class="col-12 col-xl-10 position-relative">
+                            <div class="swiper tiny-team-swiper">
+                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box">Certificate</div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
                                 </div>
                               </div>
-                              <div class="tiny-team__slide__prev swiper-button-prev">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                                </svg>
+                            </div>
+                            <div class="tiny-team__slide__prev swiper-button-prev">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                              </svg>
+                            </div>
 
-                              <div class="tiny-team__slide__next swiper-button-next">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                                </svg>
+                            <div class="tiny-team__slide__next swiper-button-next">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -1083,64 +1087,64 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <!-- todo import image -->
+              <div class="team__slide swiper-slide">
+                <div class="row d-flex justify-content-end team-swiper__row">
+                  <img class="team__member__img d-sm-none" src="assets/images/users/img_5-sm.png" alt="#">
+                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_5-md.png" alt="#">
+                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_5.png" alt="#">
 
-                <div class="team__slide swiper-slide">
-                  <div class="row d-flex justify-content-start justify-content-md-end team-swiper__row">
-                    <div class="col-6 position-relative team__member">
-                      <img class="team__member__img" src="./assets/images/users/img_5.png" alt="#">
-                    </div>
+                  <div class="col-6 team__slide__right">
+                    <div class="row">
+                      <div class="col-1 d-none d-xxl-flex"></div>
+                      <div class="col-12 team-box position-md-relative">
+                        <p class="team__name">Дмитрий Герасимов</p>
+                        <p class="team__profession">Ведущий эксперт-наставник</p>
+                        <p class="team__info">5 лет опыта работы в гостиничном бизнесе, 4 года в сфере рекламы и полиграфии, 2 года успешной работы на маркетплейсах, действующий селлер с ежемесячным оборот на OZON 2+ млн. руб.</p>
 
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col-1 d-none d-xxl-flex"></div>
-                        <div class="col-12 col-md-10 col-xxl-7 pe-5 position-md-relative">
-                          <p class="team__name">Глеб Клычев</p>
-                          <p class="team__profession">Управляющий директор</p>
-                          <p class="team__info">Опыт работы 10 лет. Подберем товар с которым вы сможете выйти на маркетплейсы. <span class="d-none d-md-inline">Организуем помощь в закупке качественного и топового товара.</span></p>
-
-                          <!-- Tiny Swiper -->
-                          <div class="row tiny-team-swiper-wrapper">
-                            <div class="col-12 col-xl-10 position-relative">
-                              <div class="swiper tiny-team-swiper">
-                                <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box">Certificate</div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
+                        <!-- Tiny Swiper -->
+                        <div class="row tiny-team-swiper-wrapper">
+                          <div class="col-12 col-xl-10 position-relative">
+                            <div class="swiper tiny-team-swiper">
+                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box">Certificate</div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
                                 </div>
                               </div>
-                              <div class="tiny-team__slide__prev swiper-button-prev">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                                </svg>
+                            </div>
+                            <div class="tiny-team__slide__prev swiper-button-prev">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                              </svg>
+                            </div>
 
-                              <div class="tiny-team__slide__next swiper-button-next">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                                </svg>
+                            <div class="tiny-team__slide__next swiper-button-next">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -1148,64 +1152,64 @@
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="team__slide swiper-slide">
-                  <div class="row d-flex justify-content-start justify-content-md-end team-swiper__row">
-                    <div class="col-6 position-relative team__member">
-                      <img class="team__member__img" src="./assets/images/users/img_6.png" alt="#">
-                    </div>
+              <div class="team__slide swiper-slide">
+                <div class="row d-flex justify-content-end team-swiper__row">
+                  <img class="team__member__img d-sm-none" src="assets/images/users/img_6-sm.png" alt="#">
+                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_6-md.png" alt="#">
+                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_6.png" alt="#">
 
-                    <div class="col-6">
-                      <div class="row">
-                        <div class="col-1 d-none d-xxl-flex"></div>
-                        <div class="col-12 col-md-10 col-xxl-7 pe-5 position-md-relative">
-                          <p class="team__name">Глеб Клычев</p>
-                          <p class="team__profession">Управляющий директор</p>
-                          <p class="team__info">Опыт работы 10 лет. Подберем товар с которым вы сможете выйти на маркетплейсы. <span class="d-none d-md-inline">Организуем помощь в закупке качественного и топового товара.</span></p>
+                  <div class="col-6 team__slide__right">
+                    <div class="row">
+                      <div class="col-1 d-none d-xxl-flex"></div>
+                      <div class="col-12 team-box position-md-relative">
+                        <p class="team__name">Сергей Иванов</p>
+                        <p class="team__profession">Эксперт-наставник</p>
+                        <p class="team__info">11 лет опыта работы в товарном бизнесе, 4 года работы в сфере интернет-трансляций на платформах Twitch и Trovo, 1 год успешной работы на маркетплейсах, действующий селлер с ежемесячным оборот на OZON 1+ млн. руб.</p>
 
-                          <!-- Tiny Swiper -->
-                          <div class="row tiny-team-swiper-wrapper">
-                            <div class="col-12 col-xl-10 position-relative">
-                              <div class="swiper tiny-team-swiper">
-                                <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box">Certificate</div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
-                                  <div class="tiny-team__slide swiper-slide position-relative">
-                                    <div class="tiny-team__slide__box"></div>
-                                  </div>
+                        <!-- Tiny Swiper -->
+                        <div class="row tiny-team-swiper-wrapper">
+                          <div class="col-12 col-xl-10 position-relative">
+                            <div class="swiper tiny-team-swiper">
+                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box">Certificate</div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
+                                </div>
+                                <div class="tiny-team__slide swiper-slide position-relative">
+                                  <div class="tiny-team__slide__box"></div>
                                 </div>
                               </div>
-                              <div class="tiny-team__slide__prev swiper-button-prev">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                                </svg>
+                            </div>
+                            <div class="tiny-team__slide__prev swiper-button-prev">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+                              </svg>
+                            </div>
 
-                              <div class="tiny-team__slide__next swiper-button-next">
-                                <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                                </svg>
+                            <div class="tiny-team__slide__next swiper-button-next">
+                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                                </svg>
+                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
+                              </svg>
 
-                                <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                                </svg>
-                              </div>
+                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -1215,6 +1219,7 @@
                 </div>
               </div>
             </div>
+          </div>
         </div>
 
         <div class="col-12 col-lg-11 col-xxl-8 thumbs-swiper-container position-relative d-flex justify-content-center">

@@ -3605,6 +3605,7 @@ html {
         padding-left: 3rem !important;
     }
 }
+
 @media (min-width: 1400px) {
     .d-xxl-inline {
         display: inline !important;
@@ -4068,6 +4069,17 @@ html {
         padding-left: 3rem !important;
     }
 }
+
+@media (min-width: 1600px) {
+    .d-xxxl-flex {
+        display: flex !important;
+    }
+
+    .d-xxxl-none {
+        display: none !important;
+    }
+}
+
 @media print {
     .d-print-inline {
         display: inline !important;

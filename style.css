@@ -222,6 +222,7 @@ input {
     text-align: center;
     font-size: 2.2rem;
     width: 100%;
+    font-family: "Noto Sans", sans-serif;
 }
 
 .input-group__box {
@@ -405,7 +406,8 @@ input {
 }
 
 .marquee-china-first {
-    margin-top: -11px;
+    margin-top: -63px;
+    z-index: 1;
 }
 
 .marquee-second {
@@ -505,6 +507,7 @@ input {
 .accordion {
     margin-top: 80px;
     align-self: center;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .accordion__content {
@@ -573,6 +576,10 @@ input {
     font-weight: 400;
     line-height: normal;
     max-width: 89%;
+}
+
+.accordion__panel p {
+    padding-top: 10px;
 }
 
 .accordion__panel__link {
@@ -678,6 +685,7 @@ input {
     font-weight: 600;
     line-height: 101%;
     text-align: center;
+    font-family: "Cygre SemiBold", sans-serif;
 }
 
 .income__title {
@@ -887,17 +895,19 @@ input {
     height: 811px;
 }
 
+.team-box {
+    max-width: 570px;
+}
+
 .team__member__img {
+    padding: 0;
     position: absolute;
     top: 14px;
     left: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 100%;
     width: 100%;
-    max-width: 818px;
+    height: 100%;
     object-fit: cover;
-    object-position: right top;
+    object-position: left top;
 }
 
 .team__name {
@@ -914,6 +924,9 @@ input {
 
 .tiny-team-swiper-wrapper {
     margin-top: 56px;
+    position: absolute;
+    width: 100%;
+    top: 282px;
 }
 
 .tiny-team-swiper {
@@ -1000,6 +1013,7 @@ input {
 }
 
 .answer__prev-btn, .answer__next-btn {
+    font-family: "Cygre SemiBold", sans-serif;
     display: flex;
     font-size: 4.8rem;
     font-weight: 800;
@@ -1007,7 +1021,7 @@ input {
     cursor: pointer;
     transition: 0.6s ease;
     user-select: none;
-    line-height: normal;
+    /*line-height: normal;*/
     gap: 16px;
 }
 
@@ -1126,6 +1140,10 @@ input {
     margin-top: 70px;
 }
 
+.about-us-swiper {
+    font-family: "Noto Sans", sans-serif;
+}
+
 .about-us-swiper__img {
     border-radius: 11px;
     height: 15vw;
@@ -1137,6 +1155,7 @@ input {
     font-size: 4.2rem;
     line-height: 140%;
     max-width: 80%;
+    margin: 19px 0 10px 0;
 }
 
 .about-us-swiper__info {
@@ -1278,18 +1297,23 @@ input {
 }
 
 /*China*/
-.china__slide__prev {
-    left: 20px;
-}
-
-.china__slide__next {
-    right: 20px;
-}
-
-.china__slide__box {
+.china__slide {
     height: 657px;
-    background-color: #8C8C8C;
 }
+
+.china__slide__img {
+    display: flex;
+    object-fit: cover;
+    height: 100%;
+}
+
+/*.china__slide__prev {*/
+/*    left: 20px;*/
+/*}*/
+
+/*.china__slide__next {*/
+/*    right: 20px;*/
+/*}*/
 
 .accordion-china__item {
     cursor: unset !important;
@@ -1315,6 +1339,10 @@ input {
     margin: 5px 0 0;
 }
 
+.accordion-list__item {
+    margin-top: 10px;
+}
+
 .accordion-list__item::marker {
     font-family: "Noto Sans", sans-serif;
 }
@@ -1338,6 +1366,7 @@ input {
 .china-to-russia {
     margin-top: 120px;
     padding: 90px 0 80px 0;
+    background-color: #F8F8F8;
 }
 
 .china-to-russia__info,
@@ -1601,7 +1630,7 @@ input {
         height: 100px;
     }
 
-    .marquee-first {
+    .marquee-first, .marquee-china-first {
         margin-top: -45px;
     }
 
@@ -1850,11 +1879,19 @@ input {
     }
 
     .tiny-team-swiper-wrapper {
-        margin-top: 26px;
+        top: 305px;
     }
 
     .team__name {
         margin-top: 20px;
+    }
+
+    .team__profession, .team__info {
+        font-size: 1.6rem;
+    }
+
+    .team__slide__right {
+        padding-right: 75px;
     }
 
     .thumbs-swiper {
@@ -2006,8 +2043,8 @@ input {
     }
 
     /*CHINA*/
-    .china__slide__box {
-        height: 450px;
+    .china__slide {
+        height: 357px;
     }
 
     .success-china-box-first {
@@ -2043,6 +2080,13 @@ input {
     .business-china-third {
         margin: 70px 0 0;
     }
+
+    /* China */
+    .work-info__title {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        font-size: 6rem;
+    }
 }
 
 @media (max-width: 991px) {
@@ -2063,13 +2107,6 @@ input {
     .about-us-swiper__img {
         height: 23vw;
         max-height: 188px;
-    }
-
-    /* China */
-    .work-info__title {
-        margin-top: 80px;
-        margin-bottom: 30px;
-        font-size: 6rem;
     }
 }
 
@@ -2164,7 +2201,7 @@ input {
         height: 65px;
     }
 
-    .marquee-first {
+    .marquee-first, .marquee-china-first {
         margin-top: -18px;
     }
 
@@ -2394,8 +2431,8 @@ input {
 
     .about-us-swiper__title {
         font-size: 2rem;
-        margin-top: 7px;
         max-width: 90%;
+        margin: 9px 0 4px 0;
     }
 
     .about-us-swiper__info {
@@ -2422,8 +2459,12 @@ input {
         width: 100%;
         left: 0;
         right: 0;
-        bottom: 20px;
-        margin: 26px auto 0 auto;
+        top: 275px;
+        margin: 0 auto;
+    }
+
+    .team__slide__right {
+        padding-right: 27px;
     }
 
     .team__name {
@@ -2431,9 +2472,7 @@ input {
     }
 
     .team__profession, .team__info {
-        font-size: 1.6rem;
-        line-height: normal;
-        margin-top: 10px;
+        font-size: 1.2rem;
     }
 
     .thumbs-swiper {
@@ -2618,8 +2657,9 @@ input {
     }
 
     .footer__hr--full {
-        width: 100vw;
-        margin: 0 -18px;
+        width: fit-content;
+        margin-left: -18px;
+        margin-right: -18px;
     }
 
     .footer__bottom {
@@ -2631,8 +2671,8 @@ input {
     }
 
     /* China */
-    .china__slide__box {
-        height: 350px;
+    .china__slide {
+        height: 317px;
     }
 
     .work-info__title {
