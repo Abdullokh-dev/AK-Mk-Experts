@@ -406,7 +406,8 @@ input {
 }
 
 .marquee-china-first {
-    margin-top: -63px;
+    margin: -63px 0 24px 0;
+    padding-bottom: 240px;
     z-index: 1;
 }
 
@@ -1722,6 +1723,11 @@ input {
         margin-top: -45px;
     }
 
+    .marquee-china-first {
+        margin: -43px 0 0;
+        padding-bottom: 130px;
+    }
+
     .marquee__text {
         font-size: 9rem;
         -webkit-text-stroke: 2px #005BFF;
@@ -2337,8 +2343,13 @@ input {
         height: 65px;
     }
 
-    .marquee-first, .marquee-china-first {
+    .marquee-first {
         margin-top: -18px;
+    }
+
+    .marquee-china-first {
+        margin: -18px 0 0;
+        padding-bottom: 80px;
     }
 
     .marquee-second, .marquee-china-second {
