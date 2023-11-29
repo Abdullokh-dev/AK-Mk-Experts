@@ -919,7 +919,7 @@ input {
 }
 
 .team__profession, .team__info {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     line-height: normal;
     margin-top: 10px;
 }
@@ -979,7 +979,7 @@ input {
 }
 
 .swiper-slide-thumb-active {
-    opacity: 1 !important;
+    opacity: .8;
 }
 
 .thumbs-swiper-container {
@@ -999,7 +999,6 @@ input {
     height: 92px;
     display: flex;
     margin: 0 10px;
-    opacity: .7;
 }
 
 .thumbs-swiper__slide__img {
@@ -1058,7 +1057,7 @@ input {
 
 .answer__title {
     margin: 120px 0 40px 0;
-    max-width: 1100px;
+    max-width: 1145px;
 }
 
 .answer__slide__question {
@@ -1069,6 +1068,7 @@ input {
 }
 
 .answer__slide__answer {
+    font-family: "Cygre SemiBold", sans-serif;
     font-size: 6rem;
     font-weight: 600;
     line-height: 100%;
@@ -1101,6 +1101,7 @@ input {
     align-items: center;
     line-height: 120%;
     margin-bottom: 17px;
+    max-width: 460px;
 }
 
 .pagination-index {
@@ -1110,10 +1111,11 @@ input {
 }
 
 .answer__slide__btn-link {
+    font-family: "Cygre SemiBold", sans-serif;
     font-size: 2.8rem;
     line-height: normal;
     font-weight: 500;
-    display: block;
+    /*display: block;*/
     margin-top: 60px;
     padding: 19px 24px;
     border-radius: 35px;
@@ -1137,8 +1139,7 @@ input {
 }
 
 .about-us__title {
-    margin-bottom: 78px;
-    margin-top: 70px;
+    margin: 120px 0 78px 0;
 }
 
 .about-us-swiper {
@@ -1164,8 +1165,13 @@ input {
     line-height: normal;
 }
 
-.marquee-third {
+.marquee-china-third {
     margin-top: -12px;
+}
+
+.marquee-third {
+    margin-top: -65px;
+    z-index: 1;
 }
 
 /* News */
@@ -1244,7 +1250,7 @@ input {
     border-bottom-color: white;
 }
 
-.news-item__title__underline  svg {
+.news-item__title__underline svg {
     margin-left: 5px;
 }
 
@@ -1262,18 +1268,21 @@ input {
     margin-top: 10px;
 }
 
-.news-item__btn {
+.news-item__btn, .news-card__btn {
     font-size: 2.8rem;
     line-height: normal;
     font-weight: 500;
     display: block;
     margin-top: 20px;
-    padding: 14px 24px 18px 24px;
     border-radius: 35px;
     text-align: center;
     max-width: 221px;
     text-transform: uppercase;
     transition: background-color .3s, color .3s;
+}
+
+.news-item__btn {
+    padding: 14px 24px 18px 24px;
 }
 
 .news-card__btn {
@@ -1282,6 +1291,7 @@ input {
 
 .news-item--light {
     background-color: #F8F8F8;
+    border: 1px solid #005BFF;
 }
 
 .news-item__btn--blue {
@@ -1629,6 +1639,10 @@ input {
     .news-card__title {
         font-size: 5rem;
     }
+
+    .answer__slide--last {
+        padding: 30px 0 !important;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -1853,11 +1867,11 @@ input {
     }
 
     .answer__title {
-        max-width: 900px;
+        max-width: 550px;
     }
 
     .answer__slide--last {
-        margin-bottom: 30px;
+        margin-bottom: 55px;
     }
 
     .answer__slide__answer {
@@ -1869,9 +1883,12 @@ input {
         font-size: 1.6rem;
         display: flex;
         text-align: center;
-        width: 100%;
-        margin-top: 20px;
-        padding: 10px 24px;
+        margin-top: 40px;
+        padding: 14px 24px;
+    }
+
+    .answer__input__label {
+        max-width: 100%px;
     }
 
     /*Success*/
@@ -1903,7 +1920,7 @@ input {
     }
 
     .answer__form {
-        padding-bottom: 30px;
+        padding-bottom: 38px;
     }
 
     .answer__slide {
@@ -1912,8 +1929,7 @@ input {
     }
 
     .about-us__title {
-        margin-bottom: 30px;
-        margin-top: 70px;
+        margin: 35px 0 30px 0;
     }
 
     .answer__slide__question {
@@ -1926,6 +1942,10 @@ input {
     }
 
     .marquee-third {
+        margin-top: -35px;
+    }
+
+    .marquee-china-third {
         margin-top: -72px;
         z-index: 12;
     }
@@ -1977,7 +1997,9 @@ input {
     .news-title-box {
         margin: 100px 0 23px 0;
     }
-
+    .news-item__title__underline {
+        padding-bottom: 5px;
+    }
     .news__link {
         font-size: 2.2rem;
         line-height: 120%;
@@ -2025,11 +2047,14 @@ input {
         margin-top: 6px;
     }
 
-    .news-item__btn {
+    .news-item__btn, .news-card__btn {
         font-size: 1.8rem;
-        margin-top: 24px;
-        padding: 4px 21px 8px 21px;
+        margin-top: 20px;
         max-width: 153px;
+    }
+
+    .news-item__btn {
+        padding: 4px 21px 8px 21px;
     }
 
     .news-card__btn {
@@ -2047,9 +2072,10 @@ input {
         padding: 10px 20px 20px 20px;
     }
 
-    .news-item__title__underline  svg {
+    .news-item__title__underline svg {
         width: 23px;
         height: 23px;
+        margin-bottom: 5px;
     }
 
     .news-item__title__underline--light svg {
@@ -2208,6 +2234,10 @@ input {
     .about-us-swiper__img {
         height: 23vw;
         max-height: 188px;
+    }
+
+    .team__profession, .team__info {
+        font-size: 1.4rem;
     }
 }
 
@@ -2479,7 +2509,7 @@ input {
     /* Answer */
     .answer__title {
         margin: 22px 0 32px 0;
-        max-width: 310px;
+        max-width: 300px;
     }
 
     .answer__form {
@@ -2488,7 +2518,17 @@ input {
 
     .answer__slide {
         padding: 10px 0;
-        height: 337px;
+        height: 345px;
+    }
+
+    .answer__slide--last {
+        margin-bottom: 23px;
+        height: 345px;
+    }
+
+    .answer__slide__btn-link {
+        padding: 10px 24px;
+        margin-top: 30px;
     }
 
     .answer__prev-btn svg,
@@ -2519,7 +2559,7 @@ input {
     }
 
     .about-us__title {
-        margin-bottom: 17px;
+        margin: 60px 0 17px 0;
     }
 
     .answer__slide__question {
@@ -2635,7 +2675,7 @@ input {
         font-size: 1.7rem;
     }
 
-    .news-item__info {.news-item:first-of-type
+    .news-item__info {
         margin-top: 10px;
     }
 
@@ -2643,11 +2683,15 @@ input {
         margin-top: 5px;
     }
 
-    .news-item__btn {
+    .news-item__btn, .news-card__btn {
         font-size: 1.6rem;
         margin-top: 10px;
-        padding: 4px 22px 9px 21px;
         max-width: 160px;
+        font-weight: 400;
+    }
+
+    .news-item__btn {
+        padding: 4px 22px 9px 21px;
     }
 
     .news-card__btn {
@@ -2661,12 +2705,13 @@ input {
     }
 
     .news-item {
-        padding: 0 20px 10px 10px;
+        padding: 2px 19px 10px 10px;
     }
 
-    .news-item__title__underline  svg {
+    .news-item__title__underline svg {
         width: 12px;
         height: 12px;
+        margin-bottom: 2px;
     }
 
     .news-item__title__underline--light svg {
