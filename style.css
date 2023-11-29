@@ -2456,10 +2456,9 @@ input {
 
     .tiny-team-swiper-wrapper {
         position: absolute;
-        width: 100%;
-        left: 0;
+        width: 50%;
         right: 0;
-        top: 275px;
+        top: 205px;
         margin: 0 auto;
     }
 
@@ -2795,5 +2794,11 @@ input {
     .income {
         margin-right: 18px;
         margin-left: 18px;
+    }
+
+    .tiny-team-swiper-wrapper {
+        width: 100%;
+        left: 0;
+        top: 275px;
     }
 }
