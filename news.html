@@ -22,16 +22,16 @@
     <nav class="offcanvas__nav nav">
       <ul class="nav__list">
         <li class="offcanvas__nav__item nav__item">
-          <a href="#" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
+          <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
         </li>
         <li class="offcanvas__nav__item nav__item">
           <a href="./china.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Закупка в китае</a>
         </li>
         <li class="offcanvas__nav__item nav__item">
-          <a href="#" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
+          <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
         </li>
         <li class="offcanvas__nav__item nav__item">
-          <a href="#" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
+          <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
         </li>
         <li class="offcanvas__nav__item nav__item">
           <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Личный кабинет</a>
@@ -41,23 +41,23 @@
   </div>
 
   <div class="offcanvas__body">
-    <form class="offcanvas__body__order-form order-form" onsubmit="return submitForm(event)">
+    <form class="offcanvas__body__order-form order-form">
       <p class="order-form__title">Заказать звонок</p>
 
       <div class="input-group">
         <div class="d-flex input-group__box">
           <label class="input-label nowrap" for="name"> Меня зовут </label>
-          <input type="text" id="name" placeholder="ваше имя" class="input-group__input">
+          <input type="text" id="name" name="name" required placeholder="ваше имя" class="input-group__input">
         </div>
 
         <div class="d-flex input-group__box">
           <label class="input-label nowrap" for="phone"> мой телефон </label>
-          <input type="text" id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input">
+          <input type="text" name="phone" required id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
         </div>
 
         <div class="d-flex input-group__box">
           <label class="input-label nowrap" for="email"> моя эл. почта </label>
-          <input type="email" id="email" placeholder="здесь@и здесь" class="input-group__input">
+          <input type="email" name="email" required id="email" placeholder="здесь@и здесь" class="input-group__input">
         </div>
 
         <button class="order-form__submit-btn" type="submit"> отправить </button>
@@ -72,7 +72,7 @@
 </div>
 
 <!-- Modal Form -->
-<div class="form-modal modal" id="modalForm" style="display: none">
+<div class="form-modal modal" id="modalForm" style="display: none;">
   <div class="modal__body">
     <button class="close-btn">
       <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,23 +81,23 @@
     </button>
 
     <div class="modal__content">
-      <form class="order-form" onsubmit="return submitForm(event)">
+      <form class="order-form">
         <p class="order-form__title">Заказать звонок</p>
 
         <div class="input-group">
           <div class="d-flex input-group__box">
             <label class="input-label nowrap" for="name1"> Меня зовут </label>
-            <input type="text" id="name1" placeholder="ваше имя" class="input-group__input">
+            <input type="text" name="name" required id="name1" placeholder="ваше имя" class="input-group__input">
           </div>
 
           <div class="d-flex input-group__box">
             <label class="input-label nowrap" for="phone1"> мой телефон </label>
-            <input type="text" id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input">
+            <input type="text" name="phone" required id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
           </div>
 
           <div class="d-flex input-group__box">
             <label class="input-label nowrap" for="email1"> моя эл. почта </label>
-            <input type="email" id="email1" placeholder="здесь@и здесь" class="input-group__input">
+            <input type="email" name="email" required id="email1" placeholder="здесь@и здесь" class="input-group__input">
           </div>
 
           <button class="order-form__submit-btn" type="submit"> отправить </button>
@@ -133,7 +133,6 @@
     </div>
   </div>
 </div>
-
 <!-- Header -->
 <header class="header dark" id="header">
   <div class="header__container container">
@@ -370,10 +369,10 @@
       <div class="col-12 footer__bottom">
         <div class="row">
           <div class="col-6">
-            <p class="footer__bottom__text">© 2023 All Rights Reserved</p>
+            <p>© 2023 All Rights Reserved</p>
           </div>
           <div class="col-6 d-flex justify-content-end">
-            <p class="footer__bottom__text">Сделано командой Office Media Crew</p>
+            <p>Разработка и поддержка: <a href="https://siteoffice.ru/" rel="nofollow" target="_blank" class="nowrap footer__bottom__link">OFFICE<span class="footer__bottom__dot">.</span> Media Crew</a></p>
           </div>
         </div>
       </div>
@@ -381,4 +380,34 @@
   </div>
 </footer>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  const offcanvas = document.querySelector('.offcanvas');
+  const modalForm = document.getElementById('modalForm');
+  const modal = document.getElementById('modalSuccess');
+
+  function openMenu() {
+    offcanvas.style.right = '0'
+  }
+
+  function closeMenu() {
+    offcanvas.style.right = '-100%';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    modalForm.style.display = 'none';
+  }
+
+  function openForm() {
+    modalForm.style.display = 'flex';
+  }
+</script>
+<script src="./assets/js/mask.js"></script>
+<script type="text/javascript">
+  jQuery(function($){
+    $(".masked").mask("+7(999) 999-9999");
+  });
+</script>
 </html>

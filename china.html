@@ -12,54 +12,94 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <!-- Header Modal -->
-  <div class="offcanvas">
-    <div class="offcanvas__header dark">
-      <button class="close-btn">
-        <svg class="close-btn__icon" id="closeBtn" onclick="closeMenu()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="white"/>
-        </svg>
-      </button>
+<!-- Header Modal -->
+<div class="offcanvas">
+  <div class="offcanvas__header dark">
+    <button class="close-btn">
+      <svg class="close-btn__icon" id="closeBtn" onclick="closeMenu()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="white"/>
+      </svg>
+    </button>
 
-      <nav class="offcanvas__nav nav">
-        <ul class="nav__list">
-          <li class="offcanvas__nav__item nav__item">
-            <a href="#work-info" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
-          </li>
-          <li class="offcanvas__nav__item nav__item">
-            <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Закупка в китае</a>
-          </li>
-          <li class="offcanvas__nav__item nav__item">
-            <a href="#our-team" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
-          </li>
-          <li class="offcanvas__nav__item nav__item">
-            <a href="./news.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
-          </li>
-          <li class="offcanvas__nav__item nav__item">
-            <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Личный кабинет</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="offcanvas__nav nav">
+      <ul class="nav__list">
+        <li class="offcanvas__nav__item nav__item">
+          <a href="#work-info" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Закупка в китае</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="#our-team" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="./news.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Личный кабинет</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-    <div class="offcanvas__body">
-      <form class="offcanvas__body__order-form order-form" onsubmit="return submitForm(event)">
+  <div class="offcanvas__body">
+    <form class="offcanvas__body__order-form order-form">
+      <p class="order-form__title">Заказать звонок</p>
+
+      <div class="input-group">
+        <div class="d-flex input-group__box">
+          <label class="input-label nowrap" for="name"> Меня зовут </label>
+          <input type="text" id="name" name="name" required placeholder="ваше имя" class="input-group__input">
+        </div>
+
+        <div class="d-flex input-group__box">
+          <label class="input-label nowrap" for="phone"> мой телефон </label>
+          <input type="text" name="phone" required id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
+        </div>
+
+        <div class="d-flex input-group__box">
+          <label class="input-label nowrap" for="email"> моя эл. почта </label>
+          <input type="email" name="email" required id="email" placeholder="здесь@и здесь" class="input-group__input">
+        </div>
+
+        <button class="order-form__submit-btn" type="submit"> отправить </button>
+
+        <a href="#" class="order-form__privacy-link privacy-text">
+          Нажимая кнопку, я принимаю Политику в <br>
+          отношении обработки персональных данных
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Form -->
+<div class="form-modal modal" id="modalForm" style="display: none;">
+  <div class="modal__body">
+    <button class="close-btn">
+      <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
+      </svg>
+    </button>
+
+    <div class="modal__content">
+      <form class="order-form">
         <p class="order-form__title">Заказать звонок</p>
 
         <div class="input-group">
           <div class="d-flex input-group__box">
-            <label class="input-label nowrap" for="name"> Меня зовут </label>
-            <input type="text" id="name" placeholder="ваше имя" class="input-group__input">
+            <label class="input-label nowrap" for="name1"> Меня зовут </label>
+            <input type="text" name="name" required id="name1" placeholder="ваше имя" class="input-group__input">
           </div>
 
           <div class="d-flex input-group__box">
-            <label class="input-label nowrap" for="phone"> мой телефон </label>
-            <input type="text" id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input">
+            <label class="input-label nowrap" for="phone1"> мой телефон </label>
+            <input type="text" name="phone" required id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
           </div>
 
           <div class="d-flex input-group__box">
-            <label class="input-label nowrap" for="email"> моя эл. почта </label>
-            <input type="email" id="email" placeholder="здесь@и здесь" class="input-group__input">
+            <label class="input-label nowrap" for="email1"> моя эл. почта </label>
+            <input type="email" name="email" required id="email1" placeholder="здесь@и здесь" class="input-group__input">
           </div>
 
           <button class="order-form__submit-btn" type="submit"> отправить </button>
@@ -72,69 +112,29 @@
       </form>
     </div>
   </div>
+</div>
 
-  <!-- Modal Form -->
-  <div class="form-modal modal" id="modalForm" style="display: none">
-    <div class="modal__body">
+<!-- Modal Success -->
+<div class="success-modal modal" id="modalSuccess" style="display: none;">
+  <div class="success-modal__content modal__body">
+    <div class="modal__content text-center">
       <button class="close-btn">
         <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
         </svg>
       </button>
 
-      <div class="modal__content">
-        <form class="order-form" onsubmit="return submitForm(event)">
-          <p class="order-form__title">Заказать звонок</p>
-
-          <div class="input-group">
-            <div class="d-flex input-group__box">
-              <label class="input-label nowrap" for="name1"> Меня зовут </label>
-              <input type="text" id="name1" placeholder="ваше имя" class="input-group__input">
-            </div>
-
-            <div class="d-flex input-group__box">
-              <label class="input-label nowrap" for="phone1"> мой телефон </label>
-              <input type="text" id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input">
-            </div>
-
-            <div class="d-flex input-group__box">
-              <label class="input-label nowrap" for="email1"> моя эл. почта </label>
-              <input type="email" id="email1" placeholder="здесь@и здесь" class="input-group__input">
-            </div>
-
-            <button class="order-form__submit-btn" type="submit"> отправить </button>
-
-            <a href="#" class="order-form__privacy-link privacy-text">
-              Нажимая кнопку, я принимаю Политику в <br>
-              отношении обработки персональных данных
-            </a>
-          </div>
-        </form>
+      <div>
+        <svg width="77" height="79" viewBox="0 0 77 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="38.5" cy="40.5" r="37.5" stroke="#005BFF" stroke-width="2"/>
+          <path d="M19 32L35 54L66 6" stroke="#005BFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
+
+      <p class="success-modal__text d-block">Спасибо! <br> Мы свяжемся с вами <br> в ближайшее время.</p>
     </div>
   </div>
-
-  <!-- Modal Success -->
-  <div class="success-modal modal" id="modalSuccess" style="display: none;">
-    <div class="success-modal__content modal__body">
-      <div class="modal__content text-center">
-        <button class="close-btn">
-          <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
-          </svg>
-        </button>
-
-        <div>
-          <svg width="77" height="79" viewBox="0 0 77 79" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="38.5" cy="40.5" r="37.5" stroke="#005BFF" stroke-width="2"/>
-            <path d="M19 32L35 54L66 6" stroke="#005BFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-
-        <p class="success-modal__text d-block">Спасибо! <br> Мы свяжемся с вами <br> в ближайшее время.</p>
-      </div>
-    </div>
-  </div>
+</div>
 
   <!-- Header -->
   <header class="header dark">
@@ -301,27 +301,27 @@
   <!-- Business -->
   <section class="business business-china" id="business-china">
     <div class="container">
-      <form class="row" action="">
+      <form class="row">
         <div class="col-12">
           <h2 class="business__title">Привет, МК ЭКСПЕРТ <br> хочу начать свой бизнес</h2>
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="name3"> Меня зовут </label>
-          <input type="text" id="name4" placeholder="ваше имя" class="business-input input-group__input">
+          <label class="business__input-label input-label nowrap" for="name2"> Меня зовут </label>
+          <input type="text" name="name" required id="name2" placeholder="ваше имя" class="business-input input-group__input">
         </div>
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="phone3"> мой телефон </label>
-          <input type="text" id="phone4" placeholder="+7 (999) 999 99-99" class="business-input input-group__input">
+          <label class="business__input-label input-label nowrap" for="phone2"> мой телефон </label>
+          <input type="text" name="phone" required id="phone2" placeholder="+7 (999) 999 99-99" class="business-input input-group__input masked">
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="email3"> моя эл. почта </label>
-          <input type="email" id="email4" placeholder="здесь@и здесь" class="business-input input-group__input">
+          <label class="business__input-label input-label nowrap" for="email2"> моя эл. почта </label>
+          <input type="email" name="mail" required id="email2" placeholder="здесь@и здесь" class="business-input input-group__input">
         </div>
 
         <div class="col-12 text-center">
-          <a href="#" class="business__btn">личный кабинет</a>
+          <button class="business__btn">личный кабинет</button>
           <div class="d-flex justify-content-center">
             <a href="#" class="business__privacy privacy-text">Нажимая кнопку, я принимаю Политику в отношении <span class="nowrap">обработки персональных данных</span></a>
           </div>
@@ -596,27 +596,27 @@
   <!-- Business -->
   <section class="business business-china-third" id="business2">
     <div class="container">
-      <form class="row" action="">
+      <form class="row">
         <div class="col-12">
           <h2 class="business__title">Привет, МК ЭКСПЕРТ <br> хочу начать свой бизнес</h2>
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
           <label class="business__input-label input-label nowrap" for="name3"> Меня зовут </label>
-          <input type="text" id="name3" placeholder="ваше имя" class="business-input input-group__input">
+          <input type="text" name="name" required id="name3" placeholder="ваше имя" class="business-input input-group__input">
         </div>
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="phone3"> мой телефон </label>
-          <input type="text" id="phone3" placeholder="+7 (999) 999 99-99" class="business-input input-group__input">
+          <label class="business__input-label input-label nowrap masked" for="phone3"> мой телефон </label>
+          <input type="text" name="phone" required id="phone3" placeholder="+7 (999) 999 99-99" class="business-input input-group__input masked">
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
           <label class="business__input-label input-label nowrap" for="email3"> моя эл. почта </label>
-          <input type="email" id="email3" placeholder="здесь@и здесь" class="business-input input-group__input">
+          <input type="email" name="email" required id="email3" placeholder="здесь@и здесь" class="business-input input-group__input">
         </div>
 
         <div class="col-12 text-center">
-          <a href="#" class="business__btn">личный кабинет</a>
+          <button class="business__btn">личный кабинет</button>
           <div class="d-flex justify-content-center">
             <a href="#" class="business__privacy privacy-text">Нажимая кнопку, я принимаю Политику в отношении <span class="nowrap">обработки персональных данных</span></a>
           </div>
@@ -689,97 +689,97 @@
 
   <!-- Footer -->
   <footer class="footer dark">
-    <div class="footer__container container">
-      <div class="row d-flex justify-content-end">
-        <div class="col-12 col-md-4 col-xxl-3 pe-md-0">
-          <img class="footer__logo" src="./assets/images/logo.png" alt="Mk Expert">
+  <div class="footer__container container">
+    <div class="row d-flex justify-content-end">
+      <div class="col-12 col-md-4 col-xxl-3 pe-md-0">
+        <img class="footer__logo" src="./assets/images/logo.png" alt="Mk Expert">
 
-          <div class="footer__contact">
-            <ul class="footer__contact__list">
-              <li class="footer__contact__item position-relative d-flex">
-                <svg class="footer__tel-icon align-self-center d-inline-flex" width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13.0777 4.46825C14.051 4.6573 14.9456 5.1312 15.6468 5.8293C16.348 6.52739 16.824 7.41791 17.0139 8.3869M13.0777 0.5C15.0999 0.723647 16.9856 1.62517 18.4252 3.05655C19.8649 4.48793 20.7728 6.36409 21 8.37697M9.26803 12.2689C8.07064 11.0769 7.12516 9.72901 6.43159 8.29089C6.37193 8.16719 6.3421 8.10534 6.31918 8.02708C6.23774 7.74895 6.29624 7.40742 6.46566 7.17188C6.51333 7.1056 6.57029 7.04889 6.6842 6.93549C7.03259 6.58866 7.20678 6.41524 7.32067 6.24086C7.75016 5.58323 7.75016 4.73543 7.32067 4.07781C7.20678 3.90342 7.03259 3.73001 6.6842 3.38318L6.49001 3.18985C5.96042 2.66263 5.69563 2.39902 5.41124 2.25582C4.84566 1.97103 4.17773 1.97103 3.61215 2.25582C3.32776 2.39902 3.06297 2.66263 2.53338 3.18985L2.37629 3.34624C1.84852 3.87166 1.58463 4.13437 1.38309 4.49154C1.15945 4.88787 0.99865 5.50344 1.00001 5.95803C1.00123 6.36769 1.08106 6.64768 1.24071 7.20764C2.09867 10.217 3.71748 13.0566 6.09714 15.4256C8.47679 17.7947 11.3292 19.4062 14.352 20.2604C14.9145 20.4193 15.1957 20.4988 15.6072 20.5C16.0638 20.5013 16.6822 20.3413 17.0803 20.1186C17.4391 19.918 17.703 19.6553 18.2307 19.1299L18.3878 18.9735C18.9174 18.4462 19.1822 18.1826 19.326 17.8995C19.6121 17.3365 19.6121 16.6715 19.326 16.1085C19.1822 15.8253 18.9174 15.5617 18.3878 15.0345L18.1936 14.8412C17.8452 14.4944 17.671 14.3209 17.4959 14.2076C16.8353 13.78 15.9837 13.78 15.3231 14.2076C15.148 14.3209 14.9738 14.4944 14.6254 14.8412C14.5115 14.9546 14.4545 15.0113 14.3879 15.0588C14.1513 15.2274 13.8083 15.2857 13.5289 15.2046C13.4503 15.1818 13.3881 15.1521 13.2639 15.0927C11.8193 14.4022 10.4654 13.4609 9.26803 12.2689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <a href="tel:88002223355" class="footer__phone footer__link nowrap">8 800 222 33 55</a>
-              </li>
-              <li class="footer__contact__item position-relative pe-2">
-                <svg class="footer__map__icon" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.5C5.47715 0.5 1 5.00454 1 10.5612C1 13.732 2.90868 16.6956 5.57845 19.0235L10.4948 23.3104C10.7847 23.5632 11.2153 23.5632 11.5052 23.3104L16.4216 19.0235C19.0913 16.6956 21 13.732 21 10.5612C21 5.00454 16.5228 0.5 11 0.5Z" stroke="white"/>
-                  <path d="M13.8569 10.5611C13.8569 12.1487 12.5777 13.4358 10.9997 13.4358C9.42176 13.4358 8.14258 12.1487 8.14258 10.5611C8.14258 8.97353 9.42176 7.68652 10.9997 7.68652C12.5777 7.68652 13.8569 8.97353 13.8569 10.5611Z" fill="white"/>
-                </svg>
-                <span class="footer__address footer__link">г. Ярославль, <span class="nowrap">ул. Свободы, 46</span></span>
-              </li>
-              <li class="footer__contact__item position-relative d-flex">
-                <svg class="footer__mail__icon align-self-center d-inline-flex" width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.5 14.5L13.8571 8.5M8.14286 8.5L1.50003 14.5M1 3.5L9.16492 9.21544C9.82609 9.67826 10.1567 9.90967 10.5163 9.99931C10.8339 10.0785 11.1661 10.0785 11.4837 9.99931C11.8433 9.90967 12.1739 9.67826 12.8351 9.21544L21 3.5M5.8 16.5H16.2C17.8802 16.5 18.7202 16.5 19.362 16.173C19.9265 15.8854 20.3854 15.4265 20.673 14.862C21 14.2202 21 13.3802 21 11.7V5.3C21 3.61984 21 2.77976 20.673 2.13803C20.3854 1.57354 19.9265 1.1146 19.362 0.82698C18.7202 0.5 17.8802 0.5 16.2 0.5H5.8C4.11984 0.5 3.27976 0.5 2.63803 0.82698C2.07354 1.1146 1.6146 1.57354 1.32698 2.13803C1 2.77976 1 3.61984 1 5.3V11.7C1 13.3802 1 14.2202 1.32698 14.862C1.6146 15.4265 2.07354 15.8854 2.63803 16.173C3.27976 16.5 4.11984 16.5 5.8 16.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <a href="mailto:info@mkexpert.ru" class="footer__email footer__link">info@mkexpert.ru</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- hr -->
-        <div class="col-12 footer__hr d-md-none"></div>
-
-        <div class="col-1 d-none d-lg-flex"></div>
-
-        <!-- hr -->
-        <div class="footer__hr d-md-none"></div>
-
-        <div class="col-6 col-md-3 col-lg-3 col-xxl-2 ps-md-5 ps-xl-0">
-          <ul class="footer__list list">
-            <li class="footer__list__item list__title list__item">О нас</li>
-            <li class="footer__list__item list__item"><a class="footer__link" href="#our-team">Команда</a></li>
-            <li class="footer__list__item list__item"><a class="footer__link" href="#news">Новости</a></li>
-            <li class="footer__list__item list__item"><a class="footer__link" href="#about-us">Отзывы</a></li>
+        <div class="footer__contact">
+          <ul class="footer__contact__list">
+            <li class="footer__contact__item position-relative d-flex">
+              <svg class="footer__tel-icon align-self-center d-inline-flex" width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.0777 4.46825C14.051 4.6573 14.9456 5.1312 15.6468 5.8293C16.348 6.52739 16.824 7.41791 17.0139 8.3869M13.0777 0.5C15.0999 0.723647 16.9856 1.62517 18.4252 3.05655C19.8649 4.48793 20.7728 6.36409 21 8.37697M9.26803 12.2689C8.07064 11.0769 7.12516 9.72901 6.43159 8.29089C6.37193 8.16719 6.3421 8.10534 6.31918 8.02708C6.23774 7.74895 6.29624 7.40742 6.46566 7.17188C6.51333 7.1056 6.57029 7.04889 6.6842 6.93549C7.03259 6.58866 7.20678 6.41524 7.32067 6.24086C7.75016 5.58323 7.75016 4.73543 7.32067 4.07781C7.20678 3.90342 7.03259 3.73001 6.6842 3.38318L6.49001 3.18985C5.96042 2.66263 5.69563 2.39902 5.41124 2.25582C4.84566 1.97103 4.17773 1.97103 3.61215 2.25582C3.32776 2.39902 3.06297 2.66263 2.53338 3.18985L2.37629 3.34624C1.84852 3.87166 1.58463 4.13437 1.38309 4.49154C1.15945 4.88787 0.99865 5.50344 1.00001 5.95803C1.00123 6.36769 1.08106 6.64768 1.24071 7.20764C2.09867 10.217 3.71748 13.0566 6.09714 15.4256C8.47679 17.7947 11.3292 19.4062 14.352 20.2604C14.9145 20.4193 15.1957 20.4988 15.6072 20.5C16.0638 20.5013 16.6822 20.3413 17.0803 20.1186C17.4391 19.918 17.703 19.6553 18.2307 19.1299L18.3878 18.9735C18.9174 18.4462 19.1822 18.1826 19.326 17.8995C19.6121 17.3365 19.6121 16.6715 19.326 16.1085C19.1822 15.8253 18.9174 15.5617 18.3878 15.0345L18.1936 14.8412C17.8452 14.4944 17.671 14.3209 17.4959 14.2076C16.8353 13.78 15.9837 13.78 15.3231 14.2076C15.148 14.3209 14.9738 14.4944 14.6254 14.8412C14.5115 14.9546 14.4545 15.0113 14.3879 15.0588C14.1513 15.2274 13.8083 15.2857 13.5289 15.2046C13.4503 15.1818 13.3881 15.1521 13.2639 15.0927C11.8193 14.4022 10.4654 13.4609 9.26803 12.2689Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <a href="tel:88002223355" class="footer__phone footer__link nowrap">8 800 222 33 55</a>
+            </li>
+            <li class="footer__contact__item position-relative pe-2">
+              <svg class="footer__map__icon" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.5C5.47715 0.5 1 5.00454 1 10.5612C1 13.732 2.90868 16.6956 5.57845 19.0235L10.4948 23.3104C10.7847 23.5632 11.2153 23.5632 11.5052 23.3104L16.4216 19.0235C19.0913 16.6956 21 13.732 21 10.5612C21 5.00454 16.5228 0.5 11 0.5Z" stroke="white"/>
+                <path d="M13.8569 10.5611C13.8569 12.1487 12.5777 13.4358 10.9997 13.4358C9.42176 13.4358 8.14258 12.1487 8.14258 10.5611C8.14258 8.97353 9.42176 7.68652 10.9997 7.68652C12.5777 7.68652 13.8569 8.97353 13.8569 10.5611Z" fill="white"/>
+              </svg>
+              <span class="footer__address footer__link">г. Ярославль, <span class="nowrap">ул. Свободы, 46</span></span>
+            </li>
+            <li class="footer__contact__item position-relative d-flex">
+              <svg class="footer__mail__icon align-self-center d-inline-flex" width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.5 14.5L13.8571 8.5M8.14286 8.5L1.50003 14.5M1 3.5L9.16492 9.21544C9.82609 9.67826 10.1567 9.90967 10.5163 9.99931C10.8339 10.0785 11.1661 10.0785 11.4837 9.99931C11.8433 9.90967 12.1739 9.67826 12.8351 9.21544L21 3.5M5.8 16.5H16.2C17.8802 16.5 18.7202 16.5 19.362 16.173C19.9265 15.8854 20.3854 15.4265 20.673 14.862C21 14.2202 21 13.3802 21 11.7V5.3C21 3.61984 21 2.77976 20.673 2.13803C20.3854 1.57354 19.9265 1.1146 19.362 0.82698C18.7202 0.5 17.8802 0.5 16.2 0.5H5.8C4.11984 0.5 3.27976 0.5 2.63803 0.82698C2.07354 1.1146 1.6146 1.57354 1.32698 2.13803C1 2.77976 1 3.61984 1 5.3V11.7C1 13.3802 1 14.2202 1.32698 14.862C1.6146 15.4265 2.07354 15.8854 2.63803 16.173C3.27976 16.5 4.11984 16.5 5.8 16.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <a href="mailto:info@mkexpert.ru" class="footer__email footer__link">info@mkexpert.ru</a>
+            </li>
           </ul>
         </div>
+      </div>
 
-        <div class="col-6 col-md-5 col-lg-4 col-xxl-3 px-xxl-0">
-          <ul class="footer__list list">
-            <li class="footer__list__item list__title list__item">Клиентам</li>
-            <li class="footer__list__item list__item"><a class="footer__link" href="#teach">Программа обучения</a></li>
-            <li class="footer__list__item list__item"><a class="footer__link" href="./china.html">Закупка в Китае</a></li>
-          </ul>
+      <!-- hr -->
+      <div class="col-12 footer__hr d-md-none"></div>
+
+      <div class="col-1 d-none d-lg-flex"></div>
+
+      <!-- hr -->
+      <div class="footer__hr d-md-none"></div>
+
+      <div class="col-6 col-md-3 col-lg-3 col-xxl-2 ps-md-5 ps-xl-0">
+        <ul class="footer__list list">
+          <li class="footer__list__item list__title list__item">О нас</li>
+          <li class="footer__list__item list__item"><a class="footer__link" href="#our-team">Команда</a></li>
+          <li class="footer__list__item list__item"><a class="footer__link" href="#news">Новости</a></li>
+          <li class="footer__list__item list__item"><a class="footer__link" href="#about-us">Отзывы</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-5 col-lg-4 col-xxl-3 px-xxl-0">
+        <ul class="footer__list list">
+          <li class="footer__list__item list__title list__item">Клиентам</li>
+          <li class="footer__list__item list__item"><a class="footer__link" href="#teach">Программа обучения</a></li>
+          <li class="footer__list__item list__item"><a class="footer__link" href="./china.html">Закупка в Китае</a></li>
+        </ul>
+      </div>
+
+      <!-- hr -->
+      <div class="col-12 footer__hr d-md-none"></div>
+
+      <div class="col-1 d-none d-xxl-flex"></div>
+
+      <div class="col-md-5 col-lg-4 col-xl-4 col-xxl-2 p-xxl-0 footer__privacy">
+        <div class="footer__btn-group d-flex d-md-block">
+          <a class="footer__btn-link footer__btn-down order-1" href="" target="_blank">Скачать договор</a>
+          <a class="footer__btn-link footer__btn-cab order-0" href="" target="_blank">личный кабинет</a>
         </div>
 
         <!-- hr -->
-        <div class="col-12 footer__hr d-md-none"></div>
+        <div class="footer__hr footer__hr--full d-md-none"></div>
 
-        <div class="col-1 d-none d-xxl-flex"></div>
+        <a href="" target="_blank" class="footer__privacy__text privacy-text">Политика в отношении обработки персональных данных</a>
+      </div>
 
-        <div class="col-md-5 col-lg-4 col-xl-4 col-xxl-2 p-xxl-0 footer__privacy">
-          <div class="footer__btn-group d-flex d-md-block">
-            <a class="footer__btn-link footer__btn-down order-1" href="" target="_blank">Скачать договор</a>
-            <a class="footer__btn-link footer__btn-cab order-0" href="" target="_blank">личный кабинет</a>
+      <!-- hr -->
+      <div class="footer__hr d-md-none"></div>
+
+      <div class="col-12 footer__bottom">
+        <div class="row">
+          <div class="col-6">
+            <p>© 2023 All Rights Reserved</p>
           </div>
-
-          <!-- hr -->
-          <div class="footer__hr footer__hr--full d-md-none"></div>
-
-          <a href="" target="_blank" class="footer__privacy__text privacy-text">Политика в отношении обработки персональных данных</a>
-        </div>
-
-        <!-- hr -->
-        <div class="footer__hr d-md-none"></div>
-
-        <div class="col-12 footer__bottom">
-          <div class="row">
-            <div class="col-6">
-              <p class="footer__bottom__text">© 2023 All Rights Reserved</p>
-            </div>
-            <div class="col-6 d-flex justify-content-end">
-              <p class="footer__bottom__text">Сделано командой Office Media Crew</p>
-            </div>
+          <div class="col-6 d-flex justify-content-end">
+            <p>Разработка и поддержка: <a href="https://siteoffice.ru/" rel="nofollow" target="_blank" class="nowrap footer__bottom__link">OFFICE<span class="footer__bottom__dot">.</span> Media Crew</a></p>
           </div>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
   let thumbs = new Swiper(".thumbs-swiper", {
     slidesPerView: 'auto',
@@ -821,13 +821,6 @@
     offcanvas.style.right = '-100%';
   }
 
-  const submitForm = () => {
-    modal.style.display = 'flex';
-
-    // prevent default submit
-    return false;
-  }
-
   function closeModal() {
     modal.style.display = 'none';
     modalForm.style.display = 'none';
@@ -838,18 +831,32 @@
   }
 
 //  Accordion
-  let acc = document.getElementsByClassName("accordion__item");
+  let acc = document.getElementsByClassName("accordion__item--arrow");
   let i;
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      let panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
+      let isActive = this.classList.contains("active");
+
+      for (let j = 0; j < acc.length; j++) {
+        acc[j].classList.remove("active");
+        acc[j].nextElementSibling.style.maxHeight = null;
+      }
+
+      if (!isActive) {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
         panel.style.maxHeight = panel.scrollHeight + "px";
       }
     });
   }
+
+  // Open the first accordion by default
+  acc[0].click();
+</script>
+<script src="./assets/js/mask.js"></script>
+<script type="text/javascript">
+  jQuery(function($){
+    $(".masked").mask("+7(999) 999-9999");
+  });
 </script>
 </html>

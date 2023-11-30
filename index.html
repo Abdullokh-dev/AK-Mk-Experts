@@ -43,23 +43,23 @@
     </div>
 
     <div class="offcanvas__body">
-      <form class="offcanvas__body__order-form order-form" onsubmit="return submitForm(event)">
+      <form class="offcanvas__body__order-form order-form">
         <p class="order-form__title">Заказать звонок</p>
 
         <div class="input-group">
           <div class="d-flex input-group__box">
             <label class="input-label nowrap" for="name"> Меня зовут </label>
-            <input type="text" id="name" placeholder="ваше имя" class="input-group__input">
+            <input type="text" id="name" name="name" required placeholder="ваше имя" class="input-group__input">
           </div>
 
           <div class="d-flex input-group__box">
             <label class="input-label nowrap" for="phone"> мой телефон </label>
-            <input type="text" id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input">
+            <input type="text" name="phone" required id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
           </div>
 
           <div class="d-flex input-group__box">
             <label class="input-label nowrap" for="email"> моя эл. почта </label>
-            <input type="email" id="email" placeholder="здесь@и здесь" class="input-group__input">
+            <input type="email" name="email" required id="email" placeholder="здесь@и здесь" class="input-group__input">
           </div>
 
           <button class="order-form__submit-btn" type="submit"> отправить </button>
@@ -74,7 +74,7 @@
   </div>
 
   <!-- Modal Form -->
-  <div class="form-modal modal" id="modalForm" style="display: none">
+  <div class="form-modal modal" id="modalForm" style="display: none;">
     <div class="modal__body">
       <button class="close-btn">
         <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,23 +83,23 @@
       </button>
 
       <div class="modal__content">
-        <form class="order-form" onsubmit="return submitForm(event)">
+        <form class="order-form">
           <p class="order-form__title">Заказать звонок</p>
 
           <div class="input-group">
             <div class="d-flex input-group__box">
               <label class="input-label nowrap" for="name1"> Меня зовут </label>
-              <input type="text" id="name1" placeholder="ваше имя" class="input-group__input">
+              <input type="text" name="name" required id="name1" placeholder="ваше имя" class="input-group__input">
             </div>
 
             <div class="d-flex input-group__box">
               <label class="input-label nowrap" for="phone1"> мой телефон </label>
-              <input type="text" id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input">
+              <input type="text" name="phone" required id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
             </div>
 
             <div class="d-flex input-group__box">
               <label class="input-label nowrap" for="email1"> моя эл. почта </label>
-              <input type="email" id="email1" placeholder="здесь@и здесь" class="input-group__input">
+              <input type="email" name="email" required id="email1" placeholder="здесь@и здесь" class="input-group__input">
             </div>
 
             <button class="order-form__submit-btn" type="submit"> отправить </button>
@@ -401,27 +401,27 @@
   <!-- Business -->
   <section class="business" id="business">
     <div class="container">
-      <form class="row" action="">
+      <form class="row">
         <div class="col-12">
           <h2 class="business__title">Привет, МК ЭКСПЕРТ <br> хочу начать свой бизнес</h2>
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="name3"> Меня зовут </label>
-          <input type="text" id="name4" placeholder="ваше имя" class="business-input input-group__input">
+          <label class="business__input-label input-label nowrap" for="name4"> Меня зовут </label>
+          <input type="text" name="name" required id="name4" placeholder="ваше имя" class="business-input input-group__input">
         </div>
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="phone3"> мой телефон </label>
-          <input type="text" id="phone4" placeholder="+7 (999) 999 99-99" class="business-input input-group__input">
+          <label class="business__input-label input-label nowrap" for="phone4"> мой телефон </label>
+          <input type="text" name="phone" required id="phone4" placeholder="+7 (999) 999 99-99" class="business-input input-group__input masked">
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="email3"> моя эл. почта </label>
-          <input type="email" id="email4" placeholder="здесь@и здесь" class="business-input input-group__input">
+          <label class="business__input-label input-label nowrap" for="email4"> моя эл. почта </label>
+          <input type="email" name="email" required id="email4" placeholder="здесь@и здесь" class="business-input input-group__input">
         </div>
 
         <div class="col-12 text-center">
-          <a href="#" class="business__btn">личный кабинет</a>
+          <button class="business__btn">личный кабинет</button>
           <div class="d-flex justify-content-center">
             <a href="#" class="business__privacy privacy-text">Нажимая кнопку, я принимаю Политику в отношении <span class="nowrap">обработки персональных данных</span></a>
           </div>
@@ -449,9 +449,7 @@
         <div class="row calculation-content">
           <div class="col-12 col-md-6">
             <p class="calculation__mid-title">Вложения от 300 000 ₽</p>
-            <div class="invest-price blue-bordered bordered-lg">
-              <span class="invest-price__text">300 000 ₽</span>
-            </div>
+            <input class="invest-price blue-bordered bordered-lg" type="number" placeholder="300 000 ₽">
           </div>
           <div class="col-12 col-md-6 pe-xxl-0">
             <p class="calculation__mid-title">Период работы</p>
@@ -641,13 +639,13 @@
                   </div>
                   <div class="col-12">
                     <div class="d-flex">
-                      <input class="answer__input__input" id="goal1" type="radio" name="goal" value="Запустить онлайн бизнес на маркетплейсе" onchange="answers.goal = event.target.value">
+                      <input class="answer__input__input" id="goal1" type="radio" name="goal" value="Запустить онлайн бизнес на маркетплейсе" onchange="answers.goal = this.value">
                       <label class="answer__input__label" for="goal1">Запустить онлайн бизнес на маркетплейсе</label>
                     </div>
                   </div>
                   <div class="col-12">
                     <div class="d-flex">
-                      <input class="answer__input__input" id="goal2" type="radio" name="goal" value="Закупка товаров в Китае." onchange="answers.goal = event.target.value">
+                      <input class="answer__input__input" id="goal2" type="radio" name="goal" value="Закупка товаров в Китае." onchange="answers.goal = this.value">
                       <label class="answer__input__label" for="goal2">Закупка товаров в Китае.</label>
                     </div>
                   </div>
@@ -663,19 +661,19 @@
 
                   <div class="col-12 col-xl-6 order-xl-0">
                     <div class="d-flex">
-                      <input class="answer__input__input" id="you1" type="radio" name="you" value="Обучение и запуск бизнеса под ключ." onchange="answers.you = event.target.value">
+                      <input class="answer__input__input" id="you1" type="radio" name="you" value="Новичок, ничего не знающий о том, как продавать на маркеплейсе." onchange="answers.you = this.value">
                       <label class="answer__input__label" for="you1">Новичок, ничего не знающий о том, как продавать на маркеплейсе.</label>
                     </div>
                   </div>
                   <div class="col-12 col-xl-6 order-xl-2">
                     <div class="d-flex">
-                      <input class="answer__input__input" id="you2" type="radio" name="you" value="Действующий селлер" onchange="answers.you = event.target.value">
+                      <input class="answer__input__input" id="you2" type="radio" name="you" value="Действующий селлер." onchange="answers.you = this.value">
                       <label class="answer__input__label" for="you2">Действующий селлер.</label>
                     </div>
                   </div>
                   <div class="col-12 col-xl-6 order-xl-1">
                     <div class="d-flex">
-                      <input class="answer__input__input" id="you3" type="radio" name="you" value="Инвестор." onchange="answers.you = event.target.value">
+                      <input class="answer__input__input" id="you3" type="radio" name="you" value="Инвестор." onchange="answers.you = this.value">
                       <label class="answer__input__label" for="you3">Инвестор.</label>
                     </div>
                   </div>
@@ -691,19 +689,19 @@
 
                   <div class="col-12 col-xl-6 order-xl-0">
                     <div class="d-flex">
-                      <input class="answer__input__input" id="budget1" type="radio" name="budget" value="300_000" onchange="answers.budget = event.target.value">
+                      <input class="answer__input__input" id="budget1" type="radio" name="budget" value="300 000 ₽" onchange="answers.budget = this.value">
                       <label class="answer__input__label" for="budget1">300 000 ₽</label>
                     </div>
                   </div>
                   <div class="col-12 col-xl-6 order-xl-2">
                     <div class="d-flex">
-                      <input class="answer__input__input" id="budget2" type="radio" name="budget" value="500_000" onchange="answers.budget = event.target.value">
+                      <input class="answer__input__input" id="budget2" type="radio" name="budget" value="500 000 ₽" onchange="answers.budget = this.value">
                       <label class="answer__input__label" for="budget2">500 000 ₽</label>
                     </div>
                   </div>
                   <div class="col-12 col-xl-6 order-xl-1">
                     <div class="d-flex">
-                      <input class="answer__input__input" id="budget3" type="radio" name="budget" value="более 1_000_000" onchange="answers.budget = event.target.value">
+                      <input class="answer__input__input" id="budget3" type="radio" name="budget" value="более 1 000 000 ₽" onchange="answers.budget = this.value">
                       <label class="answer__input__label" for="budget3">более 1 000 000 ₽</label>
                     </div>
                   </div>
@@ -1474,20 +1472,20 @@
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
           <label class="business__input-label input-label nowrap" for="name3"> Меня зовут </label>
-          <input type="text" id="name3" placeholder="ваше имя" class="business-input input-group__input">
+          <input type="text" name="name" required id="name3" placeholder="ваше имя" class="business-input input-group__input">
         </div>
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
           <label class="business__input-label input-label nowrap" for="phone3"> мой телефон </label>
-          <input type="text" id="phone3" placeholder="+7 (999) 999 99-99" class="business-input input-group__input">
+          <input type="text" name="phone" required id="phone3" placeholder="+7 (999) 999 99-99" class="business-input input-group__input masked">
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
           <label class="business__input-label input-label nowrap" for="email3"> моя эл. почта </label>
-          <input type="email" id="email3" placeholder="здесь@и здесь" class="business-input input-group__input">
+          <input type="email" name="email" required id="email3" placeholder="здесь@и здесь" class="business-input input-group__input">
         </div>
 
         <div class="col-12 text-center">
-          <a href="#" class="business__btn">личный кабинет</a>
+          <button class="business__btn">личный кабинет</button>
           <div class="d-flex justify-content-center">
             <a href="#" class="business__privacy privacy-text">Нажимая кнопку, я принимаю Политику в отношении <span class="nowrap">обработки персональных данных</span></a>
           </div>
@@ -1514,7 +1512,7 @@
       </div>
     </div>
 
-    <div class="container-fluid news-container overflow-x-scroll">
+    <div class="container-fluid news-container">
       <div class="news-group">
         <div class="news-item news-item--light">
           <p class="news-item__title">Запустили магазин бытовой техники на
@@ -1653,10 +1651,10 @@
         <div class="col-12 footer__bottom">
           <div class="row">
             <div class="col-6">
-              <p class="footer__bottom__text">© 2023 All Rights Reserved</p>
+              <p>© 2023 All Rights Reserved</p>
             </div>
             <div class="col-6 d-flex justify-content-end">
-              <p class="footer__bottom__text">Сделано командой Office Media Crew</p>
+              <p>Разработка и поддержка: <a href="https://siteoffice.ru/" rel="nofollow" target="_blank" class="nowrap footer__bottom__link">OFFICE<span class="footer__bottom__dot">.</span> Media Crew</a></p>
             </div>
           </div>
         </div>
@@ -1664,6 +1662,7 @@
     </div>
   </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   const scrollElement = (id) => {
@@ -1724,6 +1723,7 @@
 
   const offcanvas = document.querySelector('.offcanvas');
   const modalForm = document.getElementById('modalForm');
+  const overlay = document.getElementById('overlay');
   const modal = document.getElementById('modalSuccess');
 
   function openMenu() {
@@ -1732,13 +1732,6 @@
 
   function closeMenu() {
     offcanvas.style.right = '-100%';
-  }
-
-  const submitForm = () => {
-    modal.style.display = 'flex';
-
-    // prevent default submit
-    return false;
   }
 
   function closeModal() {
@@ -1753,17 +1746,26 @@
 //  Accordion
   let acc = document.getElementsByClassName("accordion__item");
   let i;
+
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      let panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
+      let isActive = this.classList.contains("active");
+
+      for (let j = 0; j < acc.length; j++) {
+        acc[j].classList.remove("active");
+        acc[j].nextElementSibling.style.maxHeight = null;
+      }
+
+      if (!isActive) {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
         panel.style.maxHeight = panel.scrollHeight + "px";
       }
     });
   }
+
+  // Open the first accordion by default
+  acc[0].click();
 
 //  Slider
   let navigation = document.getElementById('navigation')
@@ -1818,6 +1820,11 @@
       prev.style.display = 'flex'
     }
   }
-
+</script>
+<script src="./assets/js/mask.js"></script>
+<script type="text/javascript">
+  jQuery(function($){
+    $(".masked").mask("+7(999) 999-9999");
+  });
 </script>
 </html>
