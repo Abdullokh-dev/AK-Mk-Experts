@@ -24,7 +24,7 @@
       <nav class="offcanvas__nav nav">
         <ul class="nav__list">
           <li class="offcanvas__nav__item nav__item">
-            <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
+            <a href="#work-info" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
           </li>
           <li class="offcanvas__nav__item nav__item">
             <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Закупка в китае</a>
@@ -33,7 +33,7 @@
             <a href="#our-team" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
           </li>
           <li class="offcanvas__nav__item nav__item">
-            <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
+            <a href="./news.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
           </li>
           <li class="offcanvas__nav__item nav__item">
             <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Личный кабинет</a>
@@ -48,17 +48,17 @@
 
         <div class="input-group">
           <div class="d-flex input-group__box">
-            <label class="input-group__label nowrap" for="name"> Меня зовут </label>
+            <label class="input-label nowrap" for="name"> Меня зовут </label>
             <input type="text" id="name" placeholder="ваше имя" class="input-group__input">
           </div>
 
           <div class="d-flex input-group__box">
-            <label class="input-group__label nowrap" for="phone"> мой телефон </label>
+            <label class="input-label nowrap" for="phone"> мой телефон </label>
             <input type="text" id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input">
           </div>
 
           <div class="d-flex input-group__box">
-            <label class="input-group__label nowrap" for="email"> моя эл. почта </label>
+            <label class="input-label nowrap" for="email"> моя эл. почта </label>
             <input type="email" id="email" placeholder="здесь@и здесь" class="input-group__input">
           </div>
 
@@ -88,17 +88,17 @@
 
           <div class="input-group">
             <div class="d-flex input-group__box">
-              <label class="input-group__label nowrap" for="name1"> Меня зовут </label>
+              <label class="input-label nowrap" for="name1"> Меня зовут </label>
               <input type="text" id="name1" placeholder="ваше имя" class="input-group__input">
             </div>
 
             <div class="d-flex input-group__box">
-              <label class="input-group__label nowrap" for="phone1"> мой телефон </label>
+              <label class="input-label nowrap" for="phone1"> мой телефон </label>
               <input type="text" id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input">
             </div>
 
             <div class="d-flex input-group__box">
-              <label class="input-group__label nowrap" for="email1"> моя эл. почта </label>
+              <label class="input-label nowrap" for="email1"> моя эл. почта </label>
               <input type="email" id="email1" placeholder="здесь@и здесь" class="input-group__input">
             </div>
 
@@ -160,7 +160,7 @@
                 <a href="#our-team" class="header__nav__link nav__link">команда</a>
               </li>
               <li class="header__nav__item nav__item">
-                <a href="#" class="header__nav__link nav__link">новости</a>
+                <a href="./news.html" class="header__nav__link nav__link">новости</a>
               </li>
             </ul>
           </nav>
@@ -217,11 +217,11 @@
         <div class="col-12">
           <div class="china-swiper swiper position-relative">
             <div class="china-swiper__wrapper swiper-wrapper">
-              <div class="china__slide swiper-slide">
-                <img class="china__slide__img" src="./assets/images/banner/img.png" alt="#">
+              <div class="china-swiper__wrapper-slide swiper-slide">
+                <img class="china-swiper__wrapper-img" src="./assets/images/banner/img.png" alt="#">
               </div>
-              <div class="china__slide swiper-slide">
-                <img class="china__slide__img" src="./assets/images/banner/img.png" alt="#">
+              <div class="china-swiper__wrapper-slide swiper-slide">
+                <img class="china-swiper__wrapper-img" src="./assets/images/banner/img.png" alt="#">
               </div>
             </div>
 
@@ -307,16 +307,16 @@
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-group__label nowrap" for="name3"> Меня зовут </label>
+          <label class="business__input-label input-label nowrap" for="name3"> Меня зовут </label>
           <input type="text" id="name4" placeholder="ваше имя" class="business-input input-group__input">
         </div>
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-group__label nowrap" for="phone3"> мой телефон </label>
+          <label class="business__input-label input-label nowrap" for="phone3"> мой телефон </label>
           <input type="text" id="phone4" placeholder="+7 (999) 999 99-99" class="business-input input-group__input">
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-group__label nowrap" for="email3"> моя эл. почта </label>
+          <label class="business__input-label input-label nowrap" for="email3"> моя эл. почта </label>
           <input type="email" id="email4" placeholder="здесь@и здесь" class="business-input input-group__input">
         </div>
 
@@ -499,52 +499,6 @@
                         <p class="team__name">Глеб Клычев</p>
                         <p class="team__profession">Основатель компании MK EXPERT</p>
                         <p class="team__info">12 лет опыта работы в товарном бизнесе, 10 лет опыта работы с Китаем, 3 года успешной работы на маркетплейсах, действующий селлер с ежемесячным оборот на OZON 5+ млн. руб.</p>
-
-                        <!-- Tiny Swiper -->
-                        <div class="row tiny-team-swiper-wrapper">
-                          <div class="col-12 col-xl-10 position-relative">
-                            <div class="swiper tiny-team-swiper">
-                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                <div class="tiny-team__slide swiper-slide position-relative">
-                                  <div class="tiny-team__slide__box">Certificate</div>
-                                </div>
-                                <div class="tiny-team__slide swiper-slide position-relative">
-                                  <div class="tiny-team__slide__box"></div>
-                                </div>
-                                <div class="tiny-team__slide swiper-slide position-relative">
-                                  <div class="tiny-team__slide__box"></div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="tiny-team__slide__prev swiper-button-prev">
-                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                              </svg>
-                            </div>
-
-                            <div class="tiny-team__slide__next swiper-button-next">
-                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -563,52 +517,6 @@
                         <p class="team__name">Иван Матвеевский</p>
                         <p class="team__profession">Директор по маркетингу и монетизации</p>
                         <p class="team__info">15 лет опыта работы в сфере рекламы и полиграфии, владелец гостиницы с уникальным концептом, 2 года успешной работы на маркетплейсах, месячный оборот на OZON и WB 4+ млн. руб.</p>
-
-                        <!-- Tiny Swiper -->
-                        <div class="row tiny-team-swiper-wrapper">
-                          <div class="col-12 col-xl-10 position-relative">
-                            <div class="swiper tiny-team-swiper">
-                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                <div class="tiny-team__slide swiper-slide position-relative">
-                                  <div class="tiny-team__slide__box">Certificate</div>
-                                </div>
-                                <div class="tiny-team__slide swiper-slide position-relative">
-                                  <div class="tiny-team__slide__box"></div>
-                                </div>
-                                <div class="tiny-team__slide swiper-slide position-relative">
-                                  <div class="tiny-team__slide__box"></div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="tiny-team__slide__prev swiper-button-prev">
-                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                              </svg>
-                            </div>
-
-                            <div class="tiny-team__slide__next swiper-button-next">
-                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -626,52 +534,6 @@
                       <div class="col-12 team-box position-md-relative">
                         <p class="team__name">Алёна Клычева</p>
                         <p class="team__info">10 лет опыта работы в товарном бизнесе, 5 лет опыта работы с Китаем, 3 года успешной работы на маркетплейсах, действующий селлер с ежемесячным оборот на OZON 2+ млн. руб.</p>
-
-                        <!-- Tiny Swiper -->
-                        <div class="row tiny-team-swiper-wrapper">
-                          <div class="col-12 col-xl-10 position-relative">
-                            <div class="swiper tiny-team-swiper">
-                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                <div class="tiny-team__slide swiper-slide position-relative">
-                                  <div class="tiny-team__slide__box">Certificate</div>
-                                </div>
-                                <div class="tiny-team__slide swiper-slide position-relative">
-                                  <div class="tiny-team__slide__box"></div>
-                                </div>
-                                <div class="tiny-team__slide swiper-slide position-relative">
-                                  <div class="tiny-team__slide__box"></div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="tiny-team__slide__prev swiper-button-prev">
-                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                              </svg>
-                            </div>
-
-                            <div class="tiny-team__slide__next swiper-button-next">
-                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -685,12 +547,15 @@
           <div thumbsSlider="" class="thumbs-swiper swiper">
             <div class="thumbs-swiper__wrapper swiper-wrapper">
               <div class="thumbs-swiper__slide swiper-slide">
+                <div class="thumbs-swiper__shadow"></div>
                 <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_8.png" alt="#"/>
               </div>
               <div class="thumbs-swiper__slide swiper-slide">
+                <div class="thumbs-swiper__shadow"></div>
                 <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img.png" alt="#"/>
               </div>
               <div class="thumbs-swiper__slide swiper-slide">
+                <div class="thumbs-swiper__shadow"></div>
                 <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_2.png" alt="#"/>
               </div>
             </div>
@@ -737,16 +602,16 @@
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-group__label nowrap" for="name3"> Меня зовут </label>
+          <label class="business__input-label input-label nowrap" for="name3"> Меня зовут </label>
           <input type="text" id="name3" placeholder="ваше имя" class="business-input input-group__input">
         </div>
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-group__label nowrap" for="phone3"> мой телефон </label>
+          <label class="business__input-label input-label nowrap" for="phone3"> мой телефон </label>
           <input type="text" id="phone3" placeholder="+7 (999) 999 99-99" class="business-input input-group__input">
         </div>
 
         <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-group__label nowrap" for="email3"> моя эл. почта </label>
+          <label class="business__input-label input-label nowrap" for="email3"> моя эл. почта </label>
           <input type="email" id="email3" placeholder="здесь@и здесь" class="business-input input-group__input">
         </div>
 
@@ -932,16 +797,6 @@
     thumbs: {
       swiper: thumbs,
     },
-  });
-
-  const tinySwiper = new Swiper('.tiny-team-swiper', {
-    loop: true,
-    navigation: {
-      nextEl: '.tiny-team__slide__next',
-      prevEl: '.tiny-team__slide__prev',
-    },
-    spaceBetween: 20,
-    slidesPerView: 1,
   });
 
   const chinaSwiper = new Swiper('.china-swiper', {

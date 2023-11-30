@@ -242,7 +242,7 @@ input {
  border-bottom-color: #FF0505 !important;
 }
 
-.input-group__label {
+.input-label {
     color: #222222;
     font-size: 3.2rem;
     font-style: normal;
@@ -936,7 +936,7 @@ input {
     margin: 0 42px 0 42px !important;
 }
 
-.tiny-team__slide__box {
+.tiny-team-swiper__slide__box {
     height: 240px;
     border-radius: 9px;
     color: white;
@@ -948,11 +948,11 @@ input {
     background: blue;
 }
 
-.tiny-team__slide__prev {
+.tiny-team-swiper__prev {
     left: 19px;
 }
 
-.tiny-team__slide__next {
+.tiny-team-swiper__next {
     right: 19px;
 }
 
@@ -979,10 +979,6 @@ input {
     top: 45%;
 }
 
-.swiper-slide-thumb-active {
-    opacity: .8;
-}
-
 .thumbs-swiper-container {
     position: absolute;
     bottom: 91px;
@@ -1000,6 +996,21 @@ input {
     height: 92px;
     display: flex;
     margin: 0 10px;
+}
+
+.thumbs-swiper__shadow {
+    position: absolute;
+    background: #222222;
+    width: 92px;
+    height: 92px;
+    opacity: .3;
+    border-radius: 100%;
+    transition: opacity .2s, display .2s;
+}
+
+.swiper-slide-thumb-active .thumbs-swiper__shadow,
+.thumbs-swiper__slide:hover .thumbs-swiper__shadow {
+    opacity: 0;
 }
 
 .thumbs-swiper__slide__img {
@@ -1240,7 +1251,7 @@ input {
     font-size: 4.2rem;
 }
 
-.news-item__title__underline {
+.news-item__title__underline, .news-card__title__underline {
     border-bottom: 1px solid #222;
     display: inline-flex;
     align-items: end;
@@ -1251,8 +1262,14 @@ input {
     border-bottom-color: white;
 }
 
-.news-item__title__underline svg {
+.news-item__title__underline--light svg {
+    width: 31px;
+    height: 31px;
+}
+
+.news-item__title__underline svg, .news-card__title__underline svg {
     margin-left: 5px;
+    margin-bottom: 6px;
 }
 
 .news-item__info, .news-card__info {
@@ -1288,6 +1305,8 @@ input {
 
 .news-card__btn {
     padding: 14px 24px 18px 24px;
+    background-color: #005BFF;
+    color: white;
 }
 
 .news-item--light {
@@ -1300,7 +1319,7 @@ input {
     color: white;
 }
 
-.news-item__btn--blue:hover {
+.news-item__btn--blue:hover, .news-card__btn:hover {
  background-color: #222;
 }
 
@@ -1319,8 +1338,8 @@ input {
     color: white;
 }
 
-.news__title {
-    margin-bottom: 26px;
+.news-title {
+    margin-bottom: 20px;
 }
 
 .news-card {
@@ -1343,7 +1362,7 @@ input {
     z-index: -1;
 }
 
-.news-item__btn--bottom {
+.news-card__btn--bottom {
     margin-top: auto !important;
 }
 
@@ -1373,11 +1392,11 @@ input {
 }
 
 /*China*/
-.china__slide {
+.china-swiper__wrapper-slide {
     height: 657px;
 }
 
-.china__slide__img {
+.china-swiper__wrapper-img {
     display: flex;
     object-fit: cover;
     height: 100%;
@@ -1648,11 +1667,11 @@ input {
 
 @media (max-width: 1199px) {
     /*Navigation*/
-    .tiny-team__slide__prev {
+    .tiny-team-swiper__prev {
         left: 22px;
     }
 
-    .tiny-team__slide__next {
+    .tiny-team-swiper__next {
         right: 22px;
     }
 
@@ -1693,7 +1712,7 @@ input {
         line-height: 120%;
     }
 
-    .news__title {
+    .news-title {
         font-size: 9rem;
         line-height: 100%;
     }
@@ -1730,7 +1749,6 @@ input {
 
     .marquee__text {
         font-size: 9rem;
-        -webkit-text-stroke: 2px #005BFF;
     }
 
     /* Main title */
@@ -1952,12 +1970,8 @@ input {
     }
 
     .marquee-china-third {
-        margin-top: -72px;
+        margin-top: -31px;
         z-index: 12;
-    }
-
-    .marquee-third .marquee__text {
-        -webkit-text-stroke: 3px #005BFF;
     }
 
     /*Team*/
@@ -1974,7 +1988,7 @@ input {
         bottom: 103px;
     }
 
-    .tiny-team__slide__box {
+    .tiny-team-swiper__slide__box {
         height: 173px;
     }
 
@@ -2003,9 +2017,7 @@ input {
     .news-title-box {
         margin: 100px 0 23px 0;
     }
-    .news-item__title__underline {
-        padding-bottom: 5px;
-    }
+
     .news__link {
         font-size: 2.2rem;
         line-height: 120%;
@@ -2064,8 +2076,12 @@ input {
     }
 
     .news-card__btn {
-        padding: 14px 24px 18px 24px !important;
+        padding: 11px 24px 15px 24px !important;
         font-weight: 400 !important;
+    }
+
+    .news-card__btn--bottom {
+        margin-top: 20px !important;
     }
 
     .news-item__btn--light {
@@ -2078,10 +2094,20 @@ input {
         padding: 10px 20px 20px 20px;
     }
 
+    .news-item__title__underline, .news-card__title__underline {
+        padding-bottom: 5px;
+    }
+
     .news-item__title__underline svg {
         width: 23px;
         height: 23px;
         margin-bottom: 5px;
+    }
+
+    .news-card__title__underline svg {
+        width: 17px;
+        height: 17px;
+        margin-bottom: 2px;
     }
 
     .news-item__title__underline--light svg {
@@ -2171,7 +2197,7 @@ input {
     }
 
     /*CHINA*/
-    .china__slide {
+    .china-swiper__wrapper-slide {
         height: 357px;
     }
 
@@ -2249,11 +2275,11 @@ input {
 
 @media (max-width: 767px) {
     /*Navigation*/
-    .tiny-team__slide__prev {
+    .tiny-team-swiper__prev {
         left: 20px;
     }
 
-    .tiny-team__slide__next {
+    .tiny-team-swiper__next {
         right: 20px;
     }
 
@@ -2289,7 +2315,7 @@ input {
         letter-spacing: -0.56px;
     }
 
-    .news__title {
+    .news-title {
         font-size: 3.3rem;
         margin-bottom: 12px;
     }
@@ -2618,7 +2644,7 @@ input {
         position: absolute;
         width: 50%;
         right: 0;
-        top: 205px;
+        top: 245px;
         margin: 0 auto;
     }
 
@@ -2635,12 +2661,12 @@ input {
     }
 
     .thumbs-swiper {
-        margin-left: 8% !important;
-        margin-right: 8% !important;
+        margin-left: 7.5% !important;
+        margin-right: 7.5% !important;
     }
 
     .thumbs-swiper__slide {
-        margin: 20px 10px 28px 0;
+        margin: 20px 5px 28px 5px;
     }
 
     .marquee-third {
@@ -2849,10 +2875,11 @@ input {
 
     .position-md-relative {
         position: unset;
+        z-index: 1;
     }
 
     /* China */
-    .china__slide {
+    .china-swiper__wrapper-slide {
         height: 317px;
     }
 
@@ -2882,6 +2909,10 @@ input {
 
     .china-to-russia__info {
         margin-top: 20px;
+    }
+
+    .marquee-china-third {
+        margin-top: 10px;
     }
 
     .china-to-russia__mid-info {
@@ -2922,7 +2953,7 @@ input {
         margin-bottom: 20px;
     }
 
-    .input-group__label {
+    .input-label {
         font-size: 2.4rem;
     }
 
@@ -2982,5 +3013,15 @@ input {
         width: 100%;
         left: 0;
         top: 275px;
+    }
+
+    .team-box {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 474px) {
+    .team__profession, .team__info {
+        font-size: 1rem;
     }
 }
