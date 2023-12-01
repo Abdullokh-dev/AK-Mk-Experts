@@ -116,7 +116,7 @@
   </div>
 
   <!-- Modal Success -->
-  <div class="success-modal modal" id="modalSuccess" style="display: flex;">
+  <div class="success-modal modal" id="modalSuccess" style="display: none;">
     <div class="success-modal__content modal__body">
       <div class="modal__content text-center">
         <button class="close-btn">
@@ -1513,52 +1513,33 @@
       </div>
     </div>
 
-    <div class="container-fluid news-container">
-      <div class="news-group">
-        <div class="news-item news-item--light">
+    <div class="swiper home-news">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide news-item news-item--light">
           <p class="news-item__title">Запустили магазин бытовой техники на
-            <span class="news-item__title__underline">
-            Озоне
-            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-            и
-            <span class="news-item__title__underline">
-            WB
-            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
+            <span class="news-item__title__underline">Озоне<svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              и
+            <span class="news-item__title__underline">WB<svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           </p>
           <p class="news-item__info">за каждым клиентом мы закрепляем персонального эксперта-наставника</p>
 
           <a class="news-item__btn news-item__btn--blue" href="#" target="_blank">Подробнее</a>
         </div>
 
-        <div class="news-item news-item--blue">
-          <p class="news-item__title news-item__title--sm">
-            Алефтина
-            <span class="news-item__title__underline--light news-item__title__underline">
-            Демидова
-            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          </p>
+        <div class="swiper-slide news-item news-item--blue">
+          <p class="news-item__title news-item__title--sm">Алефтина<span class="news-item__title__underline--light news-item__title__underline">Демидова<svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg></span></p>
           <p class="news-item__info">новый отзыв о нашей работе</p>
-
           <a class="news-item__btn news-item__btn--light" href="#" target="_blank">Подробнее</a>
         </div>
 
-        <div class="news-item news-item--light">
+        <div class="swiper-slide news-item news-item--light">
           <p class="news-item__title">Лизинг персонал</p>
           <p class="news-item__info">Что это и чем он полезен бизнесу?</p>
 
           <a class="news-item__btn news-item__btn--blue" href="#" target="_blank">Подробнее</a>
         </div>
 
-        <div class="news-item news-item--light">
+        <div class="swiper-slide news-item news-item--light">
           <p class="news-item__title">Аутстаффинг персонала</p>
           <p class="news-item__info">Зачем это нужно?</p>
 
@@ -1567,9 +1548,59 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-12"></div>
-    </div>
+<!--    <div class="container-fluid news-container">-->
+<!--      <div class="news-group">-->
+<!--        <div class="news-item news-item&#45;&#45;light">-->
+<!--          <p class="news-item__title">Запустили магазин бытовой техники на-->
+<!--            <span class="news-item__title__underline">-->
+<!--            Озоне-->
+<!--            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--            </svg>-->
+<!--          </span>-->
+<!--            и-->
+<!--            <span class="news-item__title__underline">-->
+<!--            WB-->
+<!--            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--            </svg>-->
+<!--          </span>-->
+<!--          </p>-->
+<!--          <p class="news-item__info">за каждым клиентом мы закрепляем персонального эксперта-наставника</p>-->
+
+<!--          <a class="news-item__btn news-item__btn&#45;&#45;blue" href="#" target="_blank">Подробнее</a>-->
+<!--        </div>-->
+
+<!--        <div class="news-item news-item&#45;&#45;blue">-->
+<!--          <p class="news-item__title news-item__title&#45;&#45;sm">-->
+<!--            Алефтина-->
+<!--            <span class="news-item__title__underline&#45;&#45;light news-item__title__underline">-->
+<!--            Демидова-->
+<!--            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--            </svg>-->
+<!--          </span>-->
+<!--          </p>-->
+<!--          <p class="news-item__info">новый отзыв о нашей работе</p>-->
+
+<!--          <a class="news-item__btn news-item__btn&#45;&#45;light" href="#" target="_blank">Подробнее</a>-->
+<!--        </div>-->
+
+<!--        <div class="news-item news-item&#45;&#45;light">-->
+<!--          <p class="news-item__title">Лизинг персонал</p>-->
+<!--          <p class="news-item__info">Что это и чем он полезен бизнесу?</p>-->
+
+<!--          <a class="news-item__btn news-item__btn&#45;&#45;blue" href="#" target="_blank">Подробнее</a>-->
+<!--        </div>-->
+
+<!--        <div class="news-item news-item&#45;&#45;light">-->
+<!--          <p class="news-item__title">Аутстаффинг персонала</p>-->
+<!--          <p class="news-item__info">Зачем это нужно?</p>-->
+
+<!--          <a class="news-item__btn news-item__btn&#45;&#45;blue" href="#" target="_blank">Подробнее</a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </section>
 
   <!-- Footer -->
@@ -1740,6 +1771,17 @@
     },
     spaceBetween: 20,
     slidesPerView: 1,
+  });
+
+  const news =  new Swiper(".home-news", {
+    slidesPerView: 'auto',
+    spaceBetween: 18,
+    freeMode: true,
+    breakpoints: {
+      768 : {
+        spaceBetween: 20,
+      }
+    }
   });
 
   const offcanvas = document.querySelector('.offcanvas');

@@ -1201,26 +1201,6 @@ input {
     padding-bottom: 2px;
 }
 
-.news-container {
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.news-container::-webkit-scrollbar {
-    display: none !important;
-    width: 0 !important;
-}
-
-.news-container::-webkit-scrollbar-track {
-    background: none;
-    display: none;
-}
-
-.news-container::-webkit-scrollbar-thumb {
-    display: none;
-}
-
 .news-group {
     display: flex;
     width: 1920px !important;
@@ -1233,15 +1213,19 @@ input {
 }
 
 .news-item:first-of-type {
-    max-width: 614px;
+    width: 614px;
 }
 
 .news-item:nth-child(2) {
-    max-width: 316px;
+    width: 316px;
+}
+
+.news-item:nth-child(3) {
+    width: 428px;
 }
 
 .news-item:nth-child(4) {
-    max-width: 502px;
+    width: 502px;
 }
 
 .news-item__title, .news-card__title {
@@ -2131,13 +2115,25 @@ input {
         margin: 0 0 3px 5px;
     }
 
+    .news-item:first-of-type {
+        width: 48.7%;
+        max-width: 417px;
+    }
+
     .news-item:nth-child(2) {
-        max-width: 147px;
+        width: 20.1%;
+        max-width: 200px;
         padding: 13px 15px 20px 18px;
     }
 
-    .news-item:first-of-type {
-        max-width: 374px;
+    .news-item:nth-child(3) {
+        width: 27%;
+        max-width: 231px;
+    }
+
+    .news-item:nth-child(4) {
+        width: 34%;
+        max-width: 290px;
     }
 
     .news-show-more-btn {
@@ -2769,13 +2765,28 @@ input {
         margin: 0 0 2px 5px;
     }
 
-    .news-item:nth-child(2) {
-        max-width: 120px;
-        padding: 10px 15px 10px 10px;
+    .news-item:first-of-type {
+        min-width: 222px;
+        width: 61.7%;
+        max-width: 300px;
     }
 
-    .news-item:first-of-type {
-        max-width: 222px;
+    .news-item:nth-child(2) {
+        min-width: 120px;
+        padding: 10px 15px 10px 10px;
+        max-width: 224px;
+        width: 33.9%;
+    }
+
+    .news-item:nth-child(3) {
+        min-width: 177px;
+        width: 27%;
+    }
+
+    .news-item:nth-child(4) {
+        min-width: 175px;
+        width: 34%;
+        max-width: 239px;
     }
 
     /*Footer*/
