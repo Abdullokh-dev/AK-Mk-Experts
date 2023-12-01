@@ -78,7 +78,7 @@
   <div class="form-modal modal" id="modalForm" style="display: none;">
     <div class="modal__body">
       <button class="close-btn">
-        <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="close-btn__icon" id="closeBtn" onclick="closeForm()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
         </svg>
       </button>
@@ -116,7 +116,7 @@
   </div>
 
   <!-- Modal Success -->
-  <div class="success-modal modal" id="modalSuccess" style="display: none;">
+  <div class="success-modal modal" id="modalSuccess" style="display: flex;">
     <div class="success-modal__content modal__body">
       <div class="modal__content text-center">
         <button class="close-btn">
@@ -1678,6 +1678,26 @@
       budget: form.budget.value
   }
 
+  function setCookie(name, value, hours) {
+    let expirationDate = new Date();
+    expirationDate.setTime(expirationDate.getTime() + (hours * 60 * 60 * 1000));
+    let expires = "expires=" + expirationDate.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+
+  // Getter
+  function getCookie(name) {
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let cookies = decodedCookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      let cookie = cookies[i].trim();
+      if (cookie.startsWith(name + '=')) {
+        return cookie.substring(name.length + 1, cookie.length);
+      }
+    }
+    return null;
+  }
+
   const swiper = new Swiper('.about-us-swiper', {
     loop: true,
     autoHeight: true,
@@ -1724,25 +1744,37 @@
 
   const offcanvas = document.querySelector('.offcanvas');
   const modalForm = document.getElementById('modalForm');
-  const overlay = document.getElementById('overlay');
   const modal = document.getElementById('modalSuccess');
 
   function openMenu() {
     offcanvas.style.right = '0'
   }
-
   function closeMenu() {
     offcanvas.style.right = '-100%';
-  }
-
-  function closeModal() {
-    modal.style.display = 'none';
-    modalForm.style.display = 'none';
   }
 
   function openForm() {
     modalForm.style.display = 'flex';
   }
+
+  function closeForm() {
+    modalForm.style.display = 'none';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  modalForm.addEventListener('click', () => {
+    if (event.target === modalForm) {
+      closeForm()
+    }
+  })
+  modal.addEventListener('click', () => {
+    if (event.target === modal) {
+      closeModal()
+    }
+  })
 
 //  Accordion
   let acc = document.getElementsByClassName("accordion__item");
@@ -1799,7 +1831,7 @@
       navigation.style.display = 'none'
     }
 
-    localStorage.setItem('answers', JSON.stringify(answers));
+    setCookie('answers', JSON.stringify(answers), 24);
   }
 
   function showSlides(n) {
