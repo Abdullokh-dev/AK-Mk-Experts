@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 html {
     font-family: "Cygre SemiBold", sans-serif;
     font-size: 62.5%;
@@ -376,14 +374,15 @@ input {
 }
 
 .blur-btn-group__link {
-    display: inline-block;
+    font-family: "Cygre SemiBold", sans-serif;
     background-color: #005BFF;
-    color: white;
+    border: none;
     border-radius: 35px;
-    padding: 15px 24px;
+    color: white;
+    height: 77px;
+    padding: 0 24px;
     font-size: 2.8rem;
     font-weight: 500;
-    line-height: normal;
     text-transform: uppercase;
     transition: background-color.3s;
 }
@@ -407,7 +406,7 @@ input {
 }
 
 .marquee-china-first {
-    margin: -63px 0 24px 0;
+    margin-top: -63px;
     padding-bottom: 240px;
     z-index: 1;
 }
@@ -582,14 +581,6 @@ input {
 
 .accordion__panel p {
     padding-top: 10px;
-}
-
-.accordion__panel__link {
-    color: #005BFF;
-}
-
-.accordion__panel__link:hover {
-    text-decoration: underline;
 }
 
 .show-more-btn {
@@ -997,6 +988,7 @@ input {
     height: 92px;
     display: flex;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .thumbs-swiper__shadow {
@@ -1188,8 +1180,12 @@ input {
 }
 
 /* News */
+.news {
+    padding: 120px 0 110px 0;
+}
+
 .news-title-box {
- margin: 120px 0 70px 0;
+ margin-bottom: 70px;
 }
 
 .news__link {
@@ -1379,6 +1375,14 @@ input {
 }
 
 /*China*/
+.service {
+    padding-top: 0;
+}
+
+.work-info {
+    padding-top: 24px;
+}
+
 .china-swiper__wrapper-slide {
     height: 657px;
 }
@@ -1388,14 +1392,6 @@ input {
     object-fit: cover;
     height: 100%;
 }
-
-/*.china__slide__prev {*/
-/*    left: 20px;*/
-/*}*/
-
-/*.china__slide__next {*/
-/*    right: 20px;*/
-/*}*/
 
 .accordion-china__item {
     cursor: unset !important;
@@ -1479,7 +1475,7 @@ input {
 /* Footer */
 .footer {
     font-family: "Noto Sans", sans-serif;
-    margin-top: 230px;
+    margin-top: 120px;
     padding: 25px 0 60px 0;
 }
 
@@ -1730,8 +1726,8 @@ input {
     }
 
     .blur-btn-group__link {
-        padding: 16px 24px;
         font-size: 1.8rem;
+        height: 61px;
     }
 
     /* Marquee */
@@ -2012,8 +2008,12 @@ input {
     }
 
     /* News */
+    .news {
+        padding: 100px 0 0;
+    }
+
     .news-title-box {
-        margin: 100px 0 23px 0;
+        margin-bottom: 23px;
     }
 
     .news__link {
@@ -2207,6 +2207,10 @@ input {
     }
 
     /*CHINA*/
+    .service {
+        padding-top: 80px;
+    }
+
     .china-swiper__wrapper-slide {
         height: 357px;
     }
@@ -2246,10 +2250,13 @@ input {
     }
 
     /* China */
+    .work-info {
+        padding-top: 80px;
+    }
+
     .work-info__title {
-        margin-top: 80px;
         margin-bottom: 30px;
-        font-size: 6rem;
+        font-size: 7.5rem;
     }
 
     .news-card {
@@ -2280,6 +2287,11 @@ input {
 
     .team__profession, .team__info {
         font-size: 1.4rem;
+    }
+
+    .work-info__title {
+        margin-bottom: 30px;
+        font-size: 5.5rem;
     }
 }
 
@@ -2365,12 +2377,13 @@ input {
 
     .blur-btn-group__link {
         font-weight: 400;
-        padding: 12px 24px;
         font-size: 1.6rem;
+        height: 42px;
         display: block;
+        margin: 0 auto;
     }
 
-    .blur-btn-group__link:not(:first-child) {
+    .blur-btn-group__link--second {
         margin-top: 10px;
     }
 
@@ -2681,8 +2694,12 @@ input {
     }
 
     /* News */
+    .news {
+        padding-top: 80px;
+    }
+
     .news-title-box {
-        margin: 80px 0 20px 0;
+        margin-bottom: 20px;
     }
 
     .news__link {
@@ -2901,12 +2918,19 @@ input {
     }
 
     /* China */
+    .service {
+        padding-top: 40px;
+    }
+
     .china-swiper__wrapper-slide {
         height: 317px;
     }
 
+    .work-info {
+        padding-top: 33px;
+    }
+
     .work-info__title {
-        margin-top: 33px;
         margin-bottom: 0;
     }
 
@@ -3038,7 +3062,7 @@ input {
     }
 
     .team-box {
-        padding-left: 0;
+        padding-left: 10px;
     }
 }
 

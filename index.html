@@ -219,22 +219,28 @@
       <img class="company-image d-none d-md-flex" src="./assets/images/company.png" alt="">
 
       <div class="blur-btn-group">
-        <a href="#teach" class="blur-btn-group__link">хочу начать бизнес</a>
-        <a href="./china.html" target="_blank" class="blur-btn-group__link">поставки из китая</a>
+        <a href="#teach">
+          <button class="blur-btn-group__link">хочу начать бизнес</button>
+        </a>
+        <a href="./china.html" target="_blank">
+          <button class="blur-btn-group__link blur-btn-group__link--second">
+            поставки из китая
+          </button>
+        </a>
       </div>
     </div>
 
     <div class="container-fluid dark">
       <div class="marquee marquee-first position-relative">
         <div class="marquee__track">
-          <p class="marquee__text">115+ лет ведем бизнес 115+ лет ведем бизнес</p>
+          <p class="marquee__text">10+ лет ведем бизнес 10+ лет ведем бизнес,</p>
         </div>
       </div>
 
       <div class="container">
         <div class="row for-whom">
           <div class="col-12 col-xxl-2">
-            <p class="for-whom__title">для кого:</p>
+            <p class="for-whom__title">кому:</p>
           </div>
 
           <div class="col-12 col-md-4 col-xl-3 col-xxl-2 px-xxl-0">
@@ -272,7 +278,7 @@
               </div>
 
               <div>
-                <p class="for-whom__item__title">селлеру</p>
+                <p class="for-whom__item__title">селлерам</p>
                 <span class="for-whom__item__text">прямые поставки прибыльных кейсов из Китая выводим товары в ТОП-5%</span>
               </div>
             </div>
@@ -295,7 +301,7 @@
                 </svg>
               </div>
               <div>
-                <p class="for-whom__item__title">предпринимателю</p>
+                <p class="for-whom__item__title">предпринимателям</p>
                 <span class="for-whom__item__text">выводим продукт на новый уровень продаж через маркеталейсы</span>
               </div>
             </div>
@@ -320,7 +326,7 @@
               <button class="accordion__item accordion__item--arrow">Регистрировать юридическое лицо</button>
               <div class="accordion__panel">
                 <p>в налоговом органе, открывать расчетный счет в банке и
-                  <a href="#" class="accordion__panel__link">личный кабинет продавца</a>
+                  <span class="blue">личный кабинет продавца</span>
                   на OZON Seller и WB Seller.
                 </p>
               </div>
@@ -333,7 +339,7 @@
               <button class="accordion__item accordion__item--arrow">Создавать индивидуальный бренд</button>
               <div class="accordion__panel">
                 <p>и карточки товаров и продающие
-                  <a href="#" class="accordion__panel__link">фото, видео и Rich-контент.</a>
+                  <span class="blue">фото, видео и Rich-контент.</span>
                   Различать рекламные инструменты и настраивать рекламу.
                 </p>
               </div>
@@ -346,7 +352,7 @@
               <button class="accordion__item accordion__item--arrow">Проводить анализ категорий</button>
               <div class="accordion__panel">
                 <p>карточек конкурентов и
-                  <a class="accordion__panel__link" href="#" target="_blank">предпродажную подготовку</a>
+                  <span class="blue">предпродажную подготовку</span>
                   товаров для отправки на склады МП.
                 </p>
               </div>
@@ -359,9 +365,9 @@
               <button class="accordion__item accordion__item--arrow">Находить и делать закупки товаров</button>
               <div class="accordion__panel">
                 <p>из Китая с высокой рентабельностью, и
-                  <a class="accordion__panel__link" href="#" target="_blank">анализировать собственные продажи</a>,
+                  <span class="blue">анализировать собственные продажи</span>,
                   их географии, работать с оборачиваемостью и достаточностью товаров в своём магазине,
-                  <a class="accordion__panel__link" href="#" target="_blank">с отчётами и обратной связью</a>
+                  <span class="blue">с отчётами и обратной связью</span>
                   от покупателей.
                 </p>
               </div>
@@ -374,7 +380,7 @@
               <button class="accordion__item accordion__item--arrow">Добиваться попадение товаров в ТОП 5%</button>
               <div class="accordion__panel">
                 <p>Добиваться выдачи своих карточек
-                  <a class="accordion__panel__link" href="#" target="_blank">на первых двух страницах</a>
+                  <span class="blue">на первых двух страницах</span>
                   выдачи на OZON и WB.
                 </p>
               </div>
@@ -450,7 +456,7 @@
         <div class="row calculation-content">
           <div class="col-12 col-md-6">
             <p class="calculation__mid-title">Вложения от 300 000 ₽</p>
-            <input class="invest-price blue-bordered bordered-lg" type="number" placeholder="300 000 ₽">
+            <input class="invest-price blue-bordered bordered-lg" type="text" maxlength="10" placeholder="300 000 ₽" id="budgetInput">
           </div>
           <div class="col-12 col-md-6 pe-xxl-0">
             <p class="calculation__mid-title">Период работы</p>
@@ -496,7 +502,7 @@
     </div>
 
     <div class=" d-flex justify-content-center text-center">
-      <p class="income__warning">В калькуляторе представлены прогназируемые данные <span class="nowrap">с учетом 30-дневного месяца</span></p>
+      <p class="income__warning">В калькуляторе представлены прогнозируемые данные <span class="nowrap">с учетом 30-дневного месяца</span></p>
     </div>
   </section>
 
@@ -1194,128 +1200,6 @@
                   </div>
                 </div>
               </div>
-              <div class="team__slide swiper-slide">
-                <div class="row d-flex justify-content-end team-swiper__row">
-                  <img class="team__member__img d-sm-none" src="assets/images/users/img_7-sm.png" alt="#">
-                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_7-md.png" alt="#">
-                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_7.png" alt="#">
-
-                  <div class="col-6 team__slide__right">
-                    <div class="row">
-                      <div class="col-1 d-none d-xxl-flex"></div>
-                      <div class="col-12 team-box position-md-relative">
-                        <p class="team__name">Алина Короленковская</p>
-                        <p class="team__profession">Ведущий эксперт по закупкам и связям с производителями</p>
-                        <p class="team__info">Окончила с красным дипломом Пекинский Политехнический университет. С 2005 года живет и работает в Китае, 5 лет опыта работы в таких компаниях как: Google, Vivatao, Alibaba по разным товарным направлениям. Многократный участник крупнейшей в Азии выставки - Кантонской ярмарки.</p>
-
-                        <!-- Tiny Swiper -->
-                        <div class="row tiny-team-swiper-wrapper">
-                          <div class="col-12 col-xl-10 position-relative">
-                            <div class="swiper tiny-team-swiper">
-                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                <div class="tiny-team-swiper__slide swiper-slide position-relative">
-                                  <div class="tiny-team-swiper__slide__box">Certificate</div>
-                                </div>
-                                <div class="tiny-team-swiper__slide swiper-slide position-relative">
-                                  <div class="tiny-team-swiper__slide__box">Certificate</div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="tiny-team-swiper__prev swiper-button-prev">
-                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                              </svg>
-                            </div>
-
-                            <div class="tiny-team-swiper__next swiper-button-next">
-                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="team__slide swiper-slide">
-                <div class="row d-flex justify-content-end team-swiper__row">
-                  <img class="team__member__img d-sm-none" src="assets/images/users/img_8-sm.png" alt="#">
-                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_8-md.png" alt="#">
-                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_8.png" alt="#">
-
-                  <div class="col-6 team__slide__right">
-                    <div class="row">
-                      <div class="col-1 d-none d-xxl-flex"></div>
-                      <div class="col-12 team-box position-md-relative">
-                        <p class="team__name">Яков Саввинов</p>
-                        <p class="team__profession">Эксперт по закупкам и связям с производителями</p>
-                        <p class="team__info">С 2013 года живет и работает в Китае, 8 лет опыта работы менеджером ВЭД в компании HONG KONG FONIX по направлению мебели и строительных материалов. Многократный участник крупнейшей в Азии выставки - Кантонской ярмарки.</p>
-
-                        <!-- Tiny Swiper -->
-                        <div class="row tiny-team-swiper-wrapper">
-                          <div class="col-12 col-xl-10 position-relative">
-                            <div class="swiper tiny-team-swiper">
-                              <div class="tiny-team-swiper__wrapper swiper-wrapper">
-                                <div class="tiny-team-swiper__slide swiper-slide position-relative">
-                                  <div class="tiny-team-swiper__slide__box">Certificate</div>
-                                </div>
-                                <div class="tiny-team-swiper__slide swiper-slide position-relative">
-                                  <div class="tiny-team-swiper__slide__box">Certificate</div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="tiny-team-swiper__prev swiper-button-prev">
-                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.263 3.01836e-06L26.5981 4.65056e-06L9.48551 21.3002L28 43L18.3802 43C12.2845 35.8674 6.38166 28.4998 -3.78526e-06 21.6492L17.263 3.01836e-06Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.3307 2.15597e-06L18.9987 3.32183e-06L6.77537 15.3539L20 30.9958L13.1287 30.9958C8.77463 25.8544 4.55833 20.5436 -2.72854e-06 15.6054L12.3307 2.15597e-06Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-                              </svg>
-                            </div>
-
-                            <div class="tiny-team-swiper__next swiper-button-next">
-                              <svg class="d-none d-xl-block" width="28" height="43" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.737 43L1.40187 43L18.5145 21.6998L5.55175e-08 -1.36686e-06L9.61979 -2.20785e-06C15.7155 7.13258 21.6183 14.5002 28 21.3508L10.737 43Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-none d-md-block d-xl-none" width="20" height="31" viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.66929 31L1.00134 31L13.2246 15.6461L-2.70526e-06 0.00416549L6.87128 0.00416489C11.2254 5.14557 15.4417 10.4564 20 15.3946L7.66929 31Z" fill="#005BFF"/>
-                              </svg>
-
-                              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1351,14 +1235,6 @@
                 <div class="thumbs-swiper__shadow"></div>
                 <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_5.png" alt="#"/>
               </div>
-              <div class="thumbs-swiper__slide swiper-slide">
-                <div class="thumbs-swiper__shadow"></div>
-                <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_6.png" alt="#"/>
-              </div>
-              <div class="thumbs-swiper__slide swiper-slide">
-                <div class="thumbs-swiper__shadow"></div>
-                <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_7.png" alt="#"/>
-              </div>
             </div>
 
             <!-- navigation -->
@@ -1388,12 +1264,14 @@
     </div>
   </section>
 
+  <!-- Marquee -->
   <div class="marquee marquee-third position-relative">
     <div class="marquee__track">
-      <p class="marquee__text">115+ лет ведем бизнес 115+ лет ведем бизнес</p>
+      <p class="marquee__text">10+ лет ведем бизнес 10+ лет ведем бизнес</p>
     </div>
   </div>
 
+  <!-- Clients About Us -->
   <section class="about-us" id="about-us">
     <div class="about-us-container container position-relative">
       <h2 class="about-us__title title">клиенты о нас</h2>
@@ -1547,60 +1425,6 @@
         </div>
       </div>
     </div>
-
-<!--    <div class="container-fluid news-container">-->
-<!--      <div class="news-group">-->
-<!--        <div class="news-item news-item&#45;&#45;light">-->
-<!--          <p class="news-item__title">Запустили магазин бытовой техники на-->
-<!--            <span class="news-item__title__underline">-->
-<!--            Озоне-->
-<!--            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>-->
-<!--            </svg>-->
-<!--          </span>-->
-<!--            и-->
-<!--            <span class="news-item__title__underline">-->
-<!--            WB-->
-<!--            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>-->
-<!--            </svg>-->
-<!--          </span>-->
-<!--          </p>-->
-<!--          <p class="news-item__info">за каждым клиентом мы закрепляем персонального эксперта-наставника</p>-->
-
-<!--          <a class="news-item__btn news-item__btn&#45;&#45;blue" href="#" target="_blank">Подробнее</a>-->
-<!--        </div>-->
-
-<!--        <div class="news-item news-item&#45;&#45;blue">-->
-<!--          <p class="news-item__title news-item__title&#45;&#45;sm">-->
-<!--            Алефтина-->
-<!--            <span class="news-item__title__underline&#45;&#45;light news-item__title__underline">-->
-<!--            Демидова-->
-<!--            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--              <path d="M1 42L42 1M42 1L41.5776 39.9376M42 1L3.06243 1.42243" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>-->
-<!--            </svg>-->
-<!--          </span>-->
-<!--          </p>-->
-<!--          <p class="news-item__info">новый отзыв о нашей работе</p>-->
-
-<!--          <a class="news-item__btn news-item__btn&#45;&#45;light" href="#" target="_blank">Подробнее</a>-->
-<!--        </div>-->
-
-<!--        <div class="news-item news-item&#45;&#45;light">-->
-<!--          <p class="news-item__title">Лизинг персонал</p>-->
-<!--          <p class="news-item__info">Что это и чем он полезен бизнесу?</p>-->
-
-<!--          <a class="news-item__btn news-item__btn&#45;&#45;blue" href="#" target="_blank">Подробнее</a>-->
-<!--        </div>-->
-
-<!--        <div class="news-item news-item&#45;&#45;light">-->
-<!--          <p class="news-item__title">Аутстаффинг персонала</p>-->
-<!--          <p class="news-item__info">Зачем это нужно?</p>-->
-
-<!--          <a class="news-item__btn news-item__btn&#45;&#45;blue" href="#" target="_blank">Подробнее</a>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
   </section>
 
   <!-- Footer -->
@@ -1700,6 +1524,14 @@
   const scrollElement = (id) => {
     document.getElementById(id).scrollIntoView({behavior: "smooth",'top':'top'})
   }
+
+  const numericInput = document.getElementById('budgetInput')
+  numericInput.addEventListener(('input'), function () {
+    this.value = this.value.replace(/[^0-9]/g, '');
+    if (this.value.length > parseInt(this.getAttribute('maxlength'))) {
+      this.value = this.value.slice(0, parseInt(this.getAttribute('maxlength')));
+    }
+  })
 
   const form = document.getElementById('form')
 
@@ -1840,7 +1672,9 @@
   }
 
   // Open the first accordion by default
-  acc[0].click();
+  $( document ).ready(function() {
+    acc[0].click();
+  });
 
 //  Slider
   let navigation = document.getElementById('navigation')

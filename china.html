@@ -13,94 +13,54 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<!-- Header Modal -->
-<div class="offcanvas">
-  <div class="offcanvas__header dark">
-    <button class="close-btn">
-      <svg class="close-btn__icon" id="closeBtn" onclick="closeMenu()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="white"/>
-      </svg>
-    </button>
+  <!-- Header Modal -->
+  <div class="offcanvas">
+    <div class="offcanvas__header dark">
+      <button class="close-btn">
+        <svg class="close-btn__icon" id="closeBtn" onclick="closeMenu()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="white"/>
+        </svg>
+      </button>
 
-    <nav class="offcanvas__nav nav">
-      <ul class="nav__list">
-        <li class="offcanvas__nav__item nav__item">
-          <a href="#work-info" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
-        </li>
-        <li class="offcanvas__nav__item nav__item">
-          <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Закупка в китае</a>
-        </li>
-        <li class="offcanvas__nav__item nav__item">
-          <a href="#our-team" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
-        </li>
-        <li class="offcanvas__nav__item nav__item">
-          <a href="./news.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
-        </li>
-        <li class="offcanvas__nav__item nav__item">
-          <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Личный кабинет</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+      <nav class="offcanvas__nav nav">
+        <ul class="nav__list">
+          <li class="offcanvas__nav__item nav__item">
+            <a href="#work-info" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
+          </li>
+          <li class="offcanvas__nav__item nav__item">
+            <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Закупка в китае</a>
+          </li>
+          <li class="offcanvas__nav__item nav__item">
+            <a href="#our-team" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
+          </li>
+          <li class="offcanvas__nav__item nav__item">
+            <a href="./news.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
+          </li>
+          <li class="offcanvas__nav__item nav__item">
+            <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Личный кабинет</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-  <div class="offcanvas__body">
-    <form class="offcanvas__body__order-form order-form">
-      <p class="order-form__title">Заказать звонок</p>
-
-      <div class="input-group">
-        <div class="d-flex input-group__box">
-          <label class="input-label nowrap" for="name"> Меня зовут </label>
-          <input type="text" id="name" name="name" required placeholder="ваше имя" class="input-group__input">
-        </div>
-
-        <div class="d-flex input-group__box">
-          <label class="input-label nowrap" for="phone"> мой телефон </label>
-          <input type="text" name="phone" required id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
-        </div>
-
-        <div class="d-flex input-group__box">
-          <label class="input-label nowrap" for="email"> моя эл. почта </label>
-          <input type="email" name="email" required id="email" placeholder="здесь@и здесь" class="input-group__input">
-        </div>
-
-        <button class="order-form__submit-btn" type="submit"> отправить </button>
-
-        <a href="#" class="order-form__privacy-link privacy-text">
-          Нажимая кнопку, я принимаю Политику в <br>
-          отношении обработки персональных данных
-        </a>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- Modal Form -->
-<div class="form-modal modal" id="modalForm" style="display: none;">
-  <div class="modal__body">
-    <button class="close-btn">
-      <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
-      </svg>
-    </button>
-
-    <div class="modal__content">
-      <form class="order-form">
+    <div class="offcanvas__body">
+      <form class="offcanvas__body__order-form order-form">
         <p class="order-form__title">Заказать звонок</p>
 
         <div class="input-group">
           <div class="d-flex input-group__box">
-            <label class="input-label nowrap" for="name1"> Меня зовут </label>
-            <input type="text" name="name" required id="name1" placeholder="ваше имя" class="input-group__input">
+            <label class="input-label nowrap" for="name"> Меня зовут </label>
+            <input type="text" id="name" name="name" required placeholder="ваше имя" class="input-group__input">
           </div>
 
           <div class="d-flex input-group__box">
-            <label class="input-label nowrap" for="phone1"> мой телефон </label>
-            <input type="text" name="phone" required id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
+            <label class="input-label nowrap" for="phone"> мой телефон </label>
+            <input type="text" name="phone" required id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
           </div>
 
           <div class="d-flex input-group__box">
-            <label class="input-label nowrap" for="email1"> моя эл. почта </label>
-            <input type="email" name="email" required id="email1" placeholder="здесь@и здесь" class="input-group__input">
+            <label class="input-label nowrap" for="email"> моя эл. почта </label>
+            <input type="email" name="email" required id="email" placeholder="здесь@и здесь" class="input-group__input">
           </div>
 
           <button class="order-form__submit-btn" type="submit"> отправить </button>
@@ -113,10 +73,50 @@
       </form>
     </div>
   </div>
-</div>
 
-<!-- Modal Success -->
-<div class="success-modal modal" id="modalSuccess" style="display: none;">
+  <!-- Modal Form -->
+  <div class="form-modal modal" id="modalForm" style="display: none;">
+    <div class="modal__body">
+      <button class="close-btn">
+        <svg class="close-btn__icon" id="closeBtn" onclick="closeForm()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
+        </svg>
+      </button>
+
+      <div class="modal__content">
+        <form class="order-form">
+          <p class="order-form__title">Заказать звонок</p>
+
+          <div class="input-group">
+            <div class="d-flex input-group__box">
+              <label class="input-label nowrap" for="name1"> Меня зовут </label>
+              <input type="text" name="name" required id="name1" placeholder="ваше имя" class="input-group__input">
+            </div>
+
+            <div class="d-flex input-group__box">
+              <label class="input-label nowrap" for="phone1"> мой телефон </label>
+              <input type="text" name="phone" required id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
+            </div>
+
+            <div class="d-flex input-group__box">
+              <label class="input-label nowrap" for="email1"> моя эл. почта </label>
+              <input type="email" name="email" required id="email1" placeholder="здесь@и здесь" class="input-group__input">
+            </div>
+
+            <button class="order-form__submit-btn" type="submit"> отправить </button>
+
+            <a href="#" class="order-form__privacy-link privacy-text">
+              Нажимая кнопку, я принимаю Политику в <br>
+              отношении обработки персональных данных
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Success -->
+  <div class="success-modal modal" id="modalSuccess" style="display: none;">
   <div class="success-modal__content modal__body">
     <div class="modal__content text-center">
       <button class="close-btn">
@@ -240,7 +240,7 @@
     <div class="container-fluid dark">
       <div class="marquee marquee-china-first position-relative">
         <div class="marquee__track">
-          <p class="marquee__text">115+ лет ведем бизнес 115+ лет ведем бизнес</p>
+          <p class="marquee__text">10+ лет ведем бизнес 10+ лет ведем бизнес</p>
         </div>
       </div>
     </div>
@@ -331,8 +331,7 @@
     </div>
   </section>
 
-  <!-- Marquee -->
-  <div class="marquee marquee-china-second position-relative">
+  <div class="marquee marquee-second position-relative">
     <div class="marquee__track">
       <p class="marquee__text">мы гарантируем успех мы гарантируем успех</p>
     </div>
@@ -451,7 +450,7 @@
   <!-- China to Russia -->
   <section class="china-to-russia" id="china-to-russia">
     <div class="d-flex justify-content-center">
-      <h2 class="mid-title china-to-russia__title">Каждый день мы <span class="blue">работаем <br>над снижением стоимости</span> перевозок<span>из Китая в Россию</span></h2>
+      <h2 class="mid-title china-to-russia__title">Каждый день мы <span class="blue">работаем <br>над снижением стоимости</span> перевозок <span>из Китая в Россию</span></h2>
     </div>
 
     <div class="container">
@@ -507,17 +506,17 @@
               </div>
               <div class="team__slide swiper-slide">
                 <div class="row d-flex justify-content-end team-swiper__row">
-                  <img class="team__member__img d-sm-none" src="assets/images/users/img_1-sm.png" alt="#">
-                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_1-md.png" alt="#">
-                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_1.png" alt="#">
+                  <img class="team__member__img d-sm-none" src="assets/images/users/img_7-sm.png" alt="#">
+                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_7-md.png" alt="#">
+                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_7.png" alt="#">
 
                   <div class="col-6 team__slide__right">
                     <div class="row">
                       <div class="col-1 d-none d-xxl-flex"></div>
                       <div class="col-12 team-box position-md-relative">
-                        <p class="team__name">Иван Матвеевский</p>
-                        <p class="team__profession">Директор по маркетингу и монетизации</p>
-                        <p class="team__info">15 лет опыта работы в сфере рекламы и полиграфии, владелец гостиницы с уникальным концептом, 2 года успешной работы на маркетплейсах, месячный оборот на OZON и WB 4+ млн. руб.</p>
+                        <p class="team__name">Алина Короленковская</p>
+                        <p class="team__profession">Ведущий эксперт по закупкам и связям с производителями</p>
+                        <p class="team__info">Окончила с красным дипломом Пекинский Политехнический университет. С 2005 года живет и работает в Китае, 5 лет опыта работы в таких компаниях как: Google, Vivatao, Alibaba по разным товарным направлениям. Многократный участник крупнейшей в Азии выставки - Кантонской ярмарки.</p>
                       </div>
                     </div>
                   </div>
@@ -525,16 +524,17 @@
               </div>
               <div class="team__slide swiper-slide">
                 <div class="row d-flex justify-content-end team-swiper__row">
-                  <img class="team__member__img d-sm-none" src="assets/images/users/img_3-sm.png" alt="#">
-                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_3-md.png" alt="#">
-                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_3.png" alt="#">
+                  <img class="team__member__img d-sm-none" src="assets/images/users/img_8-sm.png" alt="#">
+                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_8-md.png" alt="#">
+                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_8.png" alt="#">
 
                   <div class="col-6 team__slide__right">
                     <div class="row">
                       <div class="col-1 d-none d-xxl-flex"></div>
                       <div class="col-12 team-box position-md-relative">
-                        <p class="team__name">Алёна Клычева</p>
-                        <p class="team__info">10 лет опыта работы в товарном бизнесе, 5 лет опыта работы с Китаем, 3 года успешной работы на маркетплейсах, действующий селлер с ежемесячным оборот на OZON 2+ млн. руб.</p>
+                        <p class="team__name">Яков Саввинов</p>
+                        <p class="team__profession">Эксперт по закупкам и связям с производителями</p>
+                        <p class="team__info">С 2013 года живет и работает в Китае, 8 лет опыта работы менеджером ВЭД в компании HONG KONG FONIX по направлению мебели и строительных материалов. Многократный участник крупнейшей в Азии выставки - Кантонской ярмарки.</p>
                       </div>
                     </div>
                   </div>
@@ -553,11 +553,11 @@
               </div>
               <div class="thumbs-swiper__slide swiper-slide">
                 <div class="thumbs-swiper__shadow"></div>
-                <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img.png" alt="#"/>
+                <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_6.png" alt="#"/>
               </div>
               <div class="thumbs-swiper__slide swiper-slide">
                 <div class="thumbs-swiper__shadow"></div>
-                <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_2.png" alt="#"/>
+                <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_7.png" alt="#"/>
               </div>
             </div>
 
@@ -588,9 +588,9 @@
     </div>
   </section>
 
-  <div class="marquee marquee-china-third position-relative">
+  <div class="marquee marquee-third position-relative">
     <div class="marquee__track">
-      <p class="marquee__text">115+ лет ведем бизнес 115+ лет ведем бизнес</p>
+      <p class="marquee__text">10+ лет ведем бизнес 10+ лет ведем бизнес</p>
     </div>
   </div>
 
@@ -817,19 +817,32 @@
   function openMenu() {
     offcanvas.style.right = '0'
   }
-
   function closeMenu() {
     offcanvas.style.right = '-100%';
-  }
-
-  function closeModal() {
-    modal.style.display = 'none';
-    modalForm.style.display = 'none';
   }
 
   function openForm() {
     modalForm.style.display = 'flex';
   }
+
+  function closeForm() {
+    modalForm.style.display = 'none';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  modalForm.addEventListener('click', () => {
+    if (event.target === modalForm) {
+      closeForm()
+    }
+  })
+  modal.addEventListener('click', () => {
+    if (event.target === modal) {
+      closeModal()
+    }
+  })
 
 //  Accordion
   let acc = document.getElementsByClassName("accordion__item--arrow");
@@ -852,7 +865,9 @@
   }
 
   // Open the first accordion by default
-  acc[0].click();
+  $( document ).ready(function() {
+    acc[0].click();
+  });
 </script>
 <script src="./assets/js/mask.js"></script>
 <script type="text/javascript">

@@ -76,7 +76,7 @@
 <div class="form-modal modal" id="modalForm" style="display: none;">
   <div class="modal__body">
     <button class="close-btn">
-      <svg class="close-btn__icon" id="closeBtn" onclick="closeModal()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="close-btn__icon" id="closeBtn" onclick="closeForm()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
       </svg>
     </button>
@@ -391,19 +391,32 @@
   function openMenu() {
     offcanvas.style.right = '0'
   }
-
   function closeMenu() {
     offcanvas.style.right = '-100%';
-  }
-
-  function closeModal() {
-    modal.style.display = 'none';
-    modalForm.style.display = 'none';
   }
 
   function openForm() {
     modalForm.style.display = 'flex';
   }
+
+  function closeForm() {
+    modalForm.style.display = 'none';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  modalForm.addEventListener('click', () => {
+    if (event.target === modalForm) {
+      closeForm()
+    }
+  })
+  modal.addEventListener('click', () => {
+    if (event.target === modal) {
+      closeModal()
+    }
+  })
 </script>
 <script src="./assets/js/mask.js"></script>
 <script type="text/javascript">
