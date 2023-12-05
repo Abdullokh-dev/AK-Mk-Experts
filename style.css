@@ -21,6 +21,7 @@ input {
 
 .plyr {
     border-radius: 10px !important;
+    width: 100%;
 }
 
 .dark {
@@ -377,14 +378,8 @@ input {
     gap: 20px;
 }
 
-@-moz-document url-prefix() {
-    .blur-btn-group__link {
-        line-height: 83px !important;
-    }
-}
-
 .blur-btn-group__link {
-    font-family: "Cygre SemiBold", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     background-color: #005BFF;
     border: none;
     border-radius: 35px;
@@ -400,6 +395,12 @@ input {
 
 .blur-btn-group__link:hover {
     background-color: #222222;
+}
+
+@-moz-document url-prefix() {
+    .blur-btn-group__link {
+        line-height: 83px !important;
+    }
 }
 
 /*Marque*/
@@ -661,6 +662,16 @@ input {
     margin-bottom: 100px;
 }
 
+.business__info {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 22px;
+    color: white;
+    line-height: normal;
+    text-align: center;
+    max-width: 780px;
+    margin: 23px auto 62px auto;
+}
+
 .business__btn {
     font-family: "Cygre SemiBold", sans-serif;
     color: white;
@@ -668,16 +679,20 @@ input {
     border: 1px solid white;
     font-size: 3.2rem;
     justify-content: center;
-    height: 74px;
+    height: 84px;
     text-transform: uppercase;
     font-weight: 500;
-    line-height: 64px;
+    line-height: 76px;
     border-radius: 35px;
     text-align: center;
     display: flex;
-    width: 339px;
+    padding: 0 24px;
     margin: 60px auto 14px auto;
     transition: background-color .3s, border-color .3s;
+}
+
+.business__btn--china {
+    margin-top: 40px !important;
 }
 
 .business__btn:hover {
@@ -687,7 +702,7 @@ input {
 
 @-moz-document url-prefix() {
     .business__btn {
-        line-height: 74px !important;
+        line-height: 87px !important;
     }
 }
 
@@ -1056,8 +1071,24 @@ input {
     gap: 16px;
 }
 
+.answer__next-btn:hover  .answer-btn-text,
+.answer__prev-btn:hover  .answer-btn-text {
+    color: #222222;
+}
+
+.answer__next-btn svg path,
+.answer__prev-btn svg path {
+    transition: fill .3s;
+}
+
+.answer__next-btn:hover svg path,
+.answer__prev-btn:hover svg path {
+    fill: #222222;
+}
+
 .answer-btn-text {
     line-height: 46px;
+    transition: color.3s;
 }
 
 @-moz-document url-prefix() {
@@ -1689,7 +1720,6 @@ input {
         font-weight: 400;
         height: 54px;
         line-height: 47px;
-        width: 197px;
         margin: 20px auto 10px auto;
     }
 
@@ -1871,6 +1901,12 @@ input {
 
     .business__privacy {
         max-width: 371px;
+    }
+
+    .business__info {
+        font-size: 18px;
+        max-width: 600px;
+        margin: 18px auto 50px auto;
     }
 
     /*Calculation*/
@@ -2575,6 +2611,13 @@ input {
 
     .business__btn {
         margin: 15px auto 10px auto;
+    }
+
+    .business__info {
+        font-size: 15px;
+        max-width: 600px;
+        text-align: left;
+        margin: 15px auto 40px auto;
     }
 
     /* Income */

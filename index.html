@@ -1582,17 +1582,24 @@
   let timeOutId = null;
 
   function calculate() {
-    if(numericInput.value <= 299_999) {
-      numericInput.value = 300_000
+    let quantity = numericInput.value.split(' ').join('');
+    if(quantity <= 299_999) {
+      numericInput.value = 300_000;
+      quantity = 300_000;
+      numericInput.value = numberWithSpaces(numericInput.value);
+    } else if(quantity >= 5_000_000) {
+      numericInput.value = 5_000_000;
+      quantity = 5_000_000;
+      numericInput.value = numberWithSpaces(numericInput.value);
     }
 
     // Get selected radio value
     const selectedRadio = document.querySelector('input[name="period"]:checked').value;
 
     // Calculate profit
-    const profit = numericInput.value * selectedRadio;
+    const profit = quantity * selectedRadio;
     const profitAfterTax = (profit / 100) * 44;
-    const income = profit - profitAfterTax - numericInput.value;
+    const income = profit - profitAfterTax - quantity;
 
     // Update result paragraphs
     turnover.textContent = `${numberWithSpaces(Math.trunc(profit))} ₽`
@@ -1610,7 +1617,7 @@
   }
 
   numericInput.addEventListener(('input'), function () {
-    this.value = this.value.replace(/[^0-9]/g, '');
+    this.value = numberWithSpaces(this.value.replace(/[^0-9]/g, ''))
     if (this.value.length > parseInt(this.getAttribute('maxlength'))) {
       this.value = this.value.slice(0, parseInt(this.getAttribute('maxlength')));
     }
@@ -1623,6 +1630,7 @@
 
   // default value
   numericInput.value = 300_000;
+  numericInput.value = numberWithSpaces(numericInput.value);
 
   const form = document.getElementById('form')
 
@@ -1819,7 +1827,6 @@
 
   const controls = ['play-large', 'progress', 'current-time', 'duration', 'captions', 'settings', 'airplay', 'fullscreen']
 
-  // const player = new Plyr('video', {captions: {active: true}});
   const player = new Plyr('.client-1', {captions: {active: true}, controls: controls});
   const player2 = new Plyr('.client-2', {captions: {active: true}, controls: controls});
   const player3 = new Plyr('.client-3', {captions: {active: true}, controls: controls});
