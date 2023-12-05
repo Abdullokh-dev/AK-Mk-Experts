@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="./assets/icons/logo.svg" />
   <title>Mk Expert</title>
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
   <link rel="stylesheet" href="./assets/styles/reset.css">
   <link rel="stylesheet" href="assets/styles/bootstrap-grid.css">
   <link rel="stylesheet" href="./assets/styles/swiper/swiper-bundle.css">
@@ -219,13 +221,13 @@
       <img class="company-image d-none d-md-flex" src="./assets/images/company.png" alt="">
 
       <div class="blur-btn-group">
-        <a href="#teach">
-          <button class="blur-btn-group__link">хочу начать бизнес</button>
+
+        <a href="#teach" class="blur-btn-group__link">
+          хочу начать бизнес
         </a>
-        <a href="./china.html" target="_blank">
-          <button class="blur-btn-group__link blur-btn-group__link--second">
-            поставки из китая
-          </button>
+
+        <a href="./china.html" target="_blank" class="blur-btn-group__link blur-btn-group__link--second">
+          поставки из китая
         </a>
       </div>
     </div>
@@ -398,8 +400,8 @@
           </div>
         </div>
 
-        <div class="col-12">
-          <button class="teach__show-more-btn show-more-btn">посмотреть всю программу</button>
+        <div class="col-12 text-center">
+          <a class="teach__show-more-btn show-more-btn" href="#">посмотреть всю программу</a>
         </div>
       </div>
     </div>
@@ -456,29 +458,29 @@
         <div class="row calculation-content">
           <div class="col-12 col-md-6">
             <p class="calculation__mid-title">Вложения от 300 000 ₽</p>
-            <input class="invest-price blue-bordered bordered-lg" type="text" maxlength="10" placeholder="300 000 ₽" id="budgetInput">
+            <input class="invest-price blue-bordered bordered-lg" type="text" maxlength="9" placeholder="300 000 ₽" id="budgetInput">
           </div>
           <div class="col-12 col-md-6 pe-xxl-0">
             <p class="calculation__mid-title">Период работы</p>
             <div class="custom-radio-group">
               <div class="custom-radio">
-                <input class="custom-radio__input" id="radio-1" type="radio" name="radio" value=3">
-                <label class="custom-radio__label blue-bordered" for="radio-1">3 месяца</label>
+                <input class="custom-radio__input" id="period-1" type="radio" name="period" value="3">
+                <label class="custom-radio__label blue-bordered" for="period-1">3 месяца</label>
               </div>
 
               <div class="custom-radio">
-                <input class="custom-radio__input" id="radio-2" type="radio" name="radio" value="6">
-                <label class="custom-radio__label blue-bordered" for="radio-2">6 месяцев</label>
+                <input class="custom-radio__input" id="period-2" type="radio" name="period" value="6">
+                <label class="custom-radio__label blue-bordered" for="period-2">6 месяцев</label>
               </div>
 
               <div class="custom-radio">
-                <input class="custom-radio__input" id="radio-3" type="radio" name="radio" value="9">
-                <label class="custom-radio__label blue-bordered" for="radio-3">9 месяцев</label>
+                <input class="custom-radio__input" id="period-3" type="radio" name="period" value="9">
+                <label class="custom-radio__label blue-bordered" for="period-3">9 месяцев</label>
               </div>
 
               <div class="custom-radio">
-                <input class="custom-radio__input" id="radio-4" type="radio" name="radio" value="12" checked>
-                <label class="custom-radio__label blue-bordered" for="radio-4">12 месяцев</label>
+                <input class="custom-radio__input" id="period-4" type="radio" name="period" value="12" checked>
+                <label class="custom-radio__label blue-bordered" for="period-4">12 месяцев</label>
               </div>
             </div>
           </div>
@@ -487,15 +489,15 @@
         <div class="row calculation-result">
           <div class="col-12 col-xl-6 order-xl-2 gx-auto">
             <p class="calculation__mid-title">Чистая прибыль</p>
-            <span class="calculation-result__income calculation-result__price">1 284 000 ₽</span>
+            <span class="calculation-result__income calculation-result__price" id="netProfit">1 284 000 ₽</span>
           </div>
           <div class="col-6 col-xl-3 order-xl-0 gx-auto">
             <p class="calculation__mid-title">Оборот</p>
-            <span class="calculation-result__price">3 600 000 ₽</span>
+            <span class="calculation-result__price" id="turnover">3 600 000 ₽</span>
           </div>
           <div class="col-6 col-xl-3 order-xl-1 gx-auto">
             <p class="calculation__mid-title">Расходы</p>
-            <span class="calculation-result__price">1 584 000 ₽</span>
+            <span class="calculation-result__price" id="consumption">1 584 000 ₽</span>
           </div>
         </div>
       </div>
@@ -575,7 +577,7 @@
 
           <p class="success__description text-left">Заключаем договор по созданию бизнеса на ozon и  wildberries, с гарантией рентабельности чистой прибыли минимум 15% в месяц, от полученной выручки.</p>
           <div class="d-flex justify-content-center">
-            <a class="success__btn-link success__btn-link--first justify-content-center" href="#" target="_blank">скачать договор</a>
+            <a class="success__btn-link success__btn-link--first justify-content-center" href="./assets/files/agreement.docx" download>скачать договор</a>
           </div>
         </div>
 
@@ -737,7 +739,9 @@
                       <path d="M23.4284 0L36.0975 0L12.8732 28.7305L38 58L24.9446 58C16.6718 48.3793 8.66083 38.4416 0 29.2012L23.4284 0Z" fill="#005BFF"/>
                     </svg>
                   </span>
-                    назад
+                    <span class="answer-btn-text">
+                      назад
+                    </span>
                   </a>
                 </div>
 
@@ -747,7 +751,9 @@
 
                 <div class="col d-flex align-items-center">
                   <a class="answer__next-btn blue" onclick="plusSlides(1)" id="answer__next-btn">
-                    далее
+                    <span class="answer-btn-text">
+                      далее
+                    </span>
                     <span class="d-flex align-self-center">
                       <svg width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.5716 58L1.90254 58L25.1268 29.2695L-5.07052e-06 3.32207e-06L13.0554 2.18072e-06C21.3282 9.62069 29.3392 19.5584 38 28.7988L14.5716 58Z" fill="#005BFF"/>
@@ -1280,7 +1286,10 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide position-relative">
             <div class="d-flex">
-              <iframe class="about-us-swiper__img" src="https://www.youtube.com/embed/Vk36-GV81Yg?si=GV3a0YgornNAT7X_&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <video controls crossorigin playsinline class="client-1">
+                <source src="./assets/videos/client_2.mp4" type="video/mp4">
+                <a href="./assets/videos/client_2.mp4" download>Download</a>
+              </video>
             </div>
 
             <p class="about-us-swiper__title">Дарья Александрова</p>
@@ -1290,7 +1299,10 @@
 
           <div class="swiper-slide position-relative">
             <div class="d-flex">
-              <iframe class="about-us-swiper__img" src="https://www.youtube.com/embed/Vk36-GV81Yg?si=GV3a0YgornNAT7X_&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <video controls crossorigin playsinline class="client-2">
+                <source src="./assets/videos/client_3.mp4" type="video/mp4">
+                <a href="./assets/videos/client_3.mp4" download>Download</a>
+              </video>
             </div>
 
             <p class="about-us-swiper__title">Тимур Тихонов</p>
@@ -1299,7 +1311,10 @@
 
           <div class="swiper-slide position-relative">
             <div class="d-flex">
-              <iframe class="about-us-swiper__img" src="https://www.youtube.com/embed/Vk36-GV81Yg?si=GV3a0YgornNAT7X_&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <video controls crossorigin playsinline class="client-3">
+                <source src="./assets/videos/client_1.mp4" type="video/mp4">
+                <a href="./assets/videos/client_1.mp4" download>Download</a>
+              </video>
             </div>
 
             <p class="about-us-swiper__title">Елена Паутова</p>
@@ -1308,12 +1323,39 @@
 
           <div class="swiper-slide position-relative">
             <div class="d-flex">
-              <iframe class="about-us-swiper__img" src="https://www.youtube.com/embed/Vk36-GV81Yg?si=GV3a0YgornNAT7X_&amp;start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <video controls crossorigin playsinline class="client-4">
+                <source src="./assets/videos/client_2.mp4" type="video/mp4">
+                <a href="./assets/videos/client_2.mp4" download>Download</a>
+              </video>
             </div>
 
             <p class="about-us-swiper__title">Дарья Александрова</p>
 
             <p class="about-us-swiper__info">магазин нижнего белья <br> магазин нижнего белья <br> магазин нижнего белья</p>
+          </div>
+
+          <div class="swiper-slide position-relative">
+            <div class="d-flex">
+              <video controls crossorigin playsinline class="client-5">
+                <source src="./assets/videos/client_3.mp4" type="video/mp4">
+                <a href="./assets/videos/client_3.mp4" download>Download</a>
+              </video>
+            </div>
+
+            <p class="about-us-swiper__title">Тимур Тихонов</p>
+            <p class="about-us-swiper__info">продуктовый магазин <br> магазин нижнего белья <br> магазин нижнего белья</p>
+          </div>
+
+          <div class="swiper-slide position-relative">
+            <div class="d-flex">
+              <video controls crossorigin playsinline class="client-6">
+                <source src="./assets/videos/client_1.mp4" type="video/mp4">
+                <a href="./assets/videos/client_1.mp4" download>Download</a>
+              </video>
+            </div>
+
+            <p class="about-us-swiper__title">Елена Паутова</p>
+            <p class="about-us-swiper__info">магазин запчастей для машин <br> магазин нижнего белья <br> магазин нижнего белья</p>
           </div>
         </div>
       </div>
@@ -1377,10 +1419,10 @@
   <section class="news" id="news">
     <div class="container">
       <div class="row news-title-box">
-        <div class="col gx-auto">
-          <h2 class="title">новости</h2>
+        <div class="col pe-0">
+          <h2 class="title"> новости </h2>
         </div>
-        <div class="col gx-auto d-inline-flex">
+        <div class="col d-inline-flex ps-0">
           <a class="news__link align-self-center ms-auto" href="./news.html" target="_blank">
             посмотреть все
             <svg class="news__link__svg" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1491,7 +1533,7 @@
 
         <div class="col-md-5 col-lg-4 col-xl-4 col-xxl-2 p-xxl-0 footer__privacy">
           <div class="footer__btn-group d-flex d-md-block">
-            <a class="footer__btn-link footer__btn-down order-1" href="" target="_blank">Скачать договор</a>
+            <a class="footer__btn-link footer__btn-down order-1" href="./assets/files/agreement.docx" download>Скачать договор</a>
             <a class="footer__btn-link footer__btn-cab order-0" href="" target="_blank">личный кабинет</a>
           </div>
 
@@ -1521,17 +1563,66 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
+  // Scroll
   const scrollElement = (id) => {
     document.getElementById(id).scrollIntoView({behavior: "smooth",'top':'top'})
   }
 
-  const numericInput = document.getElementById('budgetInput')
+  // Space adder between numbers
+  function numberWithSpaces(n) {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
+  // Calculation
+  let numericInput = document.getElementById('budgetInput');
+  let periods = document.querySelectorAll('input[name="period"]');
+  let turnover = document.getElementById('turnover');
+  let consumption = document.getElementById('consumption');
+  let netIncome = document.getElementById('netProfit');
+  let timeOutId = null;
+
+  function calculate() {
+    if(numericInput.value <= 299_999) {
+      numericInput.value = 300_000
+    }
+
+    // Get selected radio value
+    const selectedRadio = document.querySelector('input[name="period"]:checked').value;
+
+    // Calculate profit
+    const profit = numericInput.value * selectedRadio;
+    const profitAfterTax = (profit / 100) * 44;
+    const income = profit - profitAfterTax - numericInput.value;
+
+    // Update result paragraphs
+    turnover.textContent = `${numberWithSpaces(Math.trunc(profit))} ₽`
+    consumption.textContent = `${numberWithSpaces(Math.trunc(profitAfterTax))} ₽`
+    netIncome.textContent = `${numberWithSpaces(Math.trunc(income))} ₽`
+  }
+
+  // Logic calculate with waiting
+  function calculateAwait() {
+    clearTimeout(timeOutId);
+
+    timeOutId = setTimeout(() => {
+      calculate()
+    }, 3000)
+  }
+
   numericInput.addEventListener(('input'), function () {
     this.value = this.value.replace(/[^0-9]/g, '');
     if (this.value.length > parseInt(this.getAttribute('maxlength'))) {
       this.value = this.value.slice(0, parseInt(this.getAttribute('maxlength')));
     }
+
+    calculateAwait()
   })
+
+  // radios (periods)
+  periods.forEach(radio => radio.addEventListener('change', calculate));
+
+  // default value
+  numericInput.value = 300_000;
 
   const form = document.getElementById('form')
 
@@ -1559,6 +1650,116 @@
       }
     }
     return null;
+  }
+
+  const offcanvas = document.querySelector('.offcanvas');
+  const modalForm = document.getElementById('modalForm');
+  const modal = document.getElementById('modalSuccess');
+
+  function openMenu() {
+    offcanvas.style.right = '0'
+  }
+  function closeMenu() {
+    offcanvas.style.right = '-100%';
+  }
+  function openForm() {
+    modalForm.style.display = 'flex';
+  }
+  function closeForm() {
+    modalForm.style.display = 'none';
+  }
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  modalForm.addEventListener('click', () => {
+    if (event.target === modalForm) {
+      closeForm()
+    }
+  })
+  modal.addEventListener('click', () => {
+    if (event.target === modal) {
+      closeModal()
+    }
+  })
+
+//  Accordion
+  let acc = document.getElementsByClassName("accordion__item");
+  let i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      let isActive = this.classList.contains("active");
+
+      for (let j = 0; j < acc.length; j++) {
+        acc[j].classList.remove("active");
+        acc[j].nextElementSibling.style.maxHeight = null;
+      }
+
+      if (!isActive) {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
+  // Open the first accordion by default
+  $( document ).ready(function() {
+    acc[0].click();
+  });
+
+//  Slider
+  let navigation = document.getElementById('navigation')
+  let paginationText = document.getElementById('paginationText');
+  let prev = document.getElementById('answer__prev-btn');
+  let next = document.getElementById('answer__next-btn');
+  let slideIndex = 1;
+  let slideCount = 0;
+
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    if(slideIndex + n === 2 && answers.goal.length === 0) {
+      return false;
+    }
+
+    if(slideIndex + n === 3 && answers.you.length === 0) {
+      return false;
+    }
+
+    if(slideIndex + n === 4 && answers.budget.length === 0) {
+      return false;
+    }
+
+    showSlides(slideIndex += n);
+    paginationText.innerText = `${slideIndex}/${slideCount}`;
+
+    if(slideCount === slideIndex) {
+      navigation.style.display = 'none'
+    }
+
+    setCookie('answers', JSON.stringify(answers), 24);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("answer__slide");
+    slideCount = slides.length;
+    paginationText.innerText = `${slideIndex}/${slideCount}`;
+
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+
+    if(slideIndex === 1) {
+      prev.style.display = 'none'
+    } else {
+      prev.style.display = 'flex'
+    }
   }
 
   const swiper = new Swiper('.about-us-swiper', {
@@ -1616,119 +1817,15 @@
     }
   });
 
-  const offcanvas = document.querySelector('.offcanvas');
-  const modalForm = document.getElementById('modalForm');
-  const modal = document.getElementById('modalSuccess');
+  const controls = ['play-large', 'progress', 'current-time', 'duration', 'captions', 'settings', 'airplay', 'fullscreen']
 
-  function openMenu() {
-    offcanvas.style.right = '0'
-  }
-  function closeMenu() {
-    offcanvas.style.right = '-100%';
-  }
-
-  function openForm() {
-    modalForm.style.display = 'flex';
-  }
-
-  function closeForm() {
-    modalForm.style.display = 'none';
-  }
-
-  function closeModal() {
-    modal.style.display = 'none';
-  }
-
-  modalForm.addEventListener('click', () => {
-    if (event.target === modalForm) {
-      closeForm()
-    }
-  })
-  modal.addEventListener('click', () => {
-    if (event.target === modal) {
-      closeModal()
-    }
-  })
-
-//  Accordion
-  let acc = document.getElementsByClassName("accordion__item");
-  let i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      let isActive = this.classList.contains("active");
-
-      for (let j = 0; j < acc.length; j++) {
-        acc[j].classList.remove("active");
-        acc[j].nextElementSibling.style.maxHeight = null;
-      }
-
-      if (!isActive) {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
-  }
-
-  // Open the first accordion by default
-  $( document ).ready(function() {
-    acc[0].click();
-  });
-
-//  Slider
-  let navigation = document.getElementById('navigation')
-  let paginationText = document.getElementById('paginationText');
-  let prev = document.getElementById('answer__prev-btn');
-  let next = document.getElementById('answer__next-btn');
-  let slideIndex = 1;
-  let slideCount = 0;
-
-  showSlides(slideIndex);
-
-  // todo
-  function plusSlides(n) {
-    if(slideIndex + n === 2 && answers.goal.length === 0) {
-      return false;
-    }
-
-    if(slideIndex + n === 3 && answers.you.length === 0) {
-      return false;
-    }
-
-    if(slideIndex + n === 4 && answers.budget.length === 0) {
-      return false;
-    }
-
-    showSlides(slideIndex += n);
-    paginationText.innerText = `${slideIndex}/${slideCount}`;
-
-    if(slideCount === slideIndex) {
-      navigation.style.display = 'none'
-    }
-
-    setCookie('answers', JSON.stringify(answers), 24);
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("answer__slide");
-    slideCount = slides.length;
-    paginationText.innerText = `${slideIndex}/${slideCount}`;
-
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[slideIndex-1].style.display = "block";
-
-    if(slideIndex === 1) {
-      prev.style.display = 'none'
-    } else {
-      prev.style.display = 'flex'
-    }
-  }
+  // const player = new Plyr('video', {captions: {active: true}});
+  const player = new Plyr('.client-1', {captions: {active: true}, controls: controls});
+  const player2 = new Plyr('.client-2', {captions: {active: true}, controls: controls});
+  const player3 = new Plyr('.client-3', {captions: {active: true}, controls: controls});
+  const player4 = new Plyr('.client-4', {captions: {active: true}, controls: controls});
+  const player5 = new Plyr('.client-5', {captions: {active: true}, controls: controls});
+  const player6 = new Plyr('.client-6', {captions: {active: true}, controls: controls});
 </script>
 <script src="./assets/js/mask.js"></script>
 <script type="text/javascript">
