@@ -489,7 +489,7 @@
         <div class="row calculation-result">
           <div class="col-12 col-xl-6 order-xl-2 gx-auto">
             <p class="calculation__mid-title">Чистая прибыль</p>
-            <span class="calculation-result__income calculation-result__price" id="netProfit">1 284 000 ₽</span>
+            <span class="calculation-result__income calculation-result__price" id="netProfit">1 716 000 ₽</span>
           </div>
           <div class="col-6 col-xl-3 order-xl-0 gx-auto">
             <p class="calculation__mid-title">Оборот</p>
@@ -749,7 +749,7 @@
                   <div class="pagination-index blue my-auto" id="paginationText"></div>
                 </div>
 
-                <div class="col d-flex align-items-center">
+                <div class="col d-flex align-items-center justify-content-end">
                   <a class="answer__next-btn blue" onclick="plusSlides(1)" id="answer__next-btn">
                     <span class="answer-btn-text">
                       далее
@@ -1292,9 +1292,12 @@
               </video>
             </div>
 
-            <p class="about-us-swiper__title">Дарья Александрова</p>
+            <p class="about-us-swiper__title">Дарья Романова</p>
 
-            <p class="about-us-swiper__info">магазин нижнего белья <br> магазин нижнего белья <br> магазин нижнего белья</p>
+            <p class="about-us-swiper__info">
+              Действующий селлер, на OZON 6 месяцев<br>
+              Товарные категории: хобби и творчество, дом и сад. <br>
+              Среднемесячный оборот 700 тыс. руб.
           </div>
 
           <div class="swiper-slide position-relative">
@@ -1305,8 +1308,12 @@
               </video>
             </div>
 
-            <p class="about-us-swiper__title">Тимур Тихонов</p>
-            <p class="about-us-swiper__info">продуктовый магазин <br> магазин нижнего белья <br> магазин нижнего белья</p>
+            <p class="about-us-swiper__title">Илья Мирлин</p>
+            <p class="about-us-swiper__info">
+              Действующий селлер, на OZON 1 год <br>
+              Товарные категории: красота и здоровье, дом и сад. <br>
+              Среднемесячный оборот 1 млн. руб.
+            </p>
           </div>
 
           <div class="swiper-slide position-relative">
@@ -1317,8 +1324,12 @@
               </video>
             </div>
 
-            <p class="about-us-swiper__title">Елена Паутова</p>
-            <p class="about-us-swiper__info">магазин запчастей для машин <br> магазин нижнего белья <br> магазин нижнего белья</p>
+            <p class="about-us-swiper__title">Юлия Смирнова</p>
+            <p class="about-us-swiper__info">
+              Действующий селлер, на OZON 5 месяцев <br>
+              Товарные категории: строительство и ремонт, дом и сад, спорт и отдых. <br>
+              Среднемесячный оборот 1,5 млн. руб.
+            </p>
           </div>
 
           <div class="swiper-slide position-relative">
@@ -1329,9 +1340,12 @@
               </video>
             </div>
 
-            <p class="about-us-swiper__title">Дарья Александрова</p>
+            <p class="about-us-swiper__title">Дарья Романова</p>
 
-            <p class="about-us-swiper__info">магазин нижнего белья <br> магазин нижнего белья <br> магазин нижнего белья</p>
+            <p class="about-us-swiper__info">
+              Действующий селлер, на OZON 6 месяцев<br>
+              Товарные категории: хобби и творчество, дом и сад. <br>
+              Среднемесячный оборот 700 тыс. руб.
           </div>
 
           <div class="swiper-slide position-relative">
@@ -1342,8 +1356,12 @@
               </video>
             </div>
 
-            <p class="about-us-swiper__title">Тимур Тихонов</p>
-            <p class="about-us-swiper__info">продуктовый магазин <br> магазин нижнего белья <br> магазин нижнего белья</p>
+            <p class="about-us-swiper__title">Илья Мирлин</p>
+            <p class="about-us-swiper__info">
+              Действующий селлер, на OZON 1 год <br>
+              Товарные категории: красота и здоровье, дом и сад. <br>
+              Среднемесячный оборот 1 млн. руб.
+            </p>
           </div>
 
           <div class="swiper-slide position-relative">
@@ -1354,8 +1372,12 @@
               </video>
             </div>
 
-            <p class="about-us-swiper__title">Елена Паутова</p>
-            <p class="about-us-swiper__info">магазин запчастей для машин <br> магазин нижнего белья <br> магазин нижнего белья</p>
+            <p class="about-us-swiper__title">Юлия Смирнова</p>
+            <p class="about-us-swiper__info">
+              Действующий селлер, на OZON 5 месяцев <br>
+              Товарные категории: строительство и ремонт, дом и сад, спорт и отдых. <br>
+              Среднемесячный оборот 1,5 млн. руб.
+            </p>
           </div>
         </div>
       </div>
@@ -1629,7 +1651,7 @@
   periods.forEach(radio => radio.addEventListener('change', calculate));
 
   // default value
-  numericInput.value = 300_000;
+  // numericInput.value = 300_000;
   numericInput.value = numberWithSpaces(numericInput.value);
 
   const form = document.getElementById('form')
@@ -1772,7 +1794,7 @@
 
   const swiper = new Swiper('.about-us-swiper', {
     loop: true,
-    autoHeight: true,
+    autoHeight: false,
     navigation: {
       nextEl: '.about-us-swiper__next',
       prevEl: '.about-us-swiper__prev',
