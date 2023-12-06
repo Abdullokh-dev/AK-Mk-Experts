@@ -1034,6 +1034,7 @@ input {
 .answer__prev-btn, .answer__next-btn {
     font-family: "Cygre SemiBold", sans-serif;
     display: flex;
+    position: relative;
     height: 58px;
     font-size: 4.8rem;
     font-weight: 800;
@@ -1042,6 +1043,36 @@ input {
     transition: 0.6s ease;
     user-select: none;
     gap: 20px;
+}
+
+.answer__prev-btn svg, .answer__next-btn svg {
+    position: absolute;
+    top: 0;
+    transition: .3s;
+}
+
+.answer__next-btn svg {
+    right: 0;
+}
+
+.answer__prev-btn svg {
+    left: 0;
+}
+
+.answer__next-btn:hover svg {
+    right: -20px;
+}
+
+.answer__prev-btn:hover svg {
+    left: -20px;
+}
+
+.answer__prev-btn .answer-btn-text {
+    margin-left: 40px;
+}
+
+.answer__next-btn .answer-btn-text {
+    margin-right: 40px;
 }
 
 .answer__next-btn:hover  .answer-btn-text,
@@ -2674,6 +2705,22 @@ input {
         height: 27px;
         font-size: 2.2rem;
         gap: 9px;
+    }
+
+    .answer__next-btn:hover svg {
+        right: -10px;
+    }
+
+    .answer__prev-btn:hover svg {
+        left: -10px;
+    }
+
+    .answer__prev-btn .answer-btn-text {
+        margin-left: 18px;
+    }
+
+    .answer__next-btn .answer-btn-text {
+        margin-right: 18px;
     }
 
     .answer-btn-text {
