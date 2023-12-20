@@ -21,7 +21,6 @@ input {
 
 .plyr {
     border-radius: 10px !important;
-    width: 100%;
 }
 
 .dark {
@@ -75,6 +74,21 @@ input {
 .header {
     font-family: 'Noto Sans', sans-serif;
     text-transform: uppercase;
+}
+
+.china-header, .china-banner-title-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.china-header {
+    z-index: 2;
+}
+
+.china-banner-title-container {
+    z-index: 1;
 }
 
 .header__container {
@@ -340,8 +354,14 @@ input {
     padding: 50px 0;
 }
 
-.main-title--china {
-    padding: 50px 0 80px 0;
+.china-banner-title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.6px;
+    margin-top: 138px;
 }
 
 .main-title__title {
@@ -409,13 +429,13 @@ input {
 }
 
 .marquee-china-first {
-    margin-top: -63px;
+    margin-top: -80px;
     padding-bottom: 240px;
     z-index: 1;
 }
 
 .marquee-second {
-    margin-top: 178px;
+    margin-top: 150px;
 }
 
 .marquee-china-second {
@@ -434,7 +454,7 @@ input {
     line-height: 80%;
     font-weight: 900;
     text-transform: uppercase;
-    -webkit-text-stroke: 2px #005BFF;
+    -webkit-text-stroke: 3px #005BFF;
     -webkit-text-fill-color:transparent;
     color: transparent;
 }
@@ -705,8 +725,8 @@ input {
 .income__warning {
     font-size: 1.8rem;
     font-weight: 300;
-    line-height: normal;
-    margin-top: 30px;
+    line-height: 190%;
+    margin-top: 13px;
 }
 
 .calculation {
@@ -719,7 +739,7 @@ input {
 
 .calculation-result {
     margin: 35px 0 0;
-    padding: 43px 22px 47px 22px;
+    padding: 20px 22px 41px 22px;
     background-color: #005BFF;
     color: white;
 }
@@ -970,6 +990,10 @@ input {
 .team__slide__next {
     right: 0;
     width: 38px;
+}
+
+.about-us-swiper__slide {
+    width: calc(33.333% - 11px);
 }
 
 .about-us-swiper__prev {
@@ -1458,20 +1482,18 @@ input {
 /*China*/
 .service {
     padding-top: 0;
+    padding-bottom: 120px;
 }
 
 .work-info {
-    padding-top: 24px;
+    padding-top: 40px;
 }
 
-.china-swiper__wrapper-slide {
-    height: 657px;
-}
-
-.china-swiper__wrapper-img {
+.china-banner-img {
     display: flex;
     object-fit: cover;
     height: 100%;
+    z-index: -1;
 }
 
 .accordion-china__item {
@@ -1550,13 +1572,40 @@ input {
 }
 
 .business-china-third {
-    margin: 110px 0 117px;
+    margin: 165px 0 117px;
+}
+
+.fixed-buttons-overlay {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    pointer-events: none;
+}
+
+.fixed-buttons__telegram {
+    background: url('./assets/images/telegram.svg') no-repeat center center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    pointer-events: auto;
+    margin-bottom: 147px;
+    transition: .4s all;
+}
+
+.fixed-buttons__telegram:hover {
+    opacity: .9;
 }
 
 /* Footer */
 .footer {
     font-family: "Noto Sans", sans-serif;
-    margin-top: 120px;
+    /*margin-top: 120px;*/
     padding: 25px 0 60px 0;
 }
 
@@ -1825,6 +1874,7 @@ input {
 
     .marquee__text {
         font-size: 9rem;
+        -webkit-text-stroke: 2px #005BFF;
     }
 
     /* Main title */
@@ -1970,6 +2020,8 @@ input {
     }
 
     .answer__title {
+        margin-top: 40px;
+        margin-bottom: 30px;
         max-width: 550px;
     }
 
@@ -2228,7 +2280,7 @@ input {
 
     /* Footer */
     .footer {
-        margin-top: 164px;
+        /*margin-top: 164px;*/
         padding: 17px 0 19px 0;
     }
 
@@ -2293,12 +2345,15 @@ input {
     }
 
     /*CHINA*/
-    .service {
-        padding-top: 80px;
+    .china-banner-title {
+        font-size: 36px;
+        letter-spacing: unset;
+        margin-top: 100px;
     }
 
-    .china-swiper__wrapper-slide {
-        height: 357px;
+    .service {
+        padding-top: 80px;
+        padding-bottom: 100px;
     }
 
     .success-china-box-first {
@@ -2370,6 +2425,10 @@ input {
     /*    height: 23vw;*/
     /*    max-height: 188px;*/
     /*}*/
+
+    .about-us-swiper__slide {
+        width: calc(50% - 9px);
+    }
 
     .team__profession, .team__info {
         font-size: 1.4rem;
@@ -2747,6 +2806,10 @@ input {
         margin: 60px 0 17px 0;
     }
 
+    .about-us-swiper__slide {
+        width: 100%;
+    }
+
     .answer__slide__question {
         font-size: 2.2rem;
         line-height: normal;
@@ -2921,7 +2984,7 @@ input {
 
     /*Footer*/
     .footer {
-        margin-top: 82px;
+        /*margin-top: 82px;*/
         padding: 0 0 20px 0;
     }
 
@@ -3033,10 +3096,7 @@ input {
     /* China */
     .service {
         padding-top: 40px;
-    }
-
-    .china-swiper__wrapper-slide {
-        height: 317px;
+        padding-bottom: 80px;
     }
 
     .work-info {
@@ -3169,7 +3229,11 @@ input {
     }
 
     .team-box {
-        padding-left: 10px;
+        padding-left: 17px;
+    }
+
+    .china-banner-title {
+        font-size: 18px;
     }
 }
 
