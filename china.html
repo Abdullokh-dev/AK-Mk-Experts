@@ -1,71 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="./assets/icons/logo.svg" />
   <title>Mk Expert</title>
   <link rel="stylesheet" href="./assets/styles/reset.css">
-  <link rel="stylesheet" href="assets/styles/bootstrap-grid.css">
+  <link rel="stylesheet" href="./assets/styles/bootstrap-grid.css">
   <link rel="stylesheet" href="./assets/styles/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="./assets/styles/swiper/navigation.css">
   <link rel="stylesheet" href="./assets/styles/fonts.css">
   <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-  <!-- Header Modal -->
-  <div class="offcanvas">
-    <div class="offcanvas__header dark">
-      <button class="close-btn">
-        <svg class="close-btn__icon" id="closeBtn" onclick="closeMenu()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="white"/>
-        </svg>
-      </button>
+<body class="position-relative">
+<!-- Header Modal -->
+<div class="offcanvas">
+  <div class="offcanvas__header dark">
+    <button class="close-btn">
+      <svg class="close-btn__icon" id="closeBtn" onclick="closeMenu()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="white"/>
+      </svg>
+    </button>
 
-      <nav class="offcanvas__nav nav">
-        <ul class="nav__list">
-          <li class="offcanvas__nav__item nav__item">
-            <a href="./index.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
-          </li>
-          <li class="offcanvas__nav__item nav__item">
-            <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Закупка в китае</a>
-          </li>
-          <li class="offcanvas__nav__item nav__item">
-            <a href="#our-team" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
-          </li>
-          <li class="offcanvas__nav__item nav__item">
-            <a href="./news.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
-          </li>
-          <li class="offcanvas__nav__item nav__item">
-            <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Личный кабинет</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="offcanvas__nav nav">
+      <ul class="nav__list">
+        <li class="offcanvas__nav__item nav__item">
+          <a href="./index.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Начать бизнес</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Закупка в китае</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="#our-team" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Команда</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="./news.html" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Новости</a>
+        </li>
+        <li class="offcanvas__nav__item nav__item">
+          <a href="" class="offcanvas__nav__link nav__link" onclick="closeMenu()">Личный кабинет</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-    <div class="offcanvas__body">
-      <form class="offcanvas__body__order-form order-form">
+  <div class="offcanvas__body">
+    <form class="offcanvas__body__order-form order-form">
+      <p class="order-form__title">Заказать звонок</p>
+
+      <div class="input-group">
+        <div class="d-flex input-group__box">
+          <label class="input-label nowrap" for="name"> Меня зовут </label>
+          <input type="text" id="name" name="name" required placeholder="ваше имя" class="input-group__input">
+        </div>
+
+        <div class="d-flex input-group__box">
+          <label class="input-label nowrap" for="phone"> мой телефон </label>
+          <input type="text" name="phone" required id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
+        </div>
+
+        <div class="d-flex input-group__box">
+          <label class="input-label nowrap" for="email"> моя эл. почта </label>
+          <input type="email" name="email" required id="email" placeholder="здесь@и здесь" class="input-group__input">
+        </div>
+
+        <button class="order-form__submit-btn" type="submit"> отправить </button>
+
+        <a href="./privacy.html" target="_blank" class="order-form__privacy-link privacy-text">
+          Нажимая кнопку, я принимаю Политику в <br>
+          отношении обработки персональных данных
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Form -->
+<div class="form-modal modal" id="modalForm" style="display: none;">
+  <div class="modal__body">
+    <button class="close-btn">
+      <svg class="close-btn__icon" id="closeBtn" onclick="closeForm()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
+      </svg>
+    </button>
+
+    <div class="modal__content">
+      <form class="order-form">
         <p class="order-form__title">Заказать звонок</p>
 
         <div class="input-group">
           <div class="d-flex input-group__box">
-            <label class="input-label nowrap" for="name"> Меня зовут </label>
-            <input type="text" id="name" name="name" required placeholder="ваше имя" class="input-group__input">
+            <label class="input-label nowrap" for="name1"> Меня зовут </label>
+            <input type="text" name="name" required id="name1" placeholder="ваше имя" class="input-group__input">
           </div>
 
           <div class="d-flex input-group__box">
-            <label class="input-label nowrap" for="phone"> мой телефон </label>
-            <input type="text" name="phone" required id="phone" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
+            <label class="input-label nowrap" for="phone1"> мой телефон </label>
+            <input type="text" name="phone" required id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
           </div>
 
           <div class="d-flex input-group__box">
-            <label class="input-label nowrap" for="email"> моя эл. почта </label>
-            <input type="email" name="email" required id="email" placeholder="здесь@и здесь" class="input-group__input">
+            <label class="input-label nowrap" for="email1"> моя эл. почта </label>
+            <input type="email" name="email" required id="email1" placeholder="здесь@и здесь" class="input-group__input">
           </div>
 
           <button class="order-form__submit-btn" type="submit"> отправить </button>
 
-          <a href="#" class="order-form__privacy-link privacy-text">
+          <a href="./privacy.html" target="_blank" class="order-form__privacy-link privacy-text">
             Нажимая кнопку, я принимаю Политику в <br>
             отношении обработки персональных данных
           </a>
@@ -73,50 +113,10 @@
       </form>
     </div>
   </div>
+</div>
 
-  <!-- Modal Form -->
-  <div class="form-modal modal" id="modalForm" style="display: none;">
-    <div class="modal__body">
-      <button class="close-btn">
-        <svg class="close-btn__icon" id="closeBtn" onclick="closeForm()"  width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.18201 1L39 39M38.818 1L1 39" stroke="black"/>
-        </svg>
-      </button>
-
-      <div class="modal__content">
-        <form class="order-form">
-          <p class="order-form__title">Заказать звонок</p>
-
-          <div class="input-group">
-            <div class="d-flex input-group__box">
-              <label class="input-label nowrap" for="name1"> Меня зовут </label>
-              <input type="text" name="name" required id="name1" placeholder="ваше имя" class="input-group__input">
-            </div>
-
-            <div class="d-flex input-group__box">
-              <label class="input-label nowrap" for="phone1"> мой телефон </label>
-              <input type="text" name="phone" required id="phone1" placeholder="+7 (999) 999 99-99" class="input-group__input masked">
-            </div>
-
-            <div class="d-flex input-group__box">
-              <label class="input-label nowrap" for="email1"> моя эл. почта </label>
-              <input type="email" name="email" required id="email1" placeholder="здесь@и здесь" class="input-group__input">
-            </div>
-
-            <button class="order-form__submit-btn" type="submit"> отправить </button>
-
-            <a href="#" class="order-form__privacy-link privacy-text">
-              Нажимая кнопку, я принимаю Политику в <br>
-              отношении обработки персональных данных
-            </a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Success -->
-  <div class="success-modal modal" id="modalSuccess" style="display: none;">
+<!-- Modal Success -->
+<div class="success-modal modal" id="modalSuccess" style="display: none;">
   <div class="success-modal__content modal__body">
     <div class="modal__content text-center">
       <button class="close-btn">
@@ -137,540 +137,547 @@
   </div>
 </div>
 
-  <!-- Header -->
-  <header class="header china-header">
-    <div class="header__container container">
-      <div class="row">
-        <div class="col-12 d-flex">
-          <a href="./index.html" class="header__logo logo">
-            <svg width="51" height="40" viewBox="0 0 51 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M27.5817 0.00334544H31.8965C32.0972 0.00334544 32.2578 0.164015 32.2578 0.374894V25.7406C32.2578 25.9481 32.0972 26.1121 31.8965 26.1121H27.5817V0.00669599V0.00334544ZM0 0.00334544H4.35165C4.73966 0.00334544 5.08083 0.137236 5.23469 0.468617L12.7171 17.0343L19.564 0.468617C19.7079 0.137236 20.049 0.00334544 20.4371 0.00334544H24.7318V26.1088H20.417C20.2163 26.1088 20.0557 25.9481 20.0557 25.7372V7.35398L15.1522 18.6444V18.6544L14.3193 20.5724C14.2892 20.6293 14.2625 20.6862 14.2257 20.7331L12.6904 24.1774L10.1316 18.5874L4.66941 7.2569L4.66943 25.4025C4.66943 25.61 4.50888 25.7741 4.30819 25.7741H2.04154e-05L0 0V0.00334544ZM1.49849 38.9054H6.57264V39.9966H0.284312V30.0987H6.29501V31.19H1.49849V34.3866H5.76653V35.4778H1.49849V38.9021V38.9054ZM11.8341 34.0954L14.5735 30.1021H15.9115L12.5465 34.9791L16.0653 40H14.7174L11.8241 35.7958H11.7873L8.88727 40H7.52257L11.0681 34.9523L7.72995 30.1021H9.04783L11.8073 34.0954H11.8374H11.8341ZM18.681 39.9966H17.4668V30.0987H20.2063C20.6143 30.0987 20.9923 30.1289 21.3435 30.1757C21.6947 30.2226 22.0058 30.2996 22.2901 30.4033C22.8888 30.6109 23.3437 30.9356 23.6381 31.3506C23.9425 31.7791 24.093 32.2912 24.093 32.9172C24.093 33.4192 24.006 33.8577 23.7886 34.236C23.5979 34.6243 23.3036 34.9489 22.9256 35.2033C22.5543 35.4611 22.0994 35.6385 21.5509 35.7824C21.009 35.9163 20.3835 35.9732 19.7012 35.9732C19.37 35.9732 19.0289 35.9632 18.6777 35.9364V39.9966H18.681ZM18.681 34.8251C18.8416 34.8452 19.0121 34.8552 19.1928 34.872C19.3634 34.882 19.5239 34.882 19.6945 34.882C20.2531 34.882 20.7381 34.8452 21.1261 34.7481C21.5442 34.6611 21.8553 34.5406 22.1128 34.3699C22.3603 34.1891 22.541 33.9916 22.6614 33.754C22.7651 33.4962 22.8219 33.2218 22.8219 32.9205C22.8219 32.5222 22.735 32.2075 22.5577 31.9632C22.367 31.7255 22.1028 31.5448 21.7716 31.4042C21.5542 31.3272 21.3167 31.2703 21.0425 31.2435C20.7582 31.2134 20.437 31.1967 20.0758 31.1967H18.681V34.8318V34.8251ZM27.3107 38.9054H32.3849V39.9966H26.0999V30.0987H32.1106V31.19H27.3141V34.3866H31.5821V35.4778H27.3141V38.9021L27.3107 38.9054ZM35.6528 35.8962V39.9966H34.4386V30.0987H37.0074C37.4356 30.0987 37.8136 30.1188 38.1179 30.1456C38.4223 30.1757 38.6966 30.2326 38.9341 30.2962C39.6365 30.477 40.1583 30.8084 40.5262 31.2435C40.8875 31.6987 41.0681 32.2577 41.0681 32.9406C41.0681 33.3389 41.0112 33.7004 40.8674 34.0117C40.7537 34.3331 40.5731 34.6109 40.3456 34.8385C40.0981 35.0661 39.8238 35.2569 39.5127 35.4075C39.1816 35.5515 38.8304 35.672 38.4324 35.7289V35.759L41.3624 39.99H40.1483L37.1045 35.8895H35.6528V35.8962ZM35.6528 31.19V34.8151H36.8469C37.2081 34.8151 37.5292 34.795 37.7868 34.7682C38.0444 34.7481 38.2785 34.7013 38.4993 34.6444C38.9073 34.5105 39.2385 34.313 39.4659 34.0184C39.6934 33.754 39.7971 33.3724 39.7971 32.9372C39.7971 32.5021 39.6934 32.1607 39.4826 31.9029C39.2652 31.6452 38.9608 31.4678 38.5829 31.3439C38.4223 31.2971 38.2049 31.2502 37.9474 31.2201C37.7099 31.21 37.4055 31.19 37.0074 31.19H35.6528ZM46.955 39.9966H45.7509V31.19H42.4529V30.0987H50.2564V31.19H46.9584V39.9966H46.955Z" fill="white"/>
-              <path d="M42.5448 0H48.3579L37.7017 13.2094L49.2308 26.6667H43.2405C39.4446 22.2434 35.7689 17.6743 31.7949 13.4258L42.5448 0Z" fill="#005BFF"/>
+<!-- Header -->
+<header class="header china-header">
+  <div class="header__container container">
+    <div class="row">
+      <div class="col-12 d-flex">
+        <a href="./index.html" class="header__logo logo">
+          <svg width="51" height="40" viewBox="0 0 51 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M27.5817 0.00334544H31.8965C32.0972 0.00334544 32.2578 0.164015 32.2578 0.374894V25.7406C32.2578 25.9481 32.0972 26.1121 31.8965 26.1121H27.5817V0.00669599V0.00334544ZM0 0.00334544H4.35165C4.73966 0.00334544 5.08083 0.137236 5.23469 0.468617L12.7171 17.0343L19.564 0.468617C19.7079 0.137236 20.049 0.00334544 20.4371 0.00334544H24.7318V26.1088H20.417C20.2163 26.1088 20.0557 25.9481 20.0557 25.7372V7.35398L15.1522 18.6444V18.6544L14.3193 20.5724C14.2892 20.6293 14.2625 20.6862 14.2257 20.7331L12.6904 24.1774L10.1316 18.5874L4.66941 7.2569L4.66943 25.4025C4.66943 25.61 4.50888 25.7741 4.30819 25.7741H2.04154e-05L0 0V0.00334544ZM1.49849 38.9054H6.57264V39.9966H0.284312V30.0987H6.29501V31.19H1.49849V34.3866H5.76653V35.4778H1.49849V38.9021V38.9054ZM11.8341 34.0954L14.5735 30.1021H15.9115L12.5465 34.9791L16.0653 40H14.7174L11.8241 35.7958H11.7873L8.88727 40H7.52257L11.0681 34.9523L7.72995 30.1021H9.04783L11.8073 34.0954H11.8374H11.8341ZM18.681 39.9966H17.4668V30.0987H20.2063C20.6143 30.0987 20.9923 30.1289 21.3435 30.1757C21.6947 30.2226 22.0058 30.2996 22.2901 30.4033C22.8888 30.6109 23.3437 30.9356 23.6381 31.3506C23.9425 31.7791 24.093 32.2912 24.093 32.9172C24.093 33.4192 24.006 33.8577 23.7886 34.236C23.5979 34.6243 23.3036 34.9489 22.9256 35.2033C22.5543 35.4611 22.0994 35.6385 21.5509 35.7824C21.009 35.9163 20.3835 35.9732 19.7012 35.9732C19.37 35.9732 19.0289 35.9632 18.6777 35.9364V39.9966H18.681ZM18.681 34.8251C18.8416 34.8452 19.0121 34.8552 19.1928 34.872C19.3634 34.882 19.5239 34.882 19.6945 34.882C20.2531 34.882 20.7381 34.8452 21.1261 34.7481C21.5442 34.6611 21.8553 34.5406 22.1128 34.3699C22.3603 34.1891 22.541 33.9916 22.6614 33.754C22.7651 33.4962 22.8219 33.2218 22.8219 32.9205C22.8219 32.5222 22.735 32.2075 22.5577 31.9632C22.367 31.7255 22.1028 31.5448 21.7716 31.4042C21.5542 31.3272 21.3167 31.2703 21.0425 31.2435C20.7582 31.2134 20.437 31.1967 20.0758 31.1967H18.681V34.8318V34.8251ZM27.3107 38.9054H32.3849V39.9966H26.0999V30.0987H32.1106V31.19H27.3141V34.3866H31.5821V35.4778H27.3141V38.9021L27.3107 38.9054ZM35.6528 35.8962V39.9966H34.4386V30.0987H37.0074C37.4356 30.0987 37.8136 30.1188 38.1179 30.1456C38.4223 30.1757 38.6966 30.2326 38.9341 30.2962C39.6365 30.477 40.1583 30.8084 40.5262 31.2435C40.8875 31.6987 41.0681 32.2577 41.0681 32.9406C41.0681 33.3389 41.0112 33.7004 40.8674 34.0117C40.7537 34.3331 40.5731 34.6109 40.3456 34.8385C40.0981 35.0661 39.8238 35.2569 39.5127 35.4075C39.1816 35.5515 38.8304 35.672 38.4324 35.7289V35.759L41.3624 39.99H40.1483L37.1045 35.8895H35.6528V35.8962ZM35.6528 31.19V34.8151H36.8469C37.2081 34.8151 37.5292 34.795 37.7868 34.7682C38.0444 34.7481 38.2785 34.7013 38.4993 34.6444C38.9073 34.5105 39.2385 34.313 39.4659 34.0184C39.6934 33.754 39.7971 33.3724 39.7971 32.9372C39.7971 32.5021 39.6934 32.1607 39.4826 31.9029C39.2652 31.6452 38.9608 31.4678 38.5829 31.3439C38.4223 31.2971 38.2049 31.2502 37.9474 31.2201C37.7099 31.21 37.4055 31.19 37.0074 31.19H35.6528ZM46.955 39.9966H45.7509V31.19H42.4529V30.0987H50.2564V31.19H46.9584V39.9966H46.955Z" fill="white"/>
+            <path d="M42.5448 0H48.3579L37.7017 13.2094L49.2308 26.6667H43.2405C39.4446 22.2434 35.7689 17.6743 31.7949 13.4258L42.5448 0Z" fill="#005BFF"/>
+          </svg>
+        </a>
+
+        <nav class="header__nav nav d-none d-xl-flex">
+          <ul class="header__nav__list nav__list">
+            <li class="header__nav__item nav__item">
+              <a href="./index.html" class="header__nav__link nav__link">начать бизнес</a>
+            </li>
+            <li class="header__nav__item nav__item">
+              <a href="#" class="header__nav__link nav__link">закупка в китае</a>
+            </li>
+            <li class="header__nav__item nav__item">
+              <a href="#our-team" class="header__nav__link nav__link">команда</a>
+            </li>
+            <li class="header__nav__item nav__item">
+              <a href="./news.html" class="header__nav__link nav__link">новости</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__right-side">
+          <a href="tel:88005506884" class="header__tel tel">8 800 550 68 84</a>
+
+          <button onclick="openForm()" class="header__order-phone-btn order-phone-btn d-none d-xl-flex">заказать звонок</button>
+
+          <a href="" class="header__append d-none d-xl-flex">
+            <svg class="header__append__icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.39131 32.146L4.80623 31.867L4.39131 32.146ZM37.6087 32.146L37.1938 31.867L37.6087 32.146ZM5.81283 34.0142L5.33363 33.8715L5.25581 34.1328L5.43331 34.3397L5.81283 34.0142ZM36.1868 34.0142L36.5663 34.3397L36.7438 34.1328L36.666 33.8715L36.1868 34.0142ZM1.5 21C1.5 10.2304 10.2304 1.5 21 1.5V0.5C9.67816 0.5 0.5 9.67816 0.5 21H1.5ZM21 1.5C31.7696 1.5 40.5 10.2304 40.5 21H41.5C41.5 9.67816 32.3218 0.5 21 0.5V1.5ZM21 40.5C14.2543 40.5 8.30826 37.0751 4.80623 31.867L3.97639 32.425C7.65628 37.8976 13.9074 41.5 21 41.5V40.5ZM4.80623 31.867C2.71835 28.762 1.5 25.024 1.5 21H0.5C0.5 25.229 1.78107 29.1602 3.97639 32.425L4.80623 31.867ZM40.5 21C40.5 25.024 39.2816 28.762 37.1938 31.867L38.0236 32.425C40.2189 29.1602 41.5 25.229 41.5 21H40.5ZM37.1938 31.867C33.6917 37.0751 27.7457 40.5 21 40.5V41.5C28.0926 41.5 34.3437 37.8976 38.0236 32.425L37.1938 31.867ZM24.9444 14.3333C24.9444 16.5118 23.1785 18.2778 21 18.2778V19.2778C23.7307 19.2778 25.9444 17.0641 25.9444 14.3333H24.9444ZM21 18.2778C18.8215 18.2778 17.0556 16.5118 17.0556 14.3333H16.0556C16.0556 17.0641 18.2693 19.2778 21 19.2778V18.2778ZM17.0556 14.3333C17.0556 12.1549 18.8215 10.3889 21 10.3889V9.38889C18.2693 9.38889 16.0556 11.6026 16.0556 14.3333H17.0556ZM21 10.3889C23.1785 10.3889 24.9444 12.1549 24.9444 14.3333H25.9444C25.9444 11.6026 23.7307 9.38889 21 9.38889V10.3889ZM14.3331 28.1666H27.6665V27.1666H14.3331V28.1666ZM14.3331 27.1666C10.0798 27.1666 6.48828 29.9945 5.33363 33.8715L6.29203 34.1569C7.3239 30.6922 10.5342 28.1666 14.3331 28.1666V27.1666ZM21 40.5C15.0761 40.5 9.76944 37.8591 6.19234 33.6887L5.43331 34.3397C9.19229 38.7222 14.7721 41.5 21 41.5V40.5ZM27.6665 28.1666C31.4654 28.1666 34.6757 30.6922 35.7076 34.1569L36.666 33.8715C35.5113 29.9945 31.9198 27.1666 27.6665 27.1666V28.1666ZM35.8073 33.6887C32.2302 37.8591 26.9239 40.5 21 40.5V41.5C27.2279 41.5 32.8073 38.7222 36.5663 34.3397L35.8073 33.6887Z"
+                fill="white"/>
             </svg>
           </a>
 
-          <nav class="header__nav nav d-none d-xl-flex">
-            <ul class="header__nav__list nav__list">
-              <li class="header__nav__item nav__item">
-                <a href="./index.html" class="header__nav__link nav__link">начать бизнес</a>
-              </li>
-              <li class="header__nav__item nav__item">
-                <a href="#" class="header__nav__link nav__link">закупка в китае</a>
-              </li>
-              <li class="header__nav__item nav__item">
-                <a href="#our-team" class="header__nav__link nav__link">команда</a>
-              </li>
-              <li class="header__nav__item nav__item">
-                <a href="./news.html" class="header__nav__link nav__link">новости</a>
-              </li>
-            </ul>
-          </nav>
-
-          <div class="header__right-side">
-            <a href="tel:88005506884" class="header__tel tel">8 800 550 68 84</a>
-
-            <button onclick="openForm()" class="header__order-phone-btn order-phone-btn d-none d-xl-flex">заказать звонок</button>
-
-            <a href="" class="header__append d-none d-xl-flex">
-              <svg class="header__append__icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4.39131 32.146L4.80623 31.867L4.39131 32.146ZM37.6087 32.146L37.1938 31.867L37.6087 32.146ZM5.81283 34.0142L5.33363 33.8715L5.25581 34.1328L5.43331 34.3397L5.81283 34.0142ZM36.1868 34.0142L36.5663 34.3397L36.7438 34.1328L36.666 33.8715L36.1868 34.0142ZM1.5 21C1.5 10.2304 10.2304 1.5 21 1.5V0.5C9.67816 0.5 0.5 9.67816 0.5 21H1.5ZM21 1.5C31.7696 1.5 40.5 10.2304 40.5 21H41.5C41.5 9.67816 32.3218 0.5 21 0.5V1.5ZM21 40.5C14.2543 40.5 8.30826 37.0751 4.80623 31.867L3.97639 32.425C7.65628 37.8976 13.9074 41.5 21 41.5V40.5ZM4.80623 31.867C2.71835 28.762 1.5 25.024 1.5 21H0.5C0.5 25.229 1.78107 29.1602 3.97639 32.425L4.80623 31.867ZM40.5 21C40.5 25.024 39.2816 28.762 37.1938 31.867L38.0236 32.425C40.2189 29.1602 41.5 25.229 41.5 21H40.5ZM37.1938 31.867C33.6917 37.0751 27.7457 40.5 21 40.5V41.5C28.0926 41.5 34.3437 37.8976 38.0236 32.425L37.1938 31.867ZM24.9444 14.3333C24.9444 16.5118 23.1785 18.2778 21 18.2778V19.2778C23.7307 19.2778 25.9444 17.0641 25.9444 14.3333H24.9444ZM21 18.2778C18.8215 18.2778 17.0556 16.5118 17.0556 14.3333H16.0556C16.0556 17.0641 18.2693 19.2778 21 19.2778V18.2778ZM17.0556 14.3333C17.0556 12.1549 18.8215 10.3889 21 10.3889V9.38889C18.2693 9.38889 16.0556 11.6026 16.0556 14.3333H17.0556ZM21 10.3889C23.1785 10.3889 24.9444 12.1549 24.9444 14.3333H25.9444C25.9444 11.6026 23.7307 9.38889 21 9.38889V10.3889ZM14.3331 28.1666H27.6665V27.1666H14.3331V28.1666ZM14.3331 27.1666C10.0798 27.1666 6.48828 29.9945 5.33363 33.8715L6.29203 34.1569C7.3239 30.6922 10.5342 28.1666 14.3331 28.1666V27.1666ZM21 40.5C15.0761 40.5 9.76944 37.8591 6.19234 33.6887L5.43331 34.3397C9.19229 38.7222 14.7721 41.5 21 41.5V40.5ZM27.6665 28.1666C31.4654 28.1666 34.6757 30.6922 35.7076 34.1569L36.666 33.8715C35.5113 29.9945 31.9198 27.1666 27.6665 27.1666V28.1666ZM35.8073 33.6887C32.2302 37.8591 26.9239 40.5 21 40.5V41.5C27.2279 41.5 32.8073 38.7222 36.5663 34.3397L35.8073 33.6887Z"
-                  fill="white"/>
-              </svg>
-            </a>
-
-            <button onclick="openMenu()" class="header__menu-burger d-xl-none">
-              <svg class="d-flex align-self-center" xmlns="http://www.w3.org/2000/svg" width="42" height="15" viewBox="0 0 42 15" fill="none">
-                <path d="M0.5 0.5H41.5" stroke="white"/>
-                <path d="M0.5 14.5H41.5" stroke="white"/>
-              </svg>
-            </button>
-          </div>
+          <button onclick="openMenu()" class="header__menu-burger d-xl-none">
+            <svg class="d-flex align-self-center" xmlns="http://www.w3.org/2000/svg" width="42" height="15" viewBox="0 0 42 15" fill="none">
+              <path d="M0.5 0.5H41.5" stroke="white"/>
+              <path d="M0.5 14.5H41.5" stroke="white"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="hr-container container">
-      <div class="row">
-        <div class="col">
-          <div class="header__hr"></div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="container china-banner-title-container">
+  <div class="hr-container container">
     <div class="row">
-      <div class="col-12">
-        <h1 class="china-banner-title">
-          <span class="blue">закупки в китае</span> <br> для вашего бизнеса
-        </h1>
+      <div class="col">
+        <div class="header__hr"></div>
       </div>
     </div>
   </div>
+</header>
 
-  <!-- Content -->
-  <section id="content" class="position-relative">
-    <div class="china-banner-wrapper">
-      <img class="d-none d-lg-block china-banner-img" src="./assets/images/banner/img.png" width="1920" height="1107" alt="#">
-      <img class="d-none d-sm-block d-lg-none china-banner-img" src="./assets/images/banner/img-md.png" width="768" height="721" alt="#">
-      <img class="d-sm-none china-banner-img" src="./assets/images/banner/img-sm.png" width="360" height="525" alt="#">
-    </div>
-
-    <div class="marquee marquee-china-first position-relative">
-      <div class="marquee__track">
-        <p class="marquee__text">10+ лет ведем бизнес 10+ лет ведем бизнес</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Work Info -->
-  <section class="work-info" id="work-info">
-    <div class="container">
-        <!-- title -->
-      <div class="row d-flex justify-content-xl-end">
-        <div class="col-12">
-          <h2 class="work-info__title title-blue">как мы работаем:</h2>
-        </div>
-        <div class="col-12 col-xl-10">
-          <div class="accordion d-flex">
-            <p class="accordion__order">01/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion__item--arrow">Начало работы с клиентом до заключения договора</button>
-              <div class="accordion__panel">
-                <p>Клиент не работает с производителем, а сотрудничает только с нами, что значительно экономит его время.</p>
-
-                <ol class="accordion-list">
-                  <li class="accordion-list__item">Клиент описывает свои пожелания: какой товар, в каком объеме и по какой цене он хотел бы получить.</li>
-                  <li class="accordion-list__item">Мы находим надежного производителя в Китае, согласовываем его условия работы с клиентом.</li>
-                  <li class="accordion-list__item">Проводим переговоры и посылаем образцы товара клиенту.</li>
-                  <li class="accordion-list__item">Заключаем договор (контракт) на поставку продукции.</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion d-flex">
-            <p class="accordion__order">02/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion__item--arrow">Работа с клиентом после предоплаты</button>
-              <div class="accordion__panel">
-                <p>После предоплаты китайскому производителю, контролируем запуск производства, проводим инспекцию на заводе производителя.</p>
-                <p>Когда партия товара готова и проверена - переводим остаток оплаты китайскому производителю, организуем доставку в РФ.
-                  <br>Отвозим товар в город клиента.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion d-flex">
-            <p class="accordion__order">03/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion__item--arrow">Формат участия клиента</button>
-              <div class="accordion__panel">
-                <p>Наш клиент лишь дважды участвует в процессе: при выборе производителя и получении готового товара.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Business -->
-  <section class="business business-china" id="business-china">
-    <div class="container">
-      <form class="row">
-        <div class="col-12">
-          <h2 class="business__title">Привет, МК ЭКСПЕРТ <br> хочу начать закупки в Китае</h2>
-        </div>
-
-        <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="name2"> Меня зовут </label>
-          <input type="text" name="name" required id="name2" placeholder="ваше имя" class="business-input input-group__input">
-        </div>
-        <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="phone2"> мой телефон </label>
-          <input type="text" name="phone" required id="phone2" placeholder="+7 (999) 999 99-99" class="business-input input-group__input masked">
-        </div>
-
-        <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="email2"> моя эл. почта </label>
-          <input type="email" name="mail" required id="email2" placeholder="здесь@и здесь" class="business-input input-group__input">
-        </div>
-
-        <div class="col-12 text-center">
-          <button class="business__btn">личный кабинет</button>
-          <div class="d-flex justify-content-center">
-            <a href="#" class="business__privacy privacy-text">Нажимая кнопку, я принимаю Политику в отношении <span class="nowrap">обработки персональных данных</span></a>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <div class="marquee marquee-second position-relative">
-    <div class="marquee__track">
-      <p class="marquee__text">мы гарантируем успех мы гарантируем успех</p>
+<!-- Banner -->
+<div class="container china-banner-title-container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="china-banner-title">
+        <span class="blue">Закупки в китае</span> <br> для вашего бизнеса
+      </h1>
     </div>
   </div>
+</div>
 
-  <!-- Success -->
-  <section class="success" id="success">
-    <div class="success-container container">
-      <div class="row d-flex justify-content-center">
-        <div class="col-12 px-0">
-          <h2 class="success__title">мы заинтересованы <br> в вашем успехе</h2>
-        </div>
+<!-- Content -->
+<section id="content" class="position-relative">
+  <div class="china-banner-wrapper">
+    <img class="d-none d-lg-block china-banner-img" src="./assets/images/banner/img.png" width="1920" height="1107" alt="#">
+    <img class="d-none d-sm-block d-lg-none china-banner-img" src="./assets/images/banner/img-md.png" width="768" height="721" alt="#">
+    <img class="d-sm-none china-banner-img" src="./assets/images/banner/img-sm.png" width="360" height="525" alt="#">
+  </div>
 
-        <div class="col-12 col-md-10 col-xl-6 success-box success-china-box-first text-center">
-          <div>
-            <img class="success__logo" src="./assets/images/success-4.png" width="240" height="180" alt="#">
-          </div>
-
-          <div class="d-flex justify-content-center">
-            <p class="success__mid-title blue">Наши гарантии</p>
-          </div>
-
-          <div class="d-flex justify-content-between">
-            <div class="col-6 col-xl-5 text-left">
-              <p class="success__info blue">оперативность</p>
-            </div>
-
-            <div class="col-6 col-xl-7 text-right">
-              <span class="success__description">расчитываем стоимость в день обращения, найдем проверенного производителя в течение 5 рабочих дней</span>
-            </div>
-          </div>
-
-          <div class="success__hr"></div>
-
-          <div class="d-flex justify-content-between">
-            <div class="col-6 text-left">
-              <p class="success__info blue">прозрачность</p>
-            </div>
-
-            <div class="col-6 text-right">
-              <span class="success__description">никаких скрытых платежей, комиссий и мелкого шифта в договоре</span>
-            </div>
-          </div>
-
-          <div class="success__hr"></div>
-
-          <div class="d-flex justify-content-between">
-            <div class="col-6 text-left">
-              <p class="success__info blue">неизменность цены</p>
-            </div>
-
-            <div class="col-6 text-right">
-              <span class="success__description">если мы не смогли предвидеть расходы, то оплачиваем их сами</span>
-            </div>
-          </div>
-
-          <div class="success__hr"></div>
-
-          <div class="d-flex justify-content-between">
-            <div class="col-6 col-xl-5 text-left">
-              <p class="success__info blue">сервис</p>
-            </div>
-
-            <div class="col-6 col-xl-7 text-right">
-              <span class="success__description">выдаем клиентам доступ в автоматизированную систему отслеживания грузов в онлайн режиме, избавляя от забот по контролю производителя</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-10 col-xl-6 success-box success-china-box-last text-center">
-          <div>
-            <img class="success__logo" src="./assets/images/success-5.png" width="240" height="180" alt="#">
-          </div>
-          <div class="d-flex justify-content-center">
-            <p class="success__mid-title blue">Постоянный контроль</p>
-          </div>
-
-          <div class="d-flex justify-content-between">
-            <div class="col-6 col-xl-3 text-left">
-              <p class="success__info blue">законность</p>
-            </div>
-
-            <div class="col-6 col-xl-9 text-right">
-              <span class="success__description">соблюдаем законы РФ и Китая, помогаем с налоговыми платежами, пошлинами, сборами и возвратом НДС в Китае</span>
-            </div>
-          </div>
-
-          <div class="success__hr"></div>
-
-          <div class="d-flex justify-content-between">
-            <div class="col-6 col-xl-4 col-xxl-3 text-left">
-              <p class="success__info blue">качество товара</p>
-            </div>
-
-            <div class="col-6 col-xl-8 col-xxl-9 text-right">
-              <span class="success__description">проверим товар на соответствие техническому заданию, безопасность и качество</span>
-            </div>
-          </div>
-
-          <div class="success__hr"></div>
-
-          <div class="d-flex justify-content-between">
-            <div class="col-6 col-xl-4 col-xxl-3 text-left">
-              <p class="success__info blue">защищенность</p>
-            </div>
-
-            <div class="col-6 col-xl-8 col-xxl-9 text-right">
-              <span class="success__description">при срыве сроков или некачественной партии, взыщем неустойку с производителя, отправим товар нп доработку, получим бонусы и скидки. Производителю выгодней сделать все как надо с первого раза, чем связываться с нашими юристами</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- China to Russia -->
-  <section class="china-to-russia" id="china-to-russia">
-    <div class="d-flex justify-content-center">
-      <h2 class="mid-title china-to-russia__title">Каждый день мы <span class="blue">работаем <br>над снижением стоимости</span> перевозок <span>из Китая в Россию</span></h2>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <p class="china-to-russia__info text-center">Оптимизируем существующие маршруты и разрабатываем новые. Следим за изменениями в законодательстве, используем современное программное обеспечение. Заботимся о наших клиентах.</p>
-        </div>
-
-        <div class="col-12 col-md-6">
-          <div class="text-center">
-            <a href="tel:88005506884" class="china-to-russia__tel mid-title blue">8 800 550 68 84</a>
-            <p class="china-to-russia__mid-info">Позвоните для расчета стоимости товаров из Китая</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="text-center">
-            <a href="mailto:info@mkexpert.ru" class="china-to-russia__email mid-title blue">info@mkexpert.ru</a>
-            <p class="china-to-russia__mid-info">Отправьте запрос коммерческого предложения</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Team -->
-  <section class="our-team" id="our-team">
-    <div class="container">
-      <h2 class="our-team__title title">наша команда</h2>
-    </div>
-
-    <div class="team-container container-fluid position-relative">
-      <div class="row d-flex justify-content-center">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="swiper team-swiper">
-            <div class="team-swiper__wrapper swiper-wrapper">
-              <div class="team__slide swiper-slide">
-                <div class="row d-flex justify-content-end team-swiper__row">
-                  <img class="team__member__img d-sm-none" src="assets/images/users/img-sm.png" alt="#">
-                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img-md.png" alt="#">
-                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img.png" alt="#">
-
-                  <div class="col-6 team__slide__right">
-                    <div class="row">
-                      <div class="col-1 d-none d-xxl-flex"></div>
-                      <div class="col-12 team-box position-md-relative">
-                        <p class="team__name">Глеб Клычев</p>
-                        <p class="team__profession">Основатель компании MK EXPERT</p>
-                        <p class="team__info">12 лет опыта работы в товарном бизнесе, 10 лет опыта работы с Китаем, 3 года успешной работы на маркетплейсах, действующий селлер с ежемесячным оборот на OZON 5+ млн. руб.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="team__slide swiper-slide">
-                <div class="row d-flex justify-content-end team-swiper__row">
-                  <img class="team__member__img d-sm-none" src="assets/images/users/img_7-sm.png" alt="#">
-                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_7-md.png" alt="#">
-                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_7.png" alt="#">
-
-                  <div class="col-6 team__slide__right">
-                    <div class="row">
-                      <div class="col-1 d-none d-xxl-flex"></div>
-                      <div class="col-12 team-box position-md-relative">
-                        <p class="team__name">Алина Короленковская</p>
-                        <p class="team__profession">Ведущий эксперт по закупкам и связям с производителями</p>
-                        <p class="team__info">Окончила с красным дипломом Пекинский Политехнический университет. С 2005 года живет и работает в Китае, 5 лет опыта работы в таких компаниях как: Google, Vivatao, Alibaba по разным товарным направлениям. Многократный участник крупнейшей в Азии выставки - Кантонской ярмарки.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="team__slide swiper-slide">
-                <div class="row d-flex justify-content-end team-swiper__row">
-                  <img class="team__member__img d-sm-none" src="assets/images/users/img_8-sm.png" alt="#">
-                  <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_8-md.png" alt="#">
-                  <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_8.png" alt="#">
-
-                  <div class="col-6 team__slide__right">
-                    <div class="row">
-                      <div class="col-1 d-none d-xxl-flex"></div>
-                      <div class="col-12 team-box position-md-relative">
-                        <p class="team__name">Яков Саввинов</p>
-                        <p class="team__profession">Эксперт по закупкам и связям с производителями</p>
-                        <p class="team__info">С 2013 года живет и работает в Китае, 8 лет опыта работы менеджером ВЭД в компании HONG KONG FONIX по направлению мебели и строительных материалов. Многократный участник крупнейшей в Азии выставки - Кантонской ярмарки.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-11 col-xxl-8 thumbs-swiper-container position-relative d-flex justify-content-center">
-          <div thumbsSlider="" class="thumbs-swiper swiper">
-            <div class="thumbs-swiper__wrapper swiper-wrapper">
-              <div class="thumbs-swiper__slide swiper-slide">
-                <div class="thumbs-swiper__shadow"></div>
-                <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_8.png" alt="#"/>
-              </div>
-              <div class="thumbs-swiper__slide swiper-slide">
-                <div class="thumbs-swiper__shadow"></div>
-                <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_6.png" alt="#"/>
-              </div>
-              <div class="thumbs-swiper__slide swiper-slide">
-                <div class="thumbs-swiper__shadow"></div>
-                <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_7.png" alt="#"/>
-              </div>
-            </div>
-
-            <!-- navigation -->
-            <div class="team__slide__prev swiper-button-prev">
-              <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
-              </svg>
-
-              <svg class="d-none d-md-block" width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M23.4284 4.09634e-06L36.0975 6.31148e-06L12.8732 28.7305L38 58L24.9446 58C16.6718 48.3793 8.66082 38.4416 -5.1057e-06 29.2012L23.4284 4.09634e-06Z" fill="#005BFF"/>
-              </svg>
-            </div>
-
-            <div class="team__slide__next swiper-button-next">
-              <svg  class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
-              </svg>
-
-              <svg class="d-none d-md-block" width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.5716 58L1.90254 58L25.1268 29.2695L-5.07052e-06 3.32207e-06L13.0554 2.18072e-06C21.3282 9.62069 29.3392 19.5584 38 28.7988L14.5716 58Z" fill="#005BFF"/>
-              </svg>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="marquee marquee-third position-relative">
+  <div class="marquee marquee-china-first position-relative">
     <div class="marquee__track">
       <p class="marquee__text">10+ лет ведем бизнес 10+ лет ведем бизнес</p>
     </div>
   </div>
+</section>
 
-  <!-- Business -->
-  <section class="business business-china-third" id="business2">
-    <div class="container">
-      <form class="row">
-        <div class="col-12">
-          <h2 class="business__title mb-0">Хотите обсудить подробнее,<br>приходите на личную встречу</h2>
-          <p class="business__info">в нашем головном офисе и представительствах познакомимся,  выпьем кофе, покажем документы, подпишем договор</p>
+<!-- Work Info -->
+<section class="work-info" id="work-info">
+  <div class="container">
+    <!-- title -->
+    <div class="row d-flex justify-content-xl-end">
+      <div class="col-12">
+        <h2 class="work-info__title title-blue">Как мы работаем:</h2>
+      </div>
+      <div class="col-12 col-xl-10">
+        <div class="accordion d-flex">
+          <p class="accordion__order">01/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion__item--arrow">Начало работы с клиентом до заключения договора</button>
+            <div class="accordion__panel">
+              <p>Клиент не работает с производителем, а сотрудничает только с нами, что значительно экономит его время.</p>
+
+              <ol class="accordion-list">
+                <li class="accordion-list__item">Клиент описывает свои пожелания: какой товар, в каком объеме и по какой цене он хотел бы получить.</li>
+                <li class="accordion-list__item">Мы находим надежного производителя в Китае, согласовываем его условия работы с клиентом.</li>
+                <li class="accordion-list__item">Проводим переговоры и посылаем образцы товара клиенту.</li>
+                <li class="accordion-list__item">Заключаем договор (контракт) на поставку продукции.</li>
+              </ol>
+            </div>
+          </div>
         </div>
 
-        <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="name3"> Меня зовут </label>
-          <input type="text" name="name" required id="name3" placeholder="ваше имя" class="business-input input-group__input">
-        </div>
-        <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap masked" for="phone3"> мой телефон </label>
-          <input type="text" name="phone" required id="phone3" placeholder="+7 (999) 999 99-99" class="business-input input-group__input masked">
-        </div>
-
-        <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
-          <label class="business__input-label input-label nowrap" for="email3"> моя эл. почта </label>
-          <input type="email" name="email" required id="email3" placeholder="здесь@и здесь" class="business-input input-group__input">
+        <div class="accordion d-flex">
+          <p class="accordion__order">02/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion__item--arrow">Работа с клиентом после предоплаты</button>
+            <div class="accordion__panel">
+              <p>После предоплаты китайскому производителю контролируем запуск производства проводим инспекцию на заводе производителя.</p>
+              <p>Когда партия товара готова и проверена, переводим остаток оплаты китайскому производителю, организуем доставку в РФ и отвозим товар в город клиента.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="col-12 text-center">
-          <button class="business__btn business__btn--china">назначить личную встречу</button>
-          <div class="d-flex justify-content-center">
-            <a href="#" class="business__privacy privacy-text">Нажимая кнопку, я принимаю Политику в отношении <span class="nowrap">обработки персональных данных</span></a>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Work Info -->
-  <section class="service" id="service">
-    <div class="container">
-      <!-- title -->
-      <div class="row d-flex justify-content-xl-end">
-        <div class="col-12">
-          <h2 class="work-info__title title-blue">В рамках услуги мы:</h2>
-        </div>
-        <div class="col-12 col-xl-10">
-          <div class="accordion d-flex">
-            <p class="accordion__order">01/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion-china__item">Найдем нужный товар, закажем образцы</button>
-            </div>
-          </div>
-          <div class="accordion d-flex">
-            <p class="accordion__order">02/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion-china__item">Проверим поставщика, производителя</button>
-            </div>
-          </div>
-          <div class="accordion d-flex">
-            <p class="accordion__order">03/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion-china__item">Заключим внешнеторговый контракт</button>
-            </div>
-          </div>
-          <div class="accordion d-flex">
-            <p class="accordion__order">04/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion-china__item">Перечислим оплату поставщику</button>
-            </div>
-          </div>
-          <div class="accordion d-flex">
-            <p class="accordion__order">05/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion-china__item">Проконтролируем производство</button>
-            </div>
-          </div>
-          <div class="accordion d-flex">
-            <p class="accordion__order">06/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion-china__item">Подготовим груз к отправке в РФ</button>
-            </div>
-          </div>
-          <div class="accordion d-flex">
-            <p class="accordion__order">07/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion-china__item">Проведем таможенное оформление с минимальными затратами</button>
-            </div>
-          </div>
-          <div class="accordion d-flex">
-            <p class="accordion__order">08/</p>
-            <div class="accordion__content">
-              <button class="accordion__item accordion-china__item">Доставим груз до вашего склада с полным комплектом документов</button>
+        <div class="accordion d-flex">
+          <p class="accordion__order">03/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion__item--arrow">Формат участия клиента</button>
+            <div class="accordion__panel">
+              <p>Наш клиент лишь дважды участвует в процессе: при выборе производителя и получении готового товара.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="footer dark">
-    <div class="footer__container container">
+<!-- Business -->
+<section class="business business-china" id="business-china">
+  <div class="container">
+    <form class="row">
+      <div class="col-12">
+        <h2 class="business__title">Привет, МК EXPERT, <br> хочу начать закупки в Китае</h2>
+      </div>
+
+      <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
+        <label class="business__input-label input-label nowrap" for="name2"> Меня зовут </label>
+        <input type="text" name="name" required id="name2" placeholder="ваше имя" class="business-input input-group__input">
+      </div>
+      <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
+        <label class="business__input-label input-label nowrap" for="phone2"> мой телефон </label>
+        <input type="text" name="phone" required id="phone2" placeholder="+7 (999) 999 99-99" class="business-input input-group__input masked">
+      </div>
+
+      <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
+        <label class="business__input-label input-label nowrap" for="email2"> моя эл. почта </label>
+        <input type="email" name="mail" required id="email2" placeholder="здесь@и здесь" class="business-input input-group__input">
+      </div>
+
+      <div class="col-12 text-center">
+        <button class="business__btn">личный кабинет</button>
+        <div class="d-flex justify-content-center">
+          <a href="./privacy.html" target="_blank" class="business__privacy privacy-text">Нажимая кнопку, я принимаю Политику в отношении <span class="nowrap">обработки персональных данных</span></a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Marque -->
+<div class="marquee marquee-second position-relative">
+  <div class="marquee__track">
+    <p class="marquee__text">мы гарантируем успех мы гарантируем успех</p>
+  </div>
+</div>
+
+<!-- Success -->
+<section class="success" id="success">
+  <div class="success-container container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 px-0">
+        <h2 class="success__title">Мы заинтересованы <br> в вашем успехе</h2>
+      </div>
+
+      <div class="col-12 col-md-10 col-xl-6 success-box success-china-box-first text-center">
+        <div>
+          <img class="success__logo" src="./assets/images/success-4.png" width="240" height="180" alt="#">
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <p class="success__mid-title blue">Наши гарантии</p>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <div class="col-6 col-xl-5 text-left">
+            <p class="success__info blue">оперативность</p>
+          </div>
+
+          <div class="col-6 col-xl-7 text-right">
+            <span class="success__description">рассчитаем стоимость в день обращения, найдем проверенного производителя в течение 5 рабочих дней</span>
+          </div>
+        </div>
+
+        <div class="success__hr"></div>
+
+        <div class="d-flex justify-content-between">
+          <div class="col-6 text-left">
+            <p class="success__info blue">прозрачность</p>
+          </div>
+
+          <div class="col-6 text-right">
+            <span class="success__description">никаких скрытых платежей, комиссий и мелкого шрифта в договоре</span>
+          </div>
+        </div>
+
+        <div class="success__hr"></div>
+
+        <div class="d-flex justify-content-between">
+          <div class="col-6 text-left">
+            <p class="success__info blue">неизменность цены</p>
+          </div>
+
+          <div class="col-6 text-right">
+            <span class="success__description">если мы не смогли предвидеть расходы, то оплачиваем их сами</span>
+          </div>
+        </div>
+
+        <div class="success__hr"></div>
+
+        <div class="d-flex justify-content-between">
+          <div class="col-6 col-xl-5 text-left">
+            <p class="success__info blue">сервис</p>
+          </div>
+
+          <div class="col-6 col-xl-7 text-right">
+            <span class="success__description">выдаем клиентам доступ в автоматизированную систему отслеживания грузов в онлайн режиме, избавляя от забот по контролю производителя</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-10 col-xl-6 success-box success-china-box-last text-center">
+        <div>
+          <img class="success__logo" src="./assets/images/success-5.png" width="240" height="180" alt="#">
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="success__mid-title blue">Постоянный контроль</p>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <div class="col-6 col-xl-3 text-left">
+            <p class="success__info blue">законность</p>
+          </div>
+
+          <div class="col-6 col-xl-9 text-right">
+            <span class="success__description">соблюдаем законы РФ и Китая, помогаем с налоговыми платежами, пошлинами, сборами и возвратом НДС в Китае</span>
+          </div>
+        </div>
+
+        <div class="success__hr"></div>
+
+        <div class="d-flex justify-content-between">
+          <div class="col-6 col-xl-4 col-xxl-3 text-left">
+            <p class="success__info blue">качество товара</p>
+          </div>
+
+          <div class="col-6 col-xl-8 col-xxl-9 text-right">
+            <span class="success__description">проверим товар на соответствие техническому заданию, безопасность и качество</span>
+          </div>
+        </div>
+
+        <div class="success__hr"></div>
+
+        <div class="d-flex justify-content-between">
+          <div class="col-6 col-xl-4 col-xxl-3 text-left">
+            <p class="success__info blue">защищенность</p>
+          </div>
+
+          <div class="col-6 col-xl-8 col-xxl-9 text-right">
+            <span class="success__description">при срыве сроков или некачественной партии взыщем неустойку с производителя, отправим товар на доработку, получим бонусы и скидки. Производителю выгоднее сделать все как надо с первого раза, чем связываться с нашими юристами</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- China to Russia -->
+<section class="china-to-russia" id="china-to-russia">
+  <div class="d-flex justify-content-center">
+    <h2 class="mid-title china-to-russia__title">Каждый день мы <span class="blue">работаем <br>над снижением стоимости</span> перевозок <span>из Китая в Россию</span></h2>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="china-to-russia__info text-center">Оптимизируем существующие маршруты и разрабатываем новые. Следим за изменениями в законодательстве, используем современное программное обеспечение. Заботимся о наших клиентах.</p>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="text-center">
+          <a href="tel:88005506884" class="china-to-russia__tel mid-title blue">8 800 550 68 84</a>
+          <p class="china-to-russia__mid-info">Позвоните для расчета стоимости товаров из Китая</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="text-center">
+          <a href="mailto:info@mkexpert.ru" class="china-to-russia__email mid-title blue">info@mkexpert.ru</a>
+          <p class="china-to-russia__mid-info">Отправьте запрос коммерческого предложения</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Team -->
+<section class="our-team" id="our-team">
+  <div class="container">
+    <h2 class="our-team__title title">Наша команда</h2>
+  </div>
+
+  <div class="team-container container-fluid position-relative">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 d-flex justify-content-center">
+        <div class="swiper team-swiper">
+          <div class="team-swiper__wrapper swiper-wrapper">
+            <div class="team__slide swiper-slide">
+              <div class="row d-flex justify-content-end team-swiper__row">
+                <img class="team__member__img d-sm-none" src="assets/images/users/img-sm.png" alt="#">
+                <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img-md.png" alt="#">
+                <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img.png" alt="#">
+
+                <div class="col-6 team__slide__right">
+                  <div class="row">
+                    <div class="col-1 d-none d-xxl-flex"></div>
+                    <div class="col-12 team-box position-md-relative">
+                      <p class="team__name">Глеб Клычев</p>
+                      <p class="team__profession">Основатель компании MK EXPERT</p>
+                      <p class="team__info">
+                        12 лет опыта работы в товарном бизнесе. <br>
+                        10 лет опыта работы с Китаем. <br>
+                        3 года успешной работы на маркетплейсах. <br>
+                        Действующий селлер с ежемесячным оборот на OZON 5+ млн. руб.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team__slide swiper-slide">
+              <div class="row d-flex justify-content-end team-swiper__row">
+                <img class="team__member__img d-sm-none" src="assets/images/users/img_7-sm.png" alt="#">
+                <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_7-md.png" alt="#">
+                <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_7.png" alt="#">
+
+                <div class="col-6 team__slide__right">
+                  <div class="row">
+                    <div class="col-1 d-none d-xxl-flex"></div>
+                    <div class="col-12 team-box position-md-relative">
+                      <p class="team__name">Алина Короленковская</p>
+                      <p class="team__profession">Ведущий эксперт по закупкам и связям с производителями</p>
+                      <p class="team__info">Окончила с красным дипломом Пекинский Политехнический университет. С 2005 года живет и работает в Китае, 5 лет опыта работы в таких компаниях как: Google, Vivatao, Alibaba по разным товарным направлениям. Многократный участник крупнейшей в Азии выставки - Кантонской ярмарки.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team__slide swiper-slide">
+              <div class="row d-flex justify-content-end team-swiper__row">
+                <img class="team__member__img d-sm-none" src="assets/images/users/img_8-sm.png" alt="#">
+                <img class="d-none d-sm-flex d-xxxl-none team__member__img" src="assets/images/users/img_8-md.png" alt="#">
+                <img class="d-none d-xxxl-flex team__member__img" src="assets/images/users/img_8.png" alt="#">
+
+                <div class="col-6 team__slide__right">
+                  <div class="row">
+                    <div class="col-1 d-none d-xxl-flex"></div>
+                    <div class="col-12 team-box position-md-relative">
+                      <p class="team__name">Яков Саввинов</p>
+                      <p class="team__profession">Эксперт по закупкам и связям с производителями</p>
+                      <p class="team__info">С 2013 года живет и работает в Китае, 8 лет опыта работы менеджером ВЭД в компании HONG KONG FONIX по направлению мебели и строительных материалов. Многократный участник крупнейшей в Азии выставки - Кантонской ярмарки.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-11 col-xxl-8 thumbs-swiper-container position-relative d-flex justify-content-center">
+        <div thumbsSlider="" class="thumbs-swiper swiper">
+          <div class="thumbs-swiper__wrapper swiper-wrapper">
+            <div class="thumbs-swiper__slide swiper-slide">
+              <div class="thumbs-swiper__shadow"></div>
+              <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_8.png" alt="#"/>
+            </div>
+            <div class="thumbs-swiper__slide swiper-slide">
+              <div class="thumbs-swiper__shadow"></div>
+              <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_6.png" alt="#"/>
+            </div>
+            <div class="thumbs-swiper__slide swiper-slide">
+              <div class="thumbs-swiper__shadow"></div>
+              <img class="thumbs-swiper__slide__img" src="assets/images/users/thumb/img_7.png" alt="#"/>
+            </div>
+          </div>
+
+          <!-- navigation -->
+          <div class="team__slide__prev swiper-button-prev">
+            <svg class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.6315 1.50918e-06L13.2991 2.32528e-06L4.74276 10.4024L14 21L9.1901 21C6.14224 17.5166 3.19083 13.9185 -1.84862e-06 10.5729L8.6315 1.50918e-06Z" fill="#005BFF"/>
+            </svg>
+
+            <svg class="d-none d-md-block" width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.4284 4.09634e-06L36.0975 6.31148e-06L12.8732 28.7305L38 58L24.9446 58C16.6718 48.3793 8.66082 38.4416 -5.1057e-06 29.2012L23.4284 4.09634e-06Z" fill="#005BFF"/>
+            </svg>
+          </div>
+
+          <div class="team__slide__next swiper-button-next">
+            <svg  class="d-md-none" width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.3685 21L0.700936 21L9.25724 10.5976L-1.83284e-06 1.22594e-06L4.80989 8.04754e-07C7.85775 3.48335 10.8092 7.0815 14 10.4271L5.3685 21Z" fill="#005BFF"/>
+            </svg>
+
+            <svg class="d-none d-md-block" width="38" height="58" viewBox="0 0 38 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.5716 58L1.90254 58L25.1268 29.2695L-5.07052e-06 3.32207e-06L13.0554 2.18072e-06C21.3282 9.62069 29.3392 19.5584 38 28.7988L14.5716 58Z" fill="#005BFF"/>
+            </svg>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marque -->
+<div class="marquee marquee-third position-relative">
+  <div class="marquee__track">
+    <p class="marquee__text">10+ лет ведем бизнес 10+ лет ведем бизнес</p>
+  </div>
+</div>
+
+<!-- Business -->
+<section class="business business-china-third" id="business2">
+  <div class="container">
+    <form class="row">
+      <div class="col-12">
+        <h2 class="business__title mb-0">Хотите обсудить подробнее,<br>приходите на личную встречу</h2>
+        <p class="business__info">в нашем головном офисе и представительствах познакомимся, выпьем кофе, покажем документы, подпишем договор</p>
+      </div>
+
+      <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
+        <label class="business__input-label input-label nowrap" for="name3"> Меня зовут </label>
+        <input type="text" name="name" required id="name3" placeholder="ваше имя" class="business-input input-group__input">
+      </div>
+      <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
+        <label class="business__input-label input-label nowrap masked" for="phone3"> мой телефон </label>
+        <input type="text" name="phone" required id="phone3" placeholder="+7 (999) 999 99-99" class="business-input input-group__input masked">
+      </div>
+
+      <div class="business__input-group col-12 col-md-6 col-xl-4 col-xxl-4 d-flex">
+        <label class="business__input-label input-label nowrap" for="email3"> моя эл. почта </label>
+        <input type="email" name="email" required id="email3" placeholder="здесь@и здесь" class="business-input input-group__input">
+      </div>
+
+      <div class="col-12 text-center">
+        <button class="business__btn business__btn--china">назначить личную встречу</button>
+        <div class="d-flex justify-content-center">
+          <a href="./privacy.html" target="_blank" class="business__privacy privacy-text">Нажимая кнопку, я принимаю Политику в отношении <span class="nowrap">обработки персональных данных</span></a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Work Info -->
+<section class="service" id="service">
+  <div class="container">
+    <!-- title -->
+    <div class="row d-flex justify-content-xl-end">
+      <div class="col-12">
+        <h2 class="work-info__title title-blue">В рамках услуги мы:</h2>
+      </div>
+      <div class="col-12 col-xl-10">
+        <div class="accordion d-flex">
+          <p class="accordion__order">01/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion-china__item">Найдем нужный товар, закажем образцы</button>
+          </div>
+        </div>
+        <div class="accordion d-flex">
+          <p class="accordion__order">02/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion-china__item">Проверим поставщика, производителя</button>
+          </div>
+        </div>
+        <div class="accordion d-flex">
+          <p class="accordion__order">03/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion-china__item">Заключим внешнеторговый контракт</button>
+          </div>
+        </div>
+        <div class="accordion d-flex">
+          <p class="accordion__order">04/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion-china__item">Перечислим оплату поставщику</button>
+          </div>
+        </div>
+        <div class="accordion d-flex">
+          <p class="accordion__order">05/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion-china__item">Проконтролируем производство</button>
+          </div>
+        </div>
+        <div class="accordion d-flex">
+          <p class="accordion__order">06/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion-china__item">Подготовим груз к отправке в РФ</button>
+          </div>
+        </div>
+        <div class="accordion d-flex">
+          <p class="accordion__order">07/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion-china__item">Проведем таможенное оформление с минимальными затратами</button>
+          </div>
+        </div>
+        <div class="accordion d-flex">
+          <p class="accordion__order">08/</p>
+          <div class="accordion__content">
+            <button class="accordion__item accordion-china__item">Доставим груз до вашего склада с полным комплектом документов</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer dark">
+  <div class="footer__container container">
     <div class="row d-flex justify-content-end">
       <div class="col-12 col-md-4 col-xxl-3 pe-md-0">
         <img class="footer__logo" src="./assets/images/logo.png" alt="Mk Expert">
@@ -739,7 +746,7 @@
         <!-- hr -->
         <div class="footer__hr footer__hr--full d-md-none"></div>
 
-        <a href="" target="_blank" class="footer__privacy__text privacy-text">Политика в отношении обработки персональных данных</a>
+        <a href="./privacy.html" target="_blank" class="footer__privacy__text privacy-text">Политика в отношении обработки персональных данных</a>
       </div>
 
       <!-- hr -->
@@ -757,7 +764,7 @@
       </div>
     </div>
   </div>
-  </footer>
+</footer>
 </body>
 <script src="./assets/js/jquery.js"></script>
 <script src="./assets/js/mask.js"></script>
@@ -766,7 +773,7 @@
   // Mask
   $( document ).ready(function() {
     jQuery(function($){
-      $(".masked").mask("+7(999) 999-9999");
+      $(".masked").mask("+7 (999) 999-99-99");
     });
 
     acc[0].click();
@@ -842,7 +849,7 @@
       if (!isActive) {
         this.classList.toggle("active");
         let panel = this.nextElementSibling;
-        panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.style.maxHeight = "initial";
       }
     });
   }
